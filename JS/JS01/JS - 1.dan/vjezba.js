@@ -3,6 +3,6 @@ console.log('Zvone');
 
 undefined=1;
 console.log('???')
-(function pipica(){
-    console.log('pipica')
+(function random(){
+    console.log('random')
 })()
