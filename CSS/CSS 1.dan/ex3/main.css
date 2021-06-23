@@ -1,0 +1,35 @@
+.c-media :first-child{
+    color: red;
+}
+p:first-of-type{
+    color: red;
+}
+p:last-of-type{
+    color:red;
+}
+
+.c-media p:last-child{
+    color: red;
+}
+ul li:nth-child(2n){
+    color: red;
+}
+/*ovo sve su pseudo class selectori*/
+p::first-letter{
+    font-size: 30px;
+    font-weight: bold;
+}
+p::selection{
+    color:blue;
+}
+p::first-line{
+    font-weight: bold;
+}
+div::before{
+    content: "...";
+    display: block;
+    background: red;
+}
+div::after{
+    content: "...";
+}

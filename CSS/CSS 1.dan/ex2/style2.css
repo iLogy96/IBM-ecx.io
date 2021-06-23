@@ -1,0 +1,59 @@
+body {
+    background-color: lightcyan;
+}
+p {
+    font-size: 18px;
+    line-height: 22px;
+}
+p::first-letter{
+    font-size: 30px;
+    font-weight: bold;
+}
+/*target prema elementu*/
+#main {
+width: 500px;
+margin: auto;
+}
+/*target prema id*/
+.lista {
+    background-color: lightgreen;   
+}
+
+.prva {
+
+color: lightskyblue;
+
+}
+.lista.druga {
+    background-color: lightseagreen;
+}
+/*target prema klasi*/
+
+.list-item {
+
+    letter-spacing: 3px;
+}
+p + a {
+    color: red;
+}
+/* + će ofarbat neposredno iza elementa*/
+p span {
+    color: tomato;
+}
+p > span {
+    color: blue;
+}
+/*samo prvi span će targetat, ne drugi*/
+a [href = "#"] {
+    font-weight: bold;
+}
+/*samo anchor s hrefom će podebljat*/
+
+/*[href ^= "https://google.com"] - počinje sa
+[href *= "https://google.com"] - sadrži
+[href $= "https://google.com"] - zavrsava sa
+*/
+
+[href *= "https://google.com"] {
+    color: green;
+}

@@ -1,0 +1,38 @@
+body {
+    background:lightgray;
+    width: 600px;
+    text-align: center;
+}
+div {
+    text-transform: uppercase;
+}
+li {
+    letter-spacing: 2px;
+}
+.list-item {
+    font-weight: bold;
+}
+a {
+    color: rgb(167, 167, 167);
+    text-decoration: none;
+    background: rgb(104, 74, 74);
+}
+a:hover {
+    background: yellow;
+    font-style: normal;
+}
+p::first-letter {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+blockquote::before{
+    content: ' " ';
+    font-size: 50px;
+    font-weight: bold;
+}
+blockquote::after{
+    content: ' " ';
+    font-size: 50px;
+    font-weight: bold;
+}
