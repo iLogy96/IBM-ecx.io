@@ -1,5 +1,5 @@
 //'use strict'; //ovako se pali strict mode
-console.log('Zvone');
+console.log('Ivan');
 
 undefined=1;
 console.log('???')
