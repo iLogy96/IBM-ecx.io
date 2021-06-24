@@ -1,6 +1,6 @@
-let fruits = ['banana', 'lan', 'mleko'];
-console.log(fruits)
-console.log(fruits.length);
+let shopping = ['banana', 'lan', 'mleko'];
+console.log(shopping)
+console.log(shopping.length);
 const object1 = {banana: 'voće', lan: 'žitarice' ,mleko:'piće'}
 console.log(object1.banana,object1.lan,object1.mleko)
 let kontakti = new Map();
