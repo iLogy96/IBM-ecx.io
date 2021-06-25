@@ -1,0 +1,58 @@
+body{
+    background-color: burlywood;
+}
+h1{
+    font-family: 'Trocchi', serif;
+    font-size: 45px; 
+    font-weight: lighter; 
+    line-height: 48px; 
+    margin: 0;
+}
+p::first-letter{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:lighter;
+    font-style:inherit;
+}
+p{
+    text-decoration: initial;
+    letter-spacing: 2px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a.link {
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+      
+a:hover {
+    background-color: rgb(230, 213, 213);
+    }
+      
+a:active {
+    background-color: black;
+}
+      
+a:visited {
+    background-color: #ccc;
+}
+
+main {
+    counter-reset: gradient-counter;
+    list-style: none;
+    margin: 1.75rem 0;
+    padding-left: 1rem;
+}
+li {
+    background: white;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    counter-increment: gradient-counter;
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+    font-size: 30px;
+}    
