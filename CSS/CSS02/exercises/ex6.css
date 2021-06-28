@@ -1,0 +1,23 @@
+.div1 {
+    font-size: 1.5rem;
+    background-color: red;
+    height: 100vh;
+}
+.div2 {
+    font-size: 1.7rem;
+    background-color: lightblue;
+    height: 100vh;
+}
+.div3 {
+    font-size: 0,9rem;
+    background-color: green;
+    height: 100vh;
+}
+p{
+    font-size: 1em;
+    letter-spacing: 0.1em; 
+    line-height: 1.1em;
+}
+/* u divu smo namjestili font size, i onda p pokupi to i pomnozi sa svojim vrijednostima*/
+
+
