@@ -1,0 +1,8 @@
+body{
+    background: yellow;
+    color: blue;
+}
+p{
+    --color:red;
+    color:var(--color);
+}

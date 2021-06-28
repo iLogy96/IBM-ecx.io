@@ -1,0 +1,4 @@
+*{
+    border-bottom: var(--border);
+    --border:initial;
+}
