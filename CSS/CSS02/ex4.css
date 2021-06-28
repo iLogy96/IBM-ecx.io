@@ -1,0 +1,14 @@
+body{
+    width: 70%;
+    height: auto;
+}
+h1{
+    font-size: 3em;
+}
+p{
+    line-height: 1.5em;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    margin: 30 40;
+    padding: 0rem;
+}

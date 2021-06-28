@@ -1,20 +1,15 @@
-ul {
+ul li {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
-li {
+    text-align: center;
     border:solid 2px gray;
     color :cornflowerblue;
     max-width: 30%;
-    padding: 20px;
-    align-items: center;
-    margin: auto;
-
+    margin: 0px;
 }
 a {
     text-decoration: none;
+    display: block;
+    padding: 10px 20px;
 }
 a:hover{
     color:red
