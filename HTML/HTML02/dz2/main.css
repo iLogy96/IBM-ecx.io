@@ -19,6 +19,7 @@ p{
     letter-spacing: 2px;
 }
 a {
+    display: inline-block;
     text-decoration: none;
     color: black;
 }
@@ -40,19 +41,19 @@ a:visited {
     background-color: #ccc;
 }
 
-main {
+/*main {
     counter-reset: gradient-counter;
     list-style: none;
     margin: 1.75rem 0;
     padding-left: 1rem;
-}
+}*/
 li {
     background: white;
     border-radius: 0 0.5rem 0.5rem 0.5rem;
-    counter-increment: gradient-counter;
-    margin-top: 1rem;
-    min-height: 3rem;
+    margin-top: 0.5rem;
+    min-height: 2rem;
     padding: 1rem 1rem 1rem 3rem;
     position: relative;
-    font-size: 30px;
+    font-size: 25px;
+
 }    

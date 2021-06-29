@@ -15,26 +15,22 @@ function myFunction2(){
 myFunction2()
 //3.zad
 let age = 24
-let name = 'Johnfasfasfasfas'
 let reversed ="";
-function myFunction3(){
+function myFunction3(name){
     if (age % 2 != 0) {
         for(var i=name.length-1; i>=0; i--){
             reversed+=name[i];
         }
         console.log(reversed)
     }
-    else if(age>100){
-        console.log(name);
-    }
-    else if(name.length>10){
+    else if(age>100 || name.length>10){
         console.log(name);
     }
     else{
         console.log(name + ' ' + age);
     }
 }
-myFunction3();
+myFunction3('John');
 //4.zad
 var text ='';
 var i = 0;
