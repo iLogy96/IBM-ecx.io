@@ -1,0 +1,19 @@
+body{
+    margin: 0.5rem;
+    padding: 1rem;
+
+}
+header{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.address1{
+    text-align: end;
+}
+.address2{
+    text-align:start;
+}
+.ul1,.ul2 {
+    list-style-type: none;
+}
