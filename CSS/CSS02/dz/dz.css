@@ -31,13 +31,13 @@ h2{
     border: 1px solid #d97c3f; 
 }
 p.green{
-    color: #1f891d;
+    color: var(--my-p,#1f891d);
 }
 .sub{
-    color: #a737da;;
+    color: var(--my-sub,#a737da);;
 }
 .sup{
-    color: #56aeae;
+    color: var(--my-sup,#56aeae);
 }
 .abbr{
     padding: 2px; 
@@ -45,11 +45,11 @@ p.green{
     background-color: #87cefa;
 }
 .hr2{
-    border: 3px solid #f08080;
+    border:var(--my-hr2,3px solid #f08080);
 }
 .dt{
-    color: #ff875b;
+    color: var(--my-dt,#ff875b);
 }
 .dd{
-    color: #7aa4ef;
+    color: var(--my-dd,#7aa4ef);
 }
