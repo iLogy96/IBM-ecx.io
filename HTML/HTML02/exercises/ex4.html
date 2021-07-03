@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random title</title>
+    <style>
+        tr {
+            color: white;
+        }
+        th {
+            border: 4px solid black;
+            background-color: rgb(6, 6, 140);
+        }
+        td {
+            background-color: rgb(15, 112, 154);
+        }
+    </style>
+</head>
+<body>
+    <!--1.zad-->
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ul>
+    <!--2.zadatak-->
+    <ol start = 5 type ="i">
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ol>
+    <!--3.zadatak-->
+    <dl>
+        <dt>HTML</dt>
+        <dd>Hyper text markup language</dd>
+        <dt>NASA</dt>
+        <dd>National Aeronautics and Space Administration</dd>
+        <dt>CSS</dt>
+        <dd>Cascade Style Sheets</dd>
+    </dl>
+    <!--4.zadatak-->
+    <nav>
+        <ul>
+          <li><a href="./ex2.html">drugi html</a></li>
+          <li><a href="./ex1.html">treci html</a></li>
+        </ul>
+    </nav>
+    <!--5.zadatak-->
+    <h1>Table</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>09:00</td>
+            <td rowspan="6">Onboarding</td>
+            <td rowspan="3">HTML</td>
+            <td rowspan="3">Editor config Git</td>
+            <td rowspan="3">JS</td>
+            <td rowspan="3">Weekly recap</td>
+        </tr>
+        <tr>
+            <td>10:00</td>
+        </tr>
+        <tr>
+            <td>11:00</td>
+        </tr>
+        <tr>
+            <td>12:00</td>
+            <td>Lunchbreak</td>
+            <td>Lunchbreak</td>
+            <td>Lunchbreak</td>
+            <td>Lunchbreak</td>
+        </tr>
+        <tr>
+            <td>13:00</td>
+            <td rowspan="3">HTML</td>
+            <td rowspan="3">Editor config Git</td>
+            <td rowspan="3">JS</td>
+            <td rowspan="5">Weekly recap</td>
+        </tr>
+        <tr>
+            <td>14:00</td>
+        </tr>
+        <tr>
+            <td>15:00</td>
+            <td rowspan = '2'>Intro to bootcamp</td>        </tr>
+        <tr>
+            <td>16:00</td>
+            <td rowspan="2">Recap</td>
+            <td rowspan="2"></td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td>17:00</td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+<!--skracenica za radit tableove je table*2>tr*3>th*6-->
+</body>
+</html>
