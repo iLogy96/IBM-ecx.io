@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(8, 8, 8);
+}
+li {
+    color: white;
+    display:block;
+	width:120px;
+	float:left;
+	margin-left:2px;
+	border:1px solid #000;
+}
+.logo{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0px;
+    padding: 2px;
+}
