@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML day 4 - Resolution switching</title>
+    <style></style>
+  </head>
+  <body>
+    <img
+      srcset="
+        ./assets/image-xs.png  640w,
+        ./assets/image-sm.png 1024w,
+        ./assets/image-l.png  1400w"
+      sizes="(max-width:640px) 640px,
+      (min-width:640px and max-width 1024px) 1024px,
+      (min-width 1024px) 1400px"
+      src="../resolution-switching/assets/image-l.png"
+      alt="Zemljopis"
+    />
+  </body>
+</html>
