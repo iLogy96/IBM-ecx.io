@@ -1,0 +1,16 @@
+.avatar{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 0.4rem;
+    background-color: dodgerblue;
+    float:left;
+}
+/* .tweet + p{
+    clear:both;
+} ovako se cleara float */
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+} /*bolji način clearanja*/
+/*napomena, uvijek clearati float nakon prikazanog contenta*/

@@ -1,0 +1,14 @@
+.box-1{
+    background-color: royalblue;
+    height: 150px;
+    width: 150px;
+    padding: 1em;
+    border-radius: 10%;
+    float: left;
+    margin-right: 1em;
+}
+p:first-of-type::after{
+    content: '';
+    display: block;
+    clear: both;
+}

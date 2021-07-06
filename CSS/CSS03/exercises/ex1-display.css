@@ -1,0 +1,19 @@
+.wide {
+    background-color: cornflowerblue;
+    display: block;
+    padding: 10px;
+}
+.hide-me{
+    display: none;
+}
+.second-div{
+    display: inline;
+    color: rgb(41, 129, 33);
+}
+
+.link {
+    display: inline-block;
+    border: solid 2px red;
+    line-height: 0; 
+}
+/*img sto manje polutat, na wrapper idu borderi itd*/

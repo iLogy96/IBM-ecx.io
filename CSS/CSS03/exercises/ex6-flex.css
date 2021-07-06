@@ -1,0 +1,14 @@
+body{
+    margin: 50px auto;
+    max-width: 400px;
+}
+/* div{
+    display: flex;
+    justify-content: center; 
+}prijašnji zadatak*/
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

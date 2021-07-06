@@ -1,0 +1,12 @@
+.box{
+    border: solid 5px black;
+    width:300px;
+    height: 300px;
+    overflow: hidden;
+}
+.box2{
+    border: 2px solid;
+    width: 400px;
+    height: 400px;
+    background-color: cadetblue;
+}

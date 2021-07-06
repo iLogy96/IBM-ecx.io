@@ -1,10 +1,11 @@
 body{
-    margin: 1rem;
+    margin: 1em;
 }
-header{
-    margin: 0rem;
-    padding: 0rem;
-    border: 0rem;
+main{
+    margin: 2em;
+}
+footer{
+    margin: 2em;
 }
 .address1{
     text-align: start;
@@ -43,6 +44,7 @@ p.green{
     padding: 2px; 
     border-radius: 20%; 
     background-color: #87cefa;
+    text-decoration: none;
 }
 .hr2{
     border:var(--my-hr2,3px solid #f08080);

@@ -1,0 +1,18 @@
+.wrapper{
+    background-color: lightblue;
+    padding: 10px;
+}
+.wrapper::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.box-1{
+    background-color: royalblue;
+    height: 150px;
+    width: 150px;
+    padding: 1em;
+    border-radius: 10%;
+    float: right;
+    margin-right: 1em;
+}

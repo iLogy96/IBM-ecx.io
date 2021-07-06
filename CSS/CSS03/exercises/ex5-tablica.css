@@ -1,0 +1,32 @@
+table{
+    width: 50%;
+    border-collapse: collapse;
+}
+thead{
+    background-color: rgb(17, 111, 143);
+    color: white;
+    border-bottom: white 3px solid;
+}
+tr{
+    border-bottom: 0.5px solid gray;
+}
+th,td{
+    padding: 2px;
+}
+th:first-child{
+    text-align: left;
+}
+th,td:last-child{
+    text-align: end;
+}
+td:nth-child(2){
+    text-align: end;
+}
+tbody>tr:nth-child(odd){
+    background-color: rgb(179, 211, 231);
+}
+tbody>tr:hover{
+    background-color: rgb(48, 79, 110);
+    color: white;
+}
+
