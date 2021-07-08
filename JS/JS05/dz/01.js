@@ -1,13 +1,10 @@
 function americanFloors(floor){
     let floorCounter = 0;
-    if(floor < 0){
+    if(floor <= 0){
         return floor
     }
     for (let i = 1;i<floor;i++){
-        if(floor === 1){
-            floorCounter--;
-        }
-        else if(floor>13){
+        if(floor>13){
             floorCounter=i-1;
         }
         else {
