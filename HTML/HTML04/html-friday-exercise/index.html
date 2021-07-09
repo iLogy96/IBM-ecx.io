@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML day 04 - friday exercise</title>
+
+    <style>
+      html {
+        background: black;
+        color: white;
+      }
+
+      body {
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+      }
+
+      header {
+        height: 150px;
+        border-bottom: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+      }
+
+      header img {
+        width: 150px;
+      }
+
+      main {
+        padding: 0 1rem;
+      }
+
+      article img {
+          width: 100%;
+      }
+
+      footer {
+          padding: 2rem 1rem;
+          border-top: 1px solid white;
+          margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logo.svg" alt="company-logo">
+      <h1>Multimedia in HTML</h1>
+    </header>
+
+    <main>
+      <article>
+        <h2>Handling multimedia in HTML on Frontend Bootcamp</h2>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kR8dPbrDeV4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+
+        <h3>Responsive images in a nutshell</h3>
+        <picture>
+          <source
+            media="(max-width: 640px)"
+            srcset="./assets/ecx-team-s.jpg"
+          />
+          <source
+            media="(max-width: 1024px)"
+            srcset="./assets/ecx-team-m.jpg"
+          />
+          <source
+            media="(max-width: 1400px)"
+            srcset="./assets/ecx-team-l.jpg"
+          />
+          <img src="./assets/ecx-team-l.jpg" alt="team-picture">
+        </picture>
+      </article>
+    </main>
+
+    <footer>ecx.io Frontend Bootcamp</footer>
+  </body>
+</html>
