@@ -42,7 +42,28 @@ let protectEmail = (str) => {
     return part1 + "...@" + part2
 }
 console.log(protectEmail('robin_singh@example.com'))
-//
+//parametrizacija stringa
+let stringParametrize = (str) => {
+    let para = str.trim().split(' ');
+    return para.join("-").toLowerCase();
+}
+console.log(stringParametrize('Robin Singh from USA.'))
+//function that capitalizes first letter
+// let firstLetterCapital = (str) => {
+//     let cap = str.trim().split(" ");
+//     return cap[0].charAt(0).toUpperCase()+cap[0].substring(1)+ " "+cap[1].charAt(0).toUpperCase()+cap[1].substring(1)+" "+cap[2].charAt(0).toUpperCase()+cap[2].substring(1)
+    
+// }
+// console.log(firstLetterCapital("js string exercises"))
+let firstLetterCapital = (str) => {
+    let cap = str.trim().split(" ");
+    let random = "";
+    for (let i=0;i<cap.length;i++){
+        random+=cap[i].charAt(0).toUpperCase()+cap[i].substring(1)+ " "
+    }
+    return random;
+}
+console.log(firstLetterCapital("js string exercises"))
 
 
 
