@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+    <form action="action-page" method="GET">
+        <div>
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="fullName" />
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input id="email" type="email" name="email" />
+        </div>
+        <div>
+            <label for="tel">Tel:</label>
+            <input id="tel" type="tel" name="tel" />
+        </div>
+        <div>
+            <label for="url">Url:</label>
+            <input id="url" type="url" name="url" />
+        </div>
+        <div>
+            <label for="pwd">Password:</label>
+            <input id="pwd" type="password" name="pwd" />
+        </div>
+        <!--Numberic field, može imati i stepove različite od 1 koji je default-->
+        <div>
+            <label for="Numeric">Number:</label>
+            <input id="Numeric" type="number" name="Numeric" min="0" max="10" step="2"/>
+        </div>
+        <div>
+            <label for="range">Range:</label>
+            <input id="range" type="range" name="Numeric" min="0" max="10"/>
+            <output id = "output" name = "result" for="range">5</output>
+        </div>
+        <div>
+            <label for="textarea">Message:</label>
+            <textarea name="message" id="textarea" cols="20" rows="10" maxlength="15"></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Send the message</button>
+        </div>
+        <div>
+            <button type="reset">Reset the form</button>
+        </div>
+        <div>
+            <label for="hidden">Hidden field:</label>
+            <input id="hidden" type="hidden" name="hidden" value="hidden-value" />
+        </div>
+        <div>
+            <label for="search">Search:</label>
+            <input id="search" type="search" name="search"/>
+        </div>
+        <div>
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date">
+        </div>
+        <div>
+            <label for="datetime">Datetime</label>
+            <input type="datetime-local" name="date" id="datetime">
+        </div>
+        <div>
+            <label for="month">Month</label>
+            <input type="month" name="month" id="month">
+        </div>
+        <div>
+            <label for="time">Time</label>
+            <input type="time" name="time" id="time">
+        </div>
+        <div>
+            <label for="week">Week</label>
+            <input type="week" name="week" id="week">
+        </div>
+    
+    </form>
+    <script>
+        let range = document.getElementById("range");
+        let output = document.getElementById("output");
+        range.addEventListener("input",eventHandler);
+        function eventHandler(){
+            output.textContent=range.value;
+        }
+    </script>
+</body>
+
+</html>

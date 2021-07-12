@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drugi dio</title>
+    <link rel="stylesheet" href="./checkbox.css">
+</head>
+
+<body>
+    <div> <!--checkbox-->
+        <fieldset>
+            <legend>Choose all</legend>
+            <label for="carrot">Carrots</label>
+            <input id="carrot" type="checkbox" name="vegetables" value="carrot" />
+            <label for="peas">Peas</label>
+            <input id="peas" type="checkbox" name="vegetables" value="peas" />
+        </fieldset>
+    </div>
+    <div><!--radio-->
+        <legend>Favorite meal</legend>
+        <ul>
+            <li>
+                <label for="soup">Soup</label>
+                <input type="radio" id="soup" name="meal" value="soup">
+            </li>
+            <li>
+                <label for="pizza">Pizza</label>
+                <input type="radio" id="pizza" name="meal" value="pizza">
+            </li>
+            <li>
+                <label for="burger">Burger</label>
+                <input type="radio" id="burger" name="meal" value="burger" checked>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <label for="files">Files</label>
+        <input type="file" name="files" id="files" multiple accept="image/png,image/jpg,application/pdf">
+        <!--MIME type guglas da saznas fajlove kako se pišu u accept, mozes ih multiple nabacat sa zarezom-->
+    </div>
+    <div>
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date">
+    </div>
+    <div>
+        <label for="datetime">Datetime</label>
+        <input type="datetime-local" name="date" id="datetime">
+    </div>
+    <div>
+        <label for="month">Month</label>
+        <input type="month" name="month" id="month">
+    </div>
+    <div>
+        <label for="time">Time</label>
+        <input type="time" name="time" id="time">
+    </div>
+    <div>
+        <label for="week">Week</label>
+        <input type="week" name="week" id="week">
+    </div>
+    <div>
+        <label for="color">Color</label>
+        <input type="color" name="color" id="color">
+    </div>
+    <select name="fruit" id="fruit">
+        <option value="banana">Banana</option>
+        <option value="cherry" selected>Cherry</option>
+        <option value="lemon">Lemon</option>
+    </select>
+    <select name="groups" id="groups" multiple>
+        <optgroup label="fruit">
+            <option value="banana">Banana</option>
+            <option value="cherry" selected>Cherry</option>
+            <option value="lemon">Lemon</option>    
+        </optgroup>
+        <optgroup label="vegetables">
+            <option value="banana">Banana</option>
+            <option value="cherry" selected>Cherry</option>
+            <option value="lemon">Lemon</option>    
+        </optgroup>
+    </select>
+    <div>
+        <label for="autocomplete">Autocomplete</label>
+        <input type="text" name="autocomplete" id="autocomplete" list="sourceList">
+        <datalist id="sourceList">
+            <option value="">---default---</option>
+            <option value="jedan">jedan</option>
+            <option value="dva">dva</option>
+            <option value="tri">tri</option>
+        </datalist>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+body{
+    max-width: fit-content;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+div{
+    display: flex;
+    flex-direction: column;
+}
+div{
+    padding: 5px;
+    border-bottom: 1px solid black;
+}

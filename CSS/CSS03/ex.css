@@ -1,0 +1,39 @@
+body{
+    width: 600px;
+}
+.wrapper{
+    border: 5px solid gold;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.box-1{
+    background-color: royalblue;
+    height: 150px;
+    width: 150px;
+    padding: 1em;
+    border-radius: 10%;
+    display: flex;
+    align-self: flex-start;
+    
+}
+.box-2{
+    background-color: royalblue;
+    height: 150px;
+    width: 150px;
+    padding: 1em;
+    border-radius: 10%;
+    display: flex;
+    align-self: center;
+
+}
+.box-3{
+    background-color: royalblue;
+    height: 150px;
+    width: 150px;
+    padding: 1em;
+    border-radius: 10%;
+    display: flex;
+    align-self: flex-end;
+
+}

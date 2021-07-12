@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex02</title>
+  </head>
+  <body>
+    <fieldset>
+        <legend>Forma 1</legend>
+    <form action="action-page" method="GET">
+      <div>
+        <label for="first-name">First name:</label>
+        <input type="text" id="first-name" />
+      </div>
+      <div>
+        <label for="last-name">Last name:</label>
+        <input type="text" id="last-name" />
+      </div>
+      <div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" />
+      </div>
+     </select>
+      <div>
+        <label for="files">Files</label>
+        <input type="file" name="files" id="files" multiple accept="image/png,image/jpg,application/pdf">
+      </div>
+      <label for="frontend-tech">Frontend-tech</label>
+      <select name="frontend-tech" id="frontend-tech">
+        <option value="First">HTML</option>
+        <option value="Second">CSS</option>
+        <option value="Third">javascript</option>
+      </select>
+      <div>
+        <label for="color">Favorite color:</label>
+        <input type="color" id="color" name="color" />
+      </div>
+      <div>
+        <label for="range">Years of experience:</label>
+        <input
+          type="range"
+          id="range"
+          name="range"
+          min="0"
+          max="15"
+          step="0.5"
+        />
+        <output id="output" name="result" for="range">5</output>
+      </div>
+      <label for="food">Food</label>
+      <input type="text" name="food" id="food" list="sourceList" />
+      <datalist id="sourceList">
+        <option value="First">Pizza</option>
+        <option value="Second">Burger</option>
+        <option value="Third">Kebab</option>
+      </datalist>
+      <button type="submit">Submit</button>
+      <div>
+        <label for="month">Month:</label>
+        <input type="month" id="month" name="month" />
+      </div>
+    </form>
+    </fieldset>
+    <script>
+      let range = document.getElementById("range");
+      let output = document.getElementById("output");
+      range.addEventListener("input", eventHandler);
+      function eventHandler() {
+        output.textContent = range.value;
+      }
+    </script>
+  </body>
+</html>
