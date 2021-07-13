@@ -1,0 +1,26 @@
+body{
+    margin: 40px auto;
+    padding:20px 50px;
+}
+.container{
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+}
+.first{
+    flex:1;
+    background-color: lightsalmon;
+}
+.second{
+    display: flex;
+    flex:1;
+}
+.second-a{
+    background-color: lightpink;
+    flex:1;
+}
+.second-b{
+    background-color: lightgreen;
+    flex:1;
+}
+

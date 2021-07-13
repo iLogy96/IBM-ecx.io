@@ -1,0 +1,30 @@
+.container {
+  border: 15px solid #5d534a;
+  padding: 1rem;
+  background-color: #d6d2c4;
+  height: 200vh;
+  /* position: relative; drugi zad*/
+}
+.box {
+  width: 200px;
+  height: 200px;
+}
+.box-3 {
+    background-color: #b8dfd8;
+}
+.box-1 {
+  background-color: #ffe194;
+  /* position: absolute;
+  top: 0;
+  right:0; drugi zad*/
+}
+.box-2 {
+  background-color: #e8f6ef;
+  position: relative;
+  left: calc(100% - 200px);
+}
+
+
+body {
+  max-width: 350px;
+}

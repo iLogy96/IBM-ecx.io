@@ -1,0 +1,37 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 300px);
+}
+.header,.footer{
+    padding: 20px;
+    background-color: #999;
+    color:white;
+}
+.body{
+    display: flex;
+    flex-grow: 1;
+    background-color: pink;
+}
+.col-1{
+    flex-grow: 1;
+    background-color: lightblue;
+}
+.col-2{
+    width: 160px;
+    background-color: lightcyan;
+    order: -1;
+
+}
+.col-3{
+    width: 160px;
+    background-color: lightgreen;
+}
+@media (max-width: 600px){
+    .body{
+        flex-direction: column;
+    }
+    .col-2,.col-3{
+        width: auto;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body{
+            margin: 3rem;
+        }
+        .container{
+            border: 5px solid rebeccapurple;
+            display: grid;
+            /* grid-template-columns: repeat(2,100px); */
+            /* grid-template-rows: 100px 100px 100px; */
+            /* grid-template-rows: repeat(3,100px); isto kao i prethodna linija */
+            /* grid-auto-rows: minmax(100px, auto); kad bi stavio lorem i dolje maknuo hard kodirani height, on bi stretcho taj box jer je max auto */
+            /* grid-template: repeat(3,100px)/repeat(2,100px); ovo mijenja sve linije gore, redovi/kolumne */
+            /* grid-template: repeat(3,100px)/100px 30% 70%; umjesto postotaka koristimo fraction, a ne ovako */
+            /* justify-items: center; pozicioniranje grida unutar kontenjera */
+            /* align-items: center; */
+            /* justify-content: center; pozicioniranje samog contenta u gridu */
+            /* align-content: center;
+            height: 90vh; */
+            /* grid-template: 100px auto 100px/30fr 70fr; sad nece probiti grid, koristi fr, a ne postotke */
+            grid-template-areas: 
+            "header     header"
+            "sidebar    main"
+            "footer     footer";
+            height: 90vh;
+            gap: 10px 20px;
+        }
+        .box{
+            background-color: lightgreen;
+        }
+        .box-1{
+            /* grid-column: 1/3; box-1 ce zauzeti 1-3, moze ic i -1, i čak span 2 pa ce ga gurnut dokraja kako god, nemoramo razmisljat koliko kolona ima */
+            /* grid-area: 1/1/1/3; start row/startcolumn/endrow/endcolumn */
+            grid-area: header; /*gore definiramo template areas i onda posebno u klase dodajemo što zauzimaju*/
+        }
+        .box-2{
+            grid-area: sidebar;
+        }
+        .box-3{
+            grid-area: main;
+        }
+        .box-4{
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2</div>
+        <div class="box box-3">Box 3</div>
+        <div class="box box-4">Box 4</div>
+        <div class="box box-5">Box 5</div>
+    </div>
+</body>
+</html>

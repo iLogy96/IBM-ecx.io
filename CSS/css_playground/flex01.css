@@ -1,0 +1,32 @@
+body{
+    height: 90vh;
+    width: 100vw;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+}
+/* zadatak 2. */
+.wrapper{
+    max-width: 1300px;
+    margin: 40px auto 0 auto;
+    line-height: 1.65;
+    padding:10px 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    flex:3;
+}
+.one{
+    order: -1;
+
+}
