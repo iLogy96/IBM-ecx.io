@@ -3,7 +3,6 @@
   --header-gap: 15px;
   --text-large: 20px;
 }
-
 /*******
 
 1. General Styles
@@ -19,6 +18,9 @@ a:link,
 a:visited {
   color: #d1d1d3;
   text-decoration: none;
+}
+a:hover{
+  color:whitesmoke;
 }
 img{
     width: 100%;
@@ -141,6 +143,10 @@ button.button {
   border-radius: 4px;
   font-weight: bold;
 }
+a.button:hover{
+  border:2px solid #76aff4;
+  padding: 8px 23px;
+}
 
 /*******
 
@@ -155,6 +161,8 @@ button.button {
     display: flex;
     gap: 15px;
 }
+
+
 .benefits-title {
   font-size: 30px;
   margin-bottom: 20px;
@@ -181,13 +189,112 @@ button.button {
 }
 .benefits-box-image {
     display: block;
+    /* object-fit: cover;
+    height: auto;
+    width: fit-content; */
     height: 175px;
+    width: auto;
     overflow: hidden;
     border:1px solid #3a3b41;
 }
-
+img:hover{
+  filter: brightness(120%);
+}
+img{
+  height: 100%;
+  width: 100%;
+}
 /* 7.links */
 a.link-alternative {
   color: #2d8dff;
 }
-/*dovršiti footer i chevrone na linkove u petak, također hover riješiti za slike i linkove(hint:inspectaj za taj property)*/
+.image-chevron{
+  fill: #2d8dff;
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: 5px;
+}
+a.link-alternative:hover,.image-chevron:hover{
+  display: inline-block;
+  color:#84addf;
+  fill:currentColor;
+}
+a.link-trademark,a.footer-navbar-link{
+  color: whitesmoke;
+}
+/*responsive design*/
+@media screen and (max-width: 800px) {
+  .benefits-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  .benefit-box{
+    display: flex;
+  }
+  img{
+    height: 100%;
+    width: 100%;
+  }
+  
+}
+/*******
+
+8. Footer
+
+*******/
+.footer-wrapper{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--body-bg);
+}
+.logo-container{
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  font-family:sans-serif;
+  margin-top: 50px;
+  font-size: 32px;
+}
+.footer-ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.footer-listitem>a{
+  color: whitesmoke;
+  padding: 0.3em;
+}
+.footer-listitem:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  width: 1px;
+  background-color: lightgray;
+}
+.footer-copyright,.footer-trademarks{
+  display: flex;
+  justify-content: center;
+  color: #b9babc;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.footer-navbar{
+  padding:5px;
+  margin-bottom: 10em;
+}
+ul.footer-ul-navbar{
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+}
+.footer-navbar-listitem:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 1px;
+  margin: 0 5px 0;
+  background-color: lightgray;
+}
+

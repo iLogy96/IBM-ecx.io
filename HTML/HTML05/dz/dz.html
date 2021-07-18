@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout page</title>
+    <style>
+        body {
+            max-width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset class="checkout">
+        <legend>Checkout</legend>
+        <form action="action-page" method="get">
+            <div>
+                <label for="delivery">Delivery</label>
+                <input class="delivery" type="checkbox" name="delivery" id="delivery"  />
+                <label for="pickup">Pickup</label>
+                <input class="pickup" type="checkbox" name="pickup" id="pickup"  />
+            </div>
+            <div>
+                <label for="first-name">First name:</label>
+                <input type="text" name="first-name" id="first-name" />
+                <label for="last-name">Last name:</label>
+                <input type="text" name="last-name" id="last-name" />
+            </div>
+            <div>
+                <label for="street-name">Street name:</label>
+                <input type="text" name="street-name" id="street-name" />
+                <label for="street-number">Street number:</label>
+                <input type="number" name="street-number" id="street-number" />
+                <label for="zip-code">Zip code:</label>
+                <input type="number" name="zip-code" id="zip-code" />
+            </div>
+            <div>
+                <label for="town">Town:</label>
+                <input type="text" name="town" id="town" />
+                <label for="country">Country:</label>
+                <input type="text" name="country" id="country" />
+            </div>
+            <div>
+                <label for="E-mail">E-mail:</label>
+                <input type="email" name="E-mail" id="E-mail" />
+                <label for="Phone">Phone:</label>
+                <input type="tel" name="Phone" id="Phone" />
+            </div>
+            <div>
+                <label for="available-stores">Available stores</label>
+                <select name="available-stores" id="available-stores">
+                    <option value="first">Arena Centar</option>
+                    <option value="second">City East</option>
+                    <option value="third">City West</option>
+                </select>
+            </div>
+            <fieldset class="payment-details">
+                <legend>Payment details</legend>
+                <div>
+                    <label for="credit-card">Credit card number:</label>
+                    <input type="number" name="credit-card" id="credit-card" />
+                </div>
+                <div>
+                    <label for="card-name">Name on card:</label>
+                    <input type="text" name="card-name" id="card-name" />
+                </div>
+                <div>
+                    <label for="valid">Valid until:</label>
+                    <input type="month" name="valid" id="valid" />
+                    <label for="cvv">CVV:</label>
+                    <input type="number" name="cvv" id="cvv" />
+                </div>
+            </fieldset>
+            <label for="supscription">Subscribe to newsletter:</label>
+            <input type="checkbox" name="supscription" id="supscription" />
+        </form>
+    </fieldset>
+    <button type="submit">Submit</button>
+    <script>
+        let deliveryBox = document.querySelector(".delivery");
+        let pickupBox = document.querySelector(".pickup");
+        deliveryBox.addEventListener("click",checkDelivery)
+        function checkDelivery (e){
+            if ((e.target.classList.contains('delivery'))){ 
+                pickupBox.disabled = true;
+                e.target.removeAttribute('class')
+            }
+            else if(!e.target.classList.contains('delivery')){
+                pickupBox.disabled=false;
+                e.target.classList.add('delivery')
+            }   
+            e.preventDefault;
+        }
+        pickupBox.addEventListener("click",checkPickup)
+        function checkPickup (e) {
+            if ((e.target.classList.contains('pickup'))) {
+                deliveryBox.disabled = true;
+                e.target.removeAttribute('class')
+            }
+            else if(!e.target.classList.contains('pickup')){
+                deliveryBox.disabled=false;
+                e.target.classList.add('pickup')
+            }   
+            e.preventDefault;
+        }
+
+    </script>
+</body>
+
+</html>
