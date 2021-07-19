@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fake button</title>
+    <style>
+      div {
+        display: inline-block;
+        border: 1px solid darkgreen;
+        border-radius: 2px;
+        background-color: green;
+        padding: 5px;
+        color: white;
+      }
+
+      div:hover {
+          cursor: pointer;
+      }
+
+      div:focus {
+          outline: 3px solid lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div tabindex="0" role="button">Click me!</div>
+  </body>
+</html>
