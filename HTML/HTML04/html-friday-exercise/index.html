@@ -34,19 +34,20 @@
       }
 
       article img {
-          width: 100%;
+        width: 100%;
       }
 
       footer {
-          padding: 2rem 1rem;
-          border-top: 1px solid white;
-          margin-top: 2rem;
+        padding: 2rem 1rem;
+        border-top: 1px solid white;
+        margin-top: 2rem;
       }
     </style>
   </head>
+
   <body>
     <header>
-      <img src="./assets/logo.svg" alt="company-logo">
+      <img src="./assets/logo.svg" alt="company-logo" />
       <h1>Multimedia in HTML</h1>
     </header>
 
@@ -54,7 +55,15 @@
       <article>
         <h2>Handling multimedia in HTML on Frontend Bootcamp</h2>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/kR8dPbrDeV4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/kR8dPbrDeV4"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
 
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -70,10 +79,7 @@
 
         <h3>Responsive images in a nutshell</h3>
         <picture>
-          <source
-            media="(max-width: 640px)"
-            srcset="./assets/ecx-team-s.jpg"
-          />
+          <source media="(max-width: 640px)" srcset="./assets/ecx-team-s.jpg" />
           <source
             media="(max-width: 1024px)"
             srcset="./assets/ecx-team-m.jpg"
@@ -82,7 +88,7 @@
             media="(max-width: 1400px)"
             srcset="./assets/ecx-team-l.jpg"
           />
-          <img src="./assets/ecx-team-l.jpg" alt="team-picture">
+          <img src="./assets/ecx-team-l.jpg" alt="team-picture" />
         </picture>
       </article>
     </main>

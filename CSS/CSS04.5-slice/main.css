@@ -197,12 +197,15 @@ a.button:hover{
     overflow: hidden;
     border:1px solid #3a3b41;
 }
+/*images*/
+
 img:hover{
   filter: brightness(120%);
 }
 img{
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 /* 7.links */
 a.link-alternative {
@@ -231,11 +234,14 @@ a.link-trademark,a.footer-navbar-link{
   .benefit-box{
     display: flex;
   }
+  .benefits-box-image{
+    width: 100%;
+  }
   img{
     height: 100%;
     width: 100%;
+    object-fit: cover;
   }
-  
 }
 /*******
 
@@ -262,11 +268,7 @@ a.link-trademark,a.footer-navbar-link{
   margin-top: 25px;
   margin-bottom: 10px;
 }
-.footer-listitem>a{
-  color: whitesmoke;
-  padding: 0.3em;
-}
-.footer-listitem:not(:last-child)::after {
+.footer-listitem:not(:last-child)::after{
   content: "";
   display: inline-block;
   height: 10px;
@@ -280,11 +282,15 @@ a.link-trademark,a.footer-navbar-link{
   font-size: 12px;
   margin-bottom: 8px;
 }
+.footer-listitem>a{
+  color: white;
+  padding: 0.3em;
+}
 .footer-navbar{
   padding:5px;
   margin-bottom: 10em;
 }
-ul.footer-ul-navbar{
+.footer-ul-navbar{
   display: flex;
   justify-content: center;
   font-size: 10px;
@@ -296,5 +302,39 @@ ul.footer-ul-navbar{
   width: 1px;
   margin: 0 5px 0;
   background-color: lightgray;
+}
+/*******
+
+9. Cookie bar
+
+*******/
+.cookie-bar{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  position: fixed;
+  height: fit-content;
+  width: 100%;
+  bottom: 0;
+  background-color: rgb(12, 11, 11);
+}
+.message{
+  margin-top: 10px;
+}
+.message>a{
+  color: #2929df;
+  text-decoration: underline;
+}
+.cookie-button{
+  margin: 5px;
+  padding: 10px;
+  background-color:rgb(29, 29, 37);
+  box-shadow: 2px 2px 2px gray;
+}
+.accept,.decline{
+  background-color: #2d8dff;
+}
+.accept:hover,.decline:hover{
+  background-color: #5897e4;
 }
 

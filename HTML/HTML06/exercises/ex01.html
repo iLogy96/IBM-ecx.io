@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        body{
+            max-width: fit-content;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input:valid {
+            background-color: #ddffdd;
+        }
+        input:invalid {
+            background-color: #ffdddd;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="action-page" method="get">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" minlength="5" maxlength="20" required pattern="{[a-z]\, [a-z]*}">
+        <label for="">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="number">Tel:</label>
+        <input type="tel" id="number" name="number" maxlength="15" required>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" rows="10" col="10" maxlength="50" required>
+    </form>
+</body>
+</html>

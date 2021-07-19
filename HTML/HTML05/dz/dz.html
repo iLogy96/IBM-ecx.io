@@ -9,12 +9,14 @@
     <style>
         body {
             max-width: fit-content;
+            background-color: lightblue;
         }
+
     </style>
 </head>
 
 <body>
-    <fieldset class="checkout">
+    <fieldset class="checkout"> <!--nije dobra praksa wrappat form u fieldset samo zbog izgleda, jer imamo dva wrappera-->
         <legend>Checkout</legend>
         <form action="action-page" method="get">
             <div>
@@ -61,7 +63,7 @@
                 <legend>Payment details</legend>
                 <div>
                     <label for="credit-card">Credit card number:</label>
-                    <input type="number" name="credit-card" id="credit-card" />
+                    <input type="number" name="credit-card" id="credit-card" placeholder="xxxx-xxxx-xxxx-xxxx" />
                 </div>
                 <div>
                     <label for="card-name">Name on card:</label>
