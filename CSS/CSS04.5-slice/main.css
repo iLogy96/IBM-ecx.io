@@ -217,7 +217,7 @@ a.link-alternative {
   height: 0.7em;
   margin-left: 5px;
 }
-a.link-alternative:hover,.image-chevron:hover{
+a.link-alternative:hover,a.link-alternative:hover svg{
   display: inline-block;
   color:#84addf;
   fill:currentColor;
