@@ -87,6 +87,13 @@ const stringSetter = (myString) => {
 };
 console.log(stringSetter("The Quick Brown Fox"));
 //funkcija koja printa elemente iz nested arraya
+let array1= [
+  [1, 2, [1,2,3], 24],
+  [8, 11, 9, 4],
+  [7, 0, 7, 27],
+  [7, 4, 28, 14],
+  [3, 10, 26, 7],
+]
 const printArrays = (array) => {
   for (let i in array) {
     console.log("row " + i);
@@ -95,12 +102,5 @@ const printArrays = (array) => {
     }
   }
 };
-console.log(
-  printArrays([
-    [1, 2, 1, 24],
-    [8, 11, 9, 4],
-    [7, 0, 7, 27],
-    [7, 4, 28, 14],
-    [3, 10, 26, 7],
-  ])
-);
+console.log(printArrays(array1));
+console.log(array1.flat(2))

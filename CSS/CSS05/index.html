@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --input-gap:1em;
+        }
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            max-width: 500px;
+            margin: 40px auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            border: 3px solid;
+            border-radius: 5px;
+            font-size: 1rem;
+            padding: var(--input-gap);
+            outline: none;
+            appearance: none;
+        }
+        select{
+            background-image: url(./chevron.png);
+            background-repeat: no-repeat;
+            background-size: 15px;
+            background-position-x: calc(100% - var(--input-gap));
+            background-position-y: 50% ;
+        }
+        input:focus,
+        textarea:focus {
+            border-color: green;
+        }
+
+        label {
+            display: block;
+            margin: 0 0 0.2em;
+            font-weight: bold;
+            user-select: none;
+            position: relative;
+        }
+
+        ::placeholder {
+            color: #b9b9b9;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 6em;
+        }
+
+        span.icon {
+            line-height: 24px;
+        }
+
+        .form-group-error-message {
+            color: darkred;
+            margin-top: 0.5em;
+        }
+
+        .form-group.has-error input,
+        .form-group.has-error textarea {
+            border-color: darkred;
+        }
+
+        .checkbox .icon {
+            border-radius: 4px;
+            border: 2px solid;
+            display: block;
+            height: 24px;
+            width: 24px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .checkbox label {
+            padding-left: 28px;
+            margin-bottom: 1em;
+            cursor: pointer;
+        }
+
+        .checkbox [type="checkbox"] {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        [type="checkbox"]:checked~.icon {
+            background: dodgerblue;
+            box-shadow: 0 0 0 3px white inset;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="" id="name" placeholder="John Doe">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="" id="email" placeholder="john.doe@gmail.com">
+    </div>
+    <div class="form-group has-error">
+        <label for="passsword">Password</label>
+        <input type="password" name="" id="passsword" placeholder="*******">
+        <div class="form-group-error-message">This field is required.</div>
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="" id="message" placeholder="Your complaint"></textarea>
+    </div>
+
+    <div class="form-group checkbox">
+        <label for="human">
+            <span class="text">Human</span>
+            <input type="checkbox" name="" id="human">
+            <span class="icon"></span>
+        </label>
+        <label for="animal">
+            <span class="text">Animal</span>
+            <input type="checkbox" name="" id="animal">
+            <span class="icon"></span>
+        </label>
+    </div>
+    <div class="form-group">
+        <label for="selekcija">Odabir</label>
+        <select id="selekcija">
+            <option value="1">Selection 1</option>
+            <option value="2">Selection 2</option>
+            <option value="3">Selection 3</option>
+            <option value="4">Selection 4</option>
+        </select>
+    </div>
+</body>
+
+</html>

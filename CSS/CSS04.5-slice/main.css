@@ -2,6 +2,8 @@
   --body-bg: #15161e;
   --header-gap: 15px;
   --text-large: 20px;
+  --aligned-text:center;
+
 }
 /*******
 
@@ -117,7 +119,7 @@ h6 {
   background-image: url(./assets/hero.jpg);
   background-color: #150e14;
   background-position: center 0;
-  background-size: contain;
+  background-size:cover;
   background-repeat: no-repeat;
   height: 420px;
 }
@@ -225,24 +227,6 @@ a.link-alternative:hover,a.link-alternative:hover svg{
 a.link-trademark,a.footer-navbar-link{
   color: whitesmoke;
 }
-/*responsive design*/
-@media screen and (max-width: 800px) {
-  .benefits-wrapper{
-    display: flex;
-    flex-direction: column;
-  }
-  .benefit-box{
-    display: flex;
-  }
-  .benefits-box-image{
-    width: 100%;
-  }
-  img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-}
 /*******
 
 8. Footer
@@ -337,4 +321,43 @@ a.link-trademark,a.footer-navbar-link{
 .accept:hover,.decline:hover{
   background-color: #5897e4;
 }
-
+/*responsive design*/
+@media screen and (max-width: 800px) {
+  .benefits-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  .benefit-box{
+    display: flex;
+  }
+  .benefits-box-image{
+    width: 100%;
+  }
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .hero{
+    display: flex;
+    justify-content: center;
+  }
+  .footer-navbar-listitem:not(:last-child)::after,.footer-listitem:not(:last-child)::after{
+    display: none;
+  }
+  .footer-navbar-listitem,.footer-listitem{
+    padding-left: 4px;
+  }
+  li.primary-navigation-item::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 80%;
+    position: absolute;
+    top: 100%;
+    background: white;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+}
