@@ -5,15 +5,15 @@ let div = document.querySelector('.array-wrapper');
 
 buttonAdd.addEventListener("click",addElement)
 buttonDisplay.addEventListener("click",displayElement)
-counter = 0;
-array = Array(0);
+// counter = 0;
+let array = [];
 
 function addElement(){
-    array[counter]=input1.value;
+    array.push(input1.value);
     console.log(array);
-    counter++
 }
 function displayElement(){
+    span = '';
     for (let i = 0; i<array.length;i++){
         let span = document.createElement('div');
         let spanContent = document.createTextNode(`Element ${i}: ${array[i]}`);
