@@ -1,0 +1,36 @@
+nav{
+    background-color: green;
+    position:absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+}
+li{
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    font-size: 25px;
+}
+a:link{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: yellow;
+    text-decoration: none;
+}
+li > ul {
+    display: none;
+}
+li:hover ul {
+    display: block;
+    position: absolute;
+    left: 200px;
+    margin: 0;
+    background-color: green;
+}
+li:hover ul li a:link {
+    display: block;
+    margin-left: -30px;
+    margin-top:12px;
+}

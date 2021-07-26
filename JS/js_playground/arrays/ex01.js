@@ -87,13 +87,13 @@ const stringSetter = (myString) => {
 };
 console.log(stringSetter("The Quick Brown Fox"));
 //funkcija koja printa elemente iz nested arraya
-let array1= [
-  [1, 2, [1,2,3], 24],
+let array1 = [
+  [1, 2, [1, 2, 3], 24],
   [8, 11, 9, 4],
   [7, 0, 7, 27],
   [7, 4, 28, 14],
   [3, 10, 26, 7],
-]
+];
 const printArrays = (array) => {
   for (let i in array) {
     console.log("row " + i);
@@ -103,4 +103,64 @@ const printArrays = (array) => {
   }
 };
 console.log(printArrays(array1));
-console.log(array1.flat(2))
+console.log(array1.flat(2));
+//sum of two arrays
+let array3 = [];
+let ctr = 0;
+let x = 0;
+const sumArrays = (arr1, arr2) => {
+  while (ctr < arr1.length && ctr < arr2.length) {
+    array3.push(arr1[ctr] + arr2[ctr]);
+    ctr++;
+  }
+  if (ctr === arr1.length) {
+    for (ctr = x; x < arr2.length; x++) {
+      array3.push(arr2[x]);
+    }
+  } else {
+    for (x = ctr; x < arr2.length; x++) {
+      array3.push(arr1[x]);
+    }
+  }
+  return array3;
+};
+console.log(sumArrays([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]));
+//find duplicates in array and push in new array
+function find_duplicate_in_array(arra1) {
+  var object = {};
+  var result = [];
+
+  arra1.forEach(function (item) {
+    if (!object[item]) 
+    object[item] = 0;
+    object[item] += 1;
+  });
+
+  for (var prop in object) {
+    if (object[prop] >= 2) {
+      result.push(prop);
+    }
+  }
+  console.log(object)
+  return result;
+}
+console.log(find_duplicate_in_array([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]));
+//remove null,0,false and undefined from array
+let arrayOne = []
+function removeIt (arr) {
+  arr.forEach((item) => {
+    if (typeof item === 'number'){
+      arrayOne.push(item)
+    }
+  })
+  return arrayOne
+}
+console.log(removeIt([0, 15, false, -22, '',undefined, 47, null]))
+//sort objects by title value
+let library = [ 
+  { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+  { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+  { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+  ];
+console.log(library.sort((a,b) => a.title.localeCompare(b.title)));
+// console.log(library.sort((a,b) => a.title.localeCompare(b.title)));

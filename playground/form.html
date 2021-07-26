@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <h1>Travel reservation form</h1>
+    <h3>*denotes mandatory</h3>
+    <form action="action-page" method="get">
+        <label for="full-name">Full name<sup>*</sup>:</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Firstname LastName">
+        <label for="email">E-mail<sup>*</sup>:</label>
+        <input type="email" id="email" name="email" placeholder="EMAIL_ADDRESS">
+        <label for="select">Select Tour Package <sup>*</sup> :</label>
+        <select name="select" id="select">
+            <option value="opt1">Goa</option>
+            <option value="opt2">Goa</option>
+            <option value="opt3">Goa</option>
+        </select>
+        <label for="number">Number of persons<sup>*</sup>:</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Firstname LastName">
+    </form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="navbar.css"> -->
+    <!--moje rješenje-->
+    <style>
+        .navbar{
+            padding: 2px;
+            width: 100%;
+            background-color: green;
+        }
+        ul>li{
+            list-style: none;
+        }
+        li>a{
+            color: white;
+            text-decoration: none;
+        }
+        ul:first-child{
+            display: flex;
+            font-size: 20px;
+            justify-content: center;
+            gap: 20px;
+        }
+        ul:nth-child(2){
+            display: none;
+        }
+        li:hover ul{
+            display: flex;
+            flex-direction: column;
+            position:absolute;
+            background-color: green;
+        }
+        li:hover ul li a:link{
+            margin-left: -40px;
+            margin-top: 10px;
+        }
+        li>a:hover{
+            color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+                <a href="#">Products</a>
+                <ul>
+                    <li><a href="#">Engineering</a></li>
+                    <li><a href="#">Telecom</a></li>
+                    <li><a href="#">Energy</a></li>
+                    <li><a href="#">Finance</a></li>
+                    <li><a href="#">Consultancy</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
