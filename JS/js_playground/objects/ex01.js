@@ -56,4 +56,15 @@ console.log(user['age']);
 console.log(user.name);
 user['name'] = 'chun-li'
 console.log(user.name);
-
+//konstruktor koji ce vracat volumen cilindra
+function Cylinder(height,diameter) {
+    this.height = height;
+    this.diameter = diameter;
+}
+Cylinder.prototype.Volume = function () {
+    let radius = this.diameter / 2;
+    return this.height * Math.PI * Math.pow(radius,2);
+}
+let cyl = new Cylinder (7,4)
+console.log(cyl.Volume().toFixed(4));
+//bubble sort

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./rgb-mixer.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inputs">
+            <label for="red">Change Red:</label>
+            <input type="text" id="red" name="text">
+            <button class="plus red">+</button>
+            <button class="minus red">-</button>
+            <label for="blue">Change Blue:</label>
+            <input type="text" id="blue" name="text">
+            <button class="plus blue">+</button>
+            <button class="minus blue">-</button>
+            <label for="green">Change Green:</label>
+            <input type="text" id="green" name="text">
+            <button class="plus green">+</button>
+            <button class="minus green">-</button>
+        </div>
+        <div class="rgb">
+            <div class="rgb-mixer"></div>
+            <div class="rgb-text">R: <span class="span-red">0</span> G: <span class="span-green">0</span> B: <span class="span-blue">0</span> O: <span>0</span>
+        </div>
+        </div>
+    </div>
+<script src="./rgb-mixer.js"></script>
+</body>
+</html>

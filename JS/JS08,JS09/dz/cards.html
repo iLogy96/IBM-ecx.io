@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 1000px;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .card {
+            height: fit-content;
+            width: 320px;
+            box-shadow: 2px 5px black;
+            background-image: -webkit-linear-gradient(-71deg, white 50%, #b3b2fe 50%);
+            cursor: pointer;
+        }
+
+        .company-name {
+            flex-direction: column;
+            padding: 5px;
+        }
+
+        .credentials {
+            font-size: 12px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .companyName {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .username {
+            font-size: 14px;
+        }
+        .card-info{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search-section">
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search">
+        <label for="sort">Sort:</label>
+        <select name="sort" id="sort">
+            <option value="no-sort" class="option1">No sort</option>
+            <option value="company" class="option2">Sort by company</option>
+            <option value="owner" class="option3">Sort by owner</option>
+        </select>
+    </div>
+    <br>
+    <div class="wrapper">
+    </div>
+    <script src="./cards.js"></script>
+</body>
+
+</html>

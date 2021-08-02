@@ -1,0 +1,22 @@
+body{
+    margin: 40px;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+.inputs,
+.rgb{
+    display: flex;
+    flex-direction: column;
+}
+.rgb-mixer{
+    height: 250px;
+    width: 250px;
+    padding: 10px;
+}
+.plus,
+.minus {
+    padding: 5px;
+    width: 30%;
+}
