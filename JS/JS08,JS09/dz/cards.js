@@ -221,10 +221,11 @@ const data = [
     },
   },
 ];
-console.log()
+console.log();
 //funkcija koja mi appenda djecu
 HTMLDivElement.prototype.appendChildren = function () {
-  for (let i = 0; i < arguments.length; i++) this.appendChild(arguments[i]);
+  for (let i = 0; i < arguments.length; i++) 
+  this.appendChild(arguments[i]);
 };
 //main function
 const divWrapper = document.querySelector(".wrapper");
@@ -297,6 +298,7 @@ function sortBy(event) {
   } else if (event.target.value === "company") {
     data.sort((a, b) => a.company.name.localeCompare(b.company.name));
     divWrapper.innerHTML = "";
+
     cardData(data);
   } else {
     data.sort((a, b) => a.id - b.id);
@@ -307,7 +309,8 @@ function sortBy(event) {
 
 //search
 const search = document.querySelector("#search");
-search.addEventListener("keyup", (event) => {
+search.addEventListener("keyup", searchBy);
+function searchBy(event) {
   divWrapper.innerHTML = "";
   const searchData = data.filter(
     (item) =>
@@ -315,19 +318,19 @@ search.addEventListener("keyup", (event) => {
       item.company.name.startsWith(event.target.value)
   );
   cardData(searchData);
-});
+}
 
 //click event
-const card = document.querySelector(".card");
-const body = document.querySelector("body");
-card.addEventListener("click", cardClick)
-function cardClick () {
-      divWrapper.style.backgroundColor = "gray";
-      divWrapper.style.opacity = "0.5";
-      let cardInfo = document.createElement("div");
-      cardInfo.classList.add("card-info");
-      let cardInfoCompanyName = document.createTextNode();
-      let cardInfoMotto = document.createTextNode('');
-      cardInfo.appendChildren(cardInfoCompanyName, cardInfoMotto);
-      body.appendChild(cardInfo);
-}
+// const card = document.querySelector(".card");
+// const body = document.querySelector("body");
+// card.addEventListener("click", cardClick)
+// function cardClick () {
+//       divWrapper.style.backgroundColor = "gray";
+//       divWrapper.style.opacity = "0.5";
+//       let cardInfo = document.createElement("div");
+//       cardInfo.classList.add("card-info");
+//       let cardInfoCompanyName = document.createTextNode(data.company.name);
+//       let cardInfoMotto = document.createTextNode();
+//       cardInfo.appendChildren(cardInfoCompanyName, cardInfoMotto);
+//       body.appendChild(cardInfo);
+// }
