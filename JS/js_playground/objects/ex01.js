@@ -67,4 +67,5 @@ Cylinder.prototype.Volume = function () {
 }
 let cyl = new Cylinder (7,4)
 console.log(cyl.Volume().toFixed(4));
-//bubble sort
+//dice example
+
