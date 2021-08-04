@@ -1,0 +1,83 @@
+.container {
+  padding: 3rem 0;
+}
+.container h1,
+.container h2 {
+  color: #263238;
+  margin-bottom: 3rem;
+}
+.container p {
+  color: #455a64;
+  margin-bottom: 1.5rem;
+}
+.container li {
+  color: #455a64;
+  margin-bottom: 0.75rem;
+}
+
+.card {
+  padding: 1.5em;
+  border: 2px solid;
+  color: #2F4F4F;
+}
+.card-heading {
+  font-size: 2.25em;
+  color: #1E90FF;
+}
+.card-link {
+  text-decoration: none;
+  color: #A52A2A;
+}
+.card-link:hover {
+  text-decoration: underline;
+  color: #D2691E;
+}
+
+.message, .message-error {
+  border: 2px solid #37474f;
+  border-radius: 3px;
+  color: #37474f;
+  text-align: center;
+}
+.message-error {
+  border: 2px solid #d32f2f;
+  color: #d32f2f;
+  background-color: #ffcdd2;
+}
+
+.text-link, .sidebar-link, .footer-link {
+  color: #42a5f5;
+  text-decoration: none;
+  transition: color 300ms;
+}
+.text-link:hover, .sidebar-link:hover, .footer-link:hover {
+  color: #ec407a;
+}
+
+.button {
+  padding: 0, 5em 1em;
+  font-size: 1rem;
+}
+.button-primary {
+  color: red;
+  background-color: blue;
+  line-height: 1.2;
+  text-align: center;
+}
+.button-secondary {
+  color: gray;
+  background-color: green;
+}
+
+body {
+  width: 400px;
+  height: 400px;
+}
+
+.section {
+  position: absolute;
+  inset: 5px 10px;
+  height: 50vh;
+}
+
+/*# sourceMappingURL=main.css.map */

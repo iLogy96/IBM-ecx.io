@@ -1,0 +1,234 @@
+//generalno pravilo nestanja je ići do tri razine i ne više od tog
+//sass main.scss main.css kreira mapu i ostalo bitnog
+//compile with sass --watch main.scss main.css
+//varijable dodajemo s dolarom na početku
+//$primary:#7e57c2; - globalna varijabla
+//$background:#fff !global; -ovo će promijeniti globalnu varijablu, ali nije česta praksa
+//$color:blue; $color:red !default; - ovo će setat default boju
+
+//ex01
+
+// .service {
+//     &-result {
+//         margin-top: 2em;
+//     }
+//     &-model {
+//         background-color: white;
+
+//         &-name {
+//             margin-bottom: 0;
+//             padding: 1em 0;
+//             color: blue;
+//             font-size: 1.5em;
+//             text-align: center;
+//         }
+
+        // &-message {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     align-items: center;
+        //     padding: 2em;
+        // }
+//     }
+//     &-button {
+//         background-color: white;
+//         padding: 1em 1.5em;
+//         border-radius: 5px;
+//         color: white;
+//     }
+// }
+//primjer s default
+// $primary: red;
+// $primary: blue !default;
+//inače čita koja je niže, ali stavili smo da blue nije default, pa će ipak bit red
+
+//ex02
+
+$spacing: 1.5rem;
+$primary: #263238;
+$secondary: #455a64;
+
+.container {
+    padding: $spacing * 2 0;
+    h1,
+    h2 {
+        color: $primary;
+        margin-bottom: $spacing * 2;
+    }
+    p {
+        color: $secondary;
+        margin-bottom: $spacing;
+    }
+    li {
+        color: $secondary;
+        margin-bottom: $spacing/2;
+    }
+}
+
+//mape - $grid-breakpoints: ( xs:0,sm:36rem, itd ključevi);
+//ex03
+//01 - create map
+$color-map: (
+    primary:#1E90FF,
+    secondary:#4169E1,
+    text:#2F4F4F,
+    link:#A52A2A,
+    hover:#D2691E,
+);
+
+//02 - using values
+
+.card{
+    padding: 1.5em;
+    border: 2px solid;
+    color: map-get($color-map,text);
+
+    &-heading{
+        font-size: 2.25em;
+        color: map-get($color-map,primary);
+    }
+    &-link{
+        text-decoration: none;
+        color: map-get($color-map,link);
+    }
+    &-link:hover{
+        text-decoration: underline;
+        color: map-get($color-map,hover);
+    }
+}
+
+//placeholder
+//%section {margin-bottom:3rem; }
+//.about-us { @extend %section;}
+//ex04 - %buttonstyles je placeholder za stil za buttone i samo ga dodamo s extendom
+
+// %button-styles{
+//     color:red;
+//     background-color: blue;
+//     font-size: 1.2rem;
+// }
+// .modal{
+//     height: 100vh;
+//     //ovako radim odmah modal after
+//     &::after{
+//         content: '';
+//         background-color: red;
+//         position: absolute;
+//         inset: 0;
+//     }
+
+    // &-button{
+    //     @extend %button-styles;
+    // }
+// }
+//ili
+// %modal-nekakom-styles{
+//     height: 100vh;
+//     //ovako radim odmah modal after
+//     &::after{
+//         content: '';
+//         background-color: red;
+//         position: absolute;
+//         inset: 0;
+//     }
+// }
+// .neka-komponenta{
+//     @extend %modal-nekakom-styles;
+// }
+// .modal{
+//     @extend %modal-nekakom-styles;
+//     &-button {
+//         @extend %button-styles;
+//     }
+// }
+
+//ex 05 - class
+.message{
+    border:2px solid #37474f;
+    border-radius: 3px;
+    color: #37474f;
+    text-align: center;
+    &-error{
+        @extend .message;
+        border: 2px solid #d32f2f;
+        color: #d32f2f;
+        background-color: #ffcdd2;
+    }
+}
+//placeholders
+%link{
+    color: #42a5f5;
+    text-decoration: none;
+    transition:color 300ms;
+    &:hover{
+        color: #ec407a;
+    }
+}
+.text-link,.sidebar-link,.footer-link{
+    @extend %link;
+}
+
+//@mixin, mocniji od extenda, isto reusea stilove kao extend, ali zaseban je, ne ovisi o klasi i placeholderu
+//također, može primiti parametre kao funkcija u js-u
+@mixin reset-link{
+    color:cornflowerblue;
+    text-decoration: none;
+}
+@mixin reset-link($color){
+    color: $color;
+    text-decoration: none;
+}
+//pozivamo ga sa @include reset-link ili s parametrom @include reset-link(red);
+//to je glavna razlika, mozemo dodat argumente
+@mixin position($position,$top,$left){
+    position: $position;
+    top:$top;
+    left:$left;
+}
+//mozemo staviti defaultne vrijednosti u zagradi
+@mixin pseudo ($content: '', $display:'block', $position:'absolute') {
+    content: $content;
+    display: $display;
+    position: $position;
+}
+//primjer
+@mixin button-styles ($color,$bg){
+    color:$color;
+    background-color: $bg;
+    @content;
+}
+.button {
+    padding: 0,5em 1em;
+    font-size: 1rem;
+
+    //content moze passat stilove jos unutra ispod include, odlično ako se dva gumba generalno razlikuju po nekim sitnicama, pa passamo content ispode, a sav zajednički content storeamo u keyeve.
+
+    &-primary{
+        @include button-styles(red,blue ){
+            //u viticastoj je sve @content i dodaje se
+            line-height: 1.2;
+            text-align: center;
+        }
+    }
+    &-secondary{
+        @include button-styles(gray,green )
+    }
+}
+//ex06-mixin
+
+//01 - create a mixin
+body{
+    width: 400px;
+    height: 400px;
+}
+@mixin position ($position:'relative',$inset:'0',$height){
+    position:$position;
+    inset: $inset;
+    height: $height;
+    @content;
+}
+
+.section{
+    @include position(absolute,$inset:5px 10px,$height:50vh)
+}
