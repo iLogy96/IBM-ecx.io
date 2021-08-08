@@ -1,0 +1,251 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("./_variables.scss");
+@import url(./_variables.scss);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #15161e;
+  color: #fdfdfd;
+  font-family: sans-serif;
+  line-height: 1.2em;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+.header {
+  background-color: #15161e;
+  border-bottom: 1px solid #313339;
+  padding: 15px;
+}
+.header-container {
+  max-width: 1140px;
+  margin: auto;
+}
+.header-container button {
+  background: transparent;
+  color: inherit;
+  border: none;
+}
+.header-container-primary-navigation {
+  display: flex;
+  gap: 25px;
+}
+.header-container .primary-nav-item {
+  position: relative;
+}
+.header-container .primary-nav-item:last-child {
+  margin-left: auto;
+}
+.header-container .primary-nav-item.has-dropdown svg {
+  fill: white;
+  width: 0.7em;
+  height: 0.7em;
+  transform: rotate(90deg);
+}
+.header-container .has-dropdown:focus-within .dropdown {
+  display: block;
+}
+.header-container .has-dropdown:focus-within svg {
+  fill: white;
+  width: 0.7em;
+  height: 0.7em;
+  transform: rotate(270deg);
+  transition: 200ms;
+}
+.header-container .dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 15px);
+  right: 0;
+  min-width: 100px;
+  padding: 0.2em;
+  background-color: #15161e;
+}
+.header-container .dropdown-item a {
+  display: block;
+  padding: 0.5em;
+}
+.header-container .dropdown-item:not(:last-child) {
+  border-bottom: 1px solid;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.hero {
+  background-image: url(../assets/hero.jpg);
+  background-color: #150e14;
+  background-position: center 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 420px;
+}
+.hero-title {
+  font-size: 34px;
+  padding-top: 130px;
+}
+.hero-lead {
+  font-size: 20px;
+  margin: 1.5em 0;
+}
+.hero a.button, .hero button.button {
+  display: inline-block;
+  margin-left: -8px;
+  background-color: #2374e0;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.hero-button:hover a {
+  border: 2px solid #76aff4;
+  padding: 8px 23px;
+  color: white;
+}
+
+.benefits {
+  background-color: #1a1c23;
+  padding-bottom: 40px;
+}
+.benefits-lead {
+  text-align: center;
+  max-width: 60%;
+  margin: 0px auto;
+  font-size: 20px;
+  line-height: 1.3em;
+  padding: 30px 0;
+}
+.benefits-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.benefits-wrapper {
+  display: flex;
+  gap: 15px;
+}
+.benefits-wrapper-box {
+  background-color: #292b33;
+}
+.benefits-wrapper-summary {
+  padding: 10px;
+  background-color: #292b33;
+}
+.benefits-wrapper-summary-title {
+  margin: 25px 0 25px;
+}
+.benefits-wrapper-summary-description {
+  margin-bottom: 25px;
+}
+.benefits-wrapper-summary-image {
+  display: block;
+  height: 175px;
+  width: auto;
+  overflow: hidden;
+  border: 1px solid #3a3b41;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+img:hover {
+  filter: brightness(120%);
+}
+
+a:link,
+a:visited {
+  background-color: none;
+  color: #d1d1d3;
+  text-decoration: none;
+}
+
+a:link:hover,
+a:visited:hover {
+  background-color: none;
+  color: whitesmoke;
+}
+
+a.link-alternative {
+  color: #2374e0;
+}
+a.link-alternative .image-chevron {
+  fill: #2d8dff;
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: 5px;
+}
+a.link-alternative:hover, a.link-alternative .image-chevron:hover svg {
+  display: inline-block;
+  color: #84addf;
+  fill: currentColor;
+}
+
+/*# sourceMappingURL=main.css.map */

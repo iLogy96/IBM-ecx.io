@@ -1,0 +1,58 @@
+@import "./variables";
+.header {
+    background-color: map-get($color-map, primary);
+    border-bottom: 1px solid #313339;
+    padding: map-get($color-map, header-gap);
+    &-container {
+        max-width: 1140px;
+        margin: auto;
+
+        button {
+            background: transparent;
+            color: inherit;
+            border: none;
+        }
+        &-primary-navigation {
+            display: flex;
+            gap: 25px;
+        }
+        .primary-nav-item {
+            position: relative;
+            &:last-child {
+                margin-left: auto;
+            }
+            &.has-dropdown svg {
+                fill: white;
+                width: 0.7em;
+                height: 0.7em;
+                transform: rotate(90deg);
+            }
+        }
+        .has-dropdown:focus-within .dropdown {
+            display: block;
+        }
+        .has-dropdown:focus-within svg {
+            fill: white;
+            width: 0.7em;
+            height: 0.7em;
+            transform: rotate(270deg);
+            transition: 200ms;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 15px);
+            right: 0;
+            min-width: 100px;
+            padding: 0.2em;
+            background-color: map-get($color-map, primary);
+            &-item a {
+                display: block;
+                padding: 0.5em;
+            }
+            &-item:not(:last-child) {
+                border-bottom: 1px solid;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import './variables';
+a:link,
+a:visited {
+  @include color-group(none, #d1d1d3) {
+    text-decoration: none;
+  }
+}
+a:link:hover,
+a:visited:hover {
+  @include color-group(none, whitesmoke);
+}
+a.link-alternative {
+    color: map-get($color-map, button-color);
+    .image-chevron{
+        fill: #2d8dff;
+        width: 0.7em;
+        height: 0.7em;
+        margin-left: 5px;
+    }
+    &:hover,.image-chevron:hover svg{
+        display: inline-block;
+        color:#84addf;
+        fill:currentColor;      
+    }
+}
