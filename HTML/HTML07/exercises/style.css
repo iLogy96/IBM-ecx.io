@@ -1,52 +1,61 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
 }
 
-.combobox-label{
+.combobox-label {
     font-size: 1rem;
     font-weight: bold;
     margin-right: 10px;
 }
-.combobox-wrapper{
+
+.combobox-wrapper {
     display: inline-block;
     font-size: 1rem;
     position: relative;
 }
-.combobox-input{
+
+.combobox-input {
     font-size: inherit;
     line-height: 1.5em;
-    border:1px solid #aaa;
-    border-radius:3px;
-    width:200px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    width: 200px;
 }
-.combobox-listbox{
+
+.combobox-listbox {
     list-style-type: none;
-    list-style-position: inside;
     padding: 0;
-    margin:0;
+    margin: 0;
+
     background: white;
     border: 1px solid #aaa;
+
     position: absolute;
-    width:100%;
-    top:100%;
+    width: 100%;
+    top: 100%;
 }
-.combobox-listbox .result{
-    padding:0.25em;
+
+.combobox-listbox .result {
+    padding: 0.25em;
 }
-.combobox-listbox .result:hover{
-    background: rgb(139,189,225);
+
+.combobox-listbox .result:hover {
+    background: rgb(139, 189, 225);
     cursor: pointer;
 }
+
 .combobox-listbox .result.highlighted {
-    background: rgb(139,189,225);
+    background: rgb(139, 189, 225);
 }
-.submit-btn{
-    margin-top:2rem;
+
+.submit-btn {
+    margin-top: 2rem;
 }
-.hidden{
+
+.hidden {
     display: none;
 }
