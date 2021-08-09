@@ -1,0 +1,41 @@
+@media screen and (max-width: 800px) {
+    .benefits-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .benefits-box {
+        display: flex;
+        &-image {
+            width: 100%;
+        }
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .hero {
+        display: flex;
+        justify-content: center;
+    }
+    .footer-navbar-listitem:not(:last-child)::after,
+    .footer-listitem:not(:last-child)::after {
+        display: none;
+    }
+    .footer-navbar-listitem,
+    .footer-listitem {
+        padding-left: 4px;
+    }
+    li.primary-navigation-item::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 80%;
+        position: absolute;
+        top: 100%;
+        background: white;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+}

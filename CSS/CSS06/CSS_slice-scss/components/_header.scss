@@ -1,0 +1,51 @@
+@import "./variables";
+
+.header {
+    background-color: map-get($variable-map,primary);
+    border-bottom: 1px solid #313339;
+    padding:map-get($variable-map,header-gap);
+}  
+.primary-nav {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    &-item {
+        position: relative;
+        &:last-child {
+            margin-left: auto;
+        }
+    }
+    &-item.has-dropdown:focus-within .dropdown {
+        display: block;
+    }
+    &-item.has-dropdown:focus-within svg {
+        transform: rotate(270deg);
+        transition: 200ms;
+    }
+    &-item.has-dropdown button {
+        display: flex;
+        gap: 5px;
+    }
+    &-item.has-dropdown svg {
+        fill: white;
+        width: 0.7em;
+        height: 0.7em;
+        transform: rotate(90deg);
+    }
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + var(--header-gap));
+    right: 0; /* apsolutna pozicija, right 0, osigurali smo se da ide lijevo*/
+    min-width: 100px;
+    padding: 0.2em;
+    background-color: map-get($variable-map, primary);
+    &-item a {
+        display: block;
+        padding: 0.5em;
+    }
+    &-item:not(:last-child) {
+        border-bottom: 1px solid;
+    }
+}

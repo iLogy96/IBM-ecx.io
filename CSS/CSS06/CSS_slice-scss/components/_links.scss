@@ -1,0 +1,18 @@
+a.link-alternative {
+    color: #2d8dff;
+    &:hover,&:hover svg{
+        display: inline-block;
+        color: #84addf;
+        fill: currentColor;    
+    }
+}
+.image-chevron {
+    fill: #2d8dff;
+    width: 0.7em;
+    height: 0.7em;
+    margin-left: 5px;
+}
+a.link-trademark,
+a.footer-navbar-link {
+    color: whitesmoke;
+}

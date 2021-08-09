@@ -1,0 +1,39 @@
+@import './variables';
+@mixin displayFlex (){
+    display: flex;
+    justify-content: center;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: map-get($variable-map,primary);
+    &-logo{
+        @include displayFlex();
+        color: #ffffff;
+        font-family:sans-serif;
+        margin-top: 50px;
+        font-size: 32px;      
+    }
+    &-nav-ul{
+        @include displayFlex();
+        margin-top: 25px;
+        margin-bottom: 10px;
+        &-listitem:not(:last-child)::after{
+            content: "";
+            display: inline-block;
+            height: 10px;
+            width: 1px;
+            background-color: lightgray;          
+        }
+        &-listitem>a{
+            color: white;
+            padding: 0.3em;          
+        }      
+    }
+    &-copyright,&-trademarks{
+        @include displayFlex();
+        color: #b9babc;
+        font-size: 12px;
+        margin-bottom: 8px;      
+    }   
+}

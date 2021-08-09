@@ -1,0 +1,32 @@
+@import './variables';
+
+.hero{
+    background-image: url(../assets/hero.jpg);
+    background-color: #150e14;
+    background-position: center 0;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 420px;
+    
+    &-title{
+        font-size: 34px;
+        padding-top: 130px;      
+    }
+    &-lead{
+        font-size: map-get($variable-map,large-text);
+        margin: 1em 0;      
+    }
+}
+a.button,
+button.button {
+  display: inline-block;
+  background-color: #2374e0;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+a.button:hover{
+  border:2px solid #76aff4;
+  padding: 8px 23px;
+}

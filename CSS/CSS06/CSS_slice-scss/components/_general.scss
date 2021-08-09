@@ -1,0 +1,37 @@
+@import './variables';
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+button {
+    background: transparent;
+    color: inherit;
+    border: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+body {
+    color: #fdfdfd;
+    font-family: sans-serif;
+    background-color: map-get($variable-map,primary);
+    line-height: 1.2;
+}
+a:link,
+a:visited {
+    color: #e6e1e1;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+}
+img {
+    width: 100%;
+    height: auto;
+}
