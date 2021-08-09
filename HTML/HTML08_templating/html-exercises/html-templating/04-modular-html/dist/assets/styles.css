@@ -1,0 +1,94 @@
+html {
+  background: black;
+  color: white;
+}
+
+body {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header {
+  height: 150px;
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+header img {
+  width: 150px;
+}
+
+nav {
+  height: 60px;
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-right: 1rem;
+  color: #0062ff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: white;
+}
+
+main {
+  padding: 0 1rem;
+}
+
+article img {
+  width: 100%;
+}
+
+footer {
+  padding: 2rem 1rem;
+  border-top: 1px solid white;
+  margin-top: 2rem;
+}
+
+.form-control {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.form-control label {
+  margin-right: 2rem;
+  width: 60px;
+  font-size: 1.3rem;
+}
+
+.form-control input,
+.form-control textarea {
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  border: 0;
+  border-radius: 3px;
+  min-width: 400px;
+}
+
+.submit {
+  background-color: #0062ff;
+  padding: 1rem;
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  font-size: 1.3rem;
+  min-width: 140px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding:15px 0;
+}

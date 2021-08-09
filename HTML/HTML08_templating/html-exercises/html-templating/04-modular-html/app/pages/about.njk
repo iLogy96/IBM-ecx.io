@@ -1,0 +1,17 @@
+{% extends "layout.njk" %}
+{% set activePage = "about" %}
+
+{% block content %}
+    {%include "header.njk" %}
+    {%include "nav.njk" %}
+
+    <main>
+        <article>
+            <h2>About Us</h2>
+            <p>Beatiful paragraph</p>
+            <p>Another beatiful paragraph</p>
+        </article>
+    </main>
+
+    {%include "footer.njk" %}
+{%endblock%}
