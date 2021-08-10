@@ -148,10 +148,10 @@ img {
 }
 
 .hero {
-  background-image: url(../assets/hero.jpg);
+  background-image: url("./assets/hero.jpg");
   background-color: #150e14;
   background-position: center 0;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   height: 420px;
 }
