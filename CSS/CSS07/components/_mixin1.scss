@@ -1,0 +1,12 @@
+@mixin theme-colors($light-theme: true) {
+    @if $light-theme {
+      background-color: #f2ece4;
+      color: #036;
+    } @else {
+      background-color: #6b717f;
+      color: #d2e1dd;
+    }
+  }
+body {
+    @include theme-colors($light-theme:true);
+}

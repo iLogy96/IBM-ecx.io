@@ -1,0 +1,6 @@
+$base-size:1rem;
+@for $i from 1 through 6 {
+    .heading-#{$i} {
+        font-size: $base-size *(7-$i)
+    }
+}

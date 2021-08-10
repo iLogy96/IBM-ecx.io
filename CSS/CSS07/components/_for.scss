@@ -1,0 +1,20 @@
+//for petlja, to - final number excluded, through - final number included
+
+// $font-size: (24px, 22px, 20px ,18px);
+
+@for $i from 1 through 4 {
+    h#{$i} {
+        font-size: nth($font-size, $i);
+    }
+}
+// to će napraviti 3 headinga
+
+//line clamp dodamo klasu u paragraf recimo i zadamo value, odreže linije i doda ...
+@for $i from 3 through 5 {
+    .line-clamp-#{i} {
+        display: -webkit-box;
+        -webkit-line-clamp: $i;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}

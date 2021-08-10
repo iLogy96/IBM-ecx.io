@@ -1,0 +1,24 @@
+//ovako se pisu funkcije
+$rem-base: 16 !default;
+
+@function rem($value) {
+    @return $value / $rem-base * 1 rem;
+}
+
+//ili odmah
+@function rem($value: 16){
+    @return $value / 16 * 1rem;
+}
+//funckija sa petljom, ... su arbitrary argumenti, dakle samo ih šaljemo unutra
+@function sum($numbers ...) {
+    $sum: 0;
+    @each $number in $numbers {
+        $sum: $sum + $number;
+    }
+    @return $sum;
+}
+
+.block {
+    position:absolute;
+    top: sum(100px,35px,65px)
+}

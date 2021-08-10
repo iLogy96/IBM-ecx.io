@@ -1,0 +1,23 @@
+//ex01
+$weights: (
+    'light': light,
+    'normal': normal,
+    'bold': bold,
+);
+@each $type, $font-weight in $weights {
+    .p-#{$type} {
+        font-weight: $font-weight;
+    }
+}
+
+//ex02
+$colors: (
+    'red':#e53935,
+    'green':#43a047,
+    'blue':#1e88e5
+);
+@each $type, $color in $colors {
+    .p-#{$type} {
+        color:$color;
+    }
+}

@@ -1,0 +1,18 @@
+// $gap:15;
+
+// @while $gap <= 45 {
+//     .gap-#{$gap} {
+//         margin: #{$gap}px 0;
+//         padding: #{$gap/2}px 0;
+//     }
+//     $gap: $gap+5;
+// }
+
+$count:1;
+@while $count <= 5 {
+    .position-#{$count} {
+        position: absolute;
+        top:#{$count*10}#{'%'};
+    }
+    $count: $count + 1;
+}

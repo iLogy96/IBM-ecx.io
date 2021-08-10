@@ -1,0 +1,12 @@
+@mixin layout ($input){
+    @if $input == "grid" {
+        display: grid;
+        grid-template-columns: repeat(4,100px);
+        grid-auto-rows: 100px;
+}
+    @else if $input == "center"{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
