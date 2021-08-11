@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            border-radius: 10%;
+            background-color: black;
+        }
+
+        .red-js {
+            background-color: red;
+        }
+
+        .border-js {
+            border: 2px solid green;
+        }
+        .none {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>EX 01</h1>
+    <p><a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self"
+            href="https://www.ecx.io/">www.ecx.io</a></p>
+    <button onclick="getAttributes()">Click here to get attributes value</button>
+
+    <h1>EX 02</h1>
+    <button class="one">Change style</button>
+    <button class="two">Add class</button>
+    <div class="box"></div>
+    <h1>EX 03</h1>
+    <p class="key">[Press any key]</p>
+    <h1>EX 04</h1>
+
+    <h1 style="font-size: 32px;">More/Less</h1>
+    <div id="semaphore">
+        Play!
+    </div>
+    <div class="theGuessing" id="theGuessing">
+        <h1>Choose a number between 1 and 100</h1><br>
+        <input type="text" id="numInput" class="numInput" /><br><br>
+        <input type="button" value="Make Your Guess!" class="guessButton" id="guessButton">
+    </div>
+    <div id="someId" class="none">
+        <br>
+        <h1 style="font-size: 32px;" id="correctNum"></h1><br>
+        <h1>You guessed the correct number!</h1>
+        <input type="button" value="Play Again!" class="playButton">
+    </div>
+    <br>
+    <div class="more-less"></div>
+    <br>
+    <p>Number of guesses: <b id="counter"></b></p>
+    <br>
+    <h1>EX05</h1>
+    
+    <script src="./ex01.js"></script>
+    <script src="./ex02.js"></script>
+    <script src="./ex03.js"></script>
+    <script src="./ex04.js"></script>
+    <script src="./ex05.js"></script>
+</body>
+
+</html>

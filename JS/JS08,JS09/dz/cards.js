@@ -224,8 +224,7 @@ const data = [
 console.log();
 //funkcija koja mi appenda djecu
 HTMLDivElement.prototype.appendChildren = function () {
-  for (let i = 0; i < arguments.length; i++) 
-  this.appendChild(arguments[i]);
+  for (let i = 0; i < arguments.length; i++) this.appendChild(arguments[i]);
 };
 //main function
 const divWrapper = document.querySelector(".wrapper");
@@ -298,7 +297,6 @@ function sortBy(event) {
   } else if (event.target.value === "company") {
     data.sort((a, b) => a.company.name.localeCompare(b.company.name));
     divWrapper.innerHTML = "";
-
     cardData(data);
   } else {
     data.sort((a, b) => a.id - b.id);
