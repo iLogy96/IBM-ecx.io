@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: none;
+}
+
+.nav-menu-item a {
+  transition: all 0.5s ease-in-out;
+}
+.nav-menu-item a:hover {
+  color: #ff652f;
+}
+
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("./img/model-1.jpeg") center top;
+  background-size: cover;
+}
+.home-name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  border-bottom: 2px solid #fff;
+}
+.home-name-last {
+  color: #ff652f;
+  font-weight: 600;
+}
+.home-summary {
+  padding-top: 1rem;
+}
+
+.burger-wrapper {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.has-dropdown {
+  position: absolute;
+  background: #fff;
+  height: 3px;
+  width: 28px;
+  transition: all 0.5s ease-in-out;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1;
+  cursor: pointer;
+}
+.has-dropdown::before {
+  position: absolute;
+  background: #fff;
+  height: 3px;
+  width: 28px;
+  transition: all 0.5s ease-in-out;
+  content: "";
+  left: 0px;
+  top: -7px;
+}
+.has-dropdown::after {
+  position: absolute;
+  background: #fff;
+  height: 3px;
+  width: 28px;
+  transition: all 0.5s ease-in-out;
+  content: "";
+  left: 0px;
+  top: 7px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 1rem;
+  right: 6rem;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.js-transform {
+  position: absolute;
+  background: #fff;
+  height: 3px;
+  width: 28px;
+  transition: all 0.5s ease-in-out;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1;
+  cursor: pointer;
+}
+.js-transform::before {
+  position: absolute;
+  background: #fff;
+  height: 3px;
+  width: 28px;
+  transition: all 0.5s ease-in-out;
+  content: "";
+  left: -8px;
+  top: -7px;
+}
+.js-transform::after {
+  position: absolute;
+  background: #fff;
+  height: 3px;
+  width: 28px;
+  transition: all 0.5s ease-in-out;
+  content: "";
+  left: 8px;
+  top: 7px;
+}
+
+body {
+  background: #272727;
+  color: #fff;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main .social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+main a {
+  padding: 0.4rem;
+  transition: all 0.5s ease-in-out;
+}
+main a:hover {
+  color: #ff652f;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */

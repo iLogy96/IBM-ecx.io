@@ -1,0 +1,13 @@
+.nav {
+    display: none;
+}
+.nav-menu {
+    &-item {
+        a {
+            @include transition();
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}

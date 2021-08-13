@@ -1,0 +1,75 @@
+@mixin burger () {
+    position: absolute;
+    background: #fff;
+    height: 3px;
+    width: 28px;
+    @include transition();
+    @content
+}
+.burger-wrapper{
+    position: absolute;
+    z-index: 1;
+    right: 1rem;
+    top: 1rem;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    @include transition();
+}
+.has-dropdown{
+    @include burger() {
+        right: 1rem;
+        top: 1rem;
+        z-index: 1;
+        cursor: pointer;    
+    }
+    &::before{
+        @include burger(){
+            content: "";
+            left: 0px;;
+            top: -7px;
+        }   
+    }
+    &::after{
+        @include burger(){
+            content: "";
+            left: 0px;
+            top: 7px;    
+        }
+    }
+
+}
+.dropdown{
+    position: absolute;
+    top: $base-margin;
+    right:5rem + $base-margin;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: $base-margin + 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.js-transform{
+    @include burger() {
+        right: $base-margin;
+        top: $base-margin;
+        z-index: 1;
+        cursor: pointer;    
+    }
+    &::before{
+        @include burger(){
+            content: "";
+            left: -8px;;
+            top: -7px;    
+        }   
+    }
+    &::after{
+        @include burger(){
+            content: "";
+            left: 8px;
+            top: 7px;    
+        }
+    }
+}
