@@ -1,0 +1,252 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.container--big {
+  max-width: 1400px;
+}
+
+body {
+  color: white;
+  background-color: #291708;
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.article-list {
+  list-style: decimal;
+  padding-left: 0.5rem;
+  line-height: 1.5;
+  margin-left: 1rem;
+  color: #cdc3bf;
+  padding-bottom: 2rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+
+​ .col-12 {
+  grid-column: span 12;
+}
+
+.col-9 {
+  grid-column: span 9;
+}
+
+.col-8 {
+  grid-column: span 8;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-5 {
+  grid-column: span 5;
+}
+
+.col-4 {
+  grid-column: span 4;
+}
+
+.col-3 {
+  grid-column: span 3;
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+
+.article-1-title {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.article-1-title-span {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #cdc3bf;
+}
+.article-1-img {
+  height: 400px;
+  padding: 2rem 0;
+}
+
+.date-time {
+  color: #cdc3bf;
+  font-size: 1rem;
+  padding-right: 10px;
+  position: relative;
+}
+.date-time::after {
+  right: -7px;
+  position: absolute;
+  background: #5a4438;
+  height: 22px;
+  width: 1px;
+  content: "";
+}
+
+.text {
+  color: #80c2fb;
+  font-size: 1rem;
+}
+
+.article-main-title {
+  font-weight: 700;
+  color: #cdc3bf;
+}
+.article-main-title-h3 {
+  color: #fff;
+  font-size: 0.7rem;
+}
+.article-main-para {
+  padding: 2rem 0;
+  color: #cdc3bf;
+  line-height: 1.5;
+}
+
+.social-wrapper {
+  display: flex;
+  gap: 20px;
+  padding-top: 2rem;
+}
+
+.twitter, .facebook, .reddit {
+  padding: 0px 7px;
+}
+
+svg {
+  fill: #00adff;
+  height: 20px;
+  width: 20px;
+  transition: all 0.3s ease-in-out;
+}
+svg:hover {
+  fill: white;
+  cursor: pointer;
+}
+
+.col-4 {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: fit-content;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  position: fixed;
+  right: 5rem;
+}
+
+.aside {
+  display: flex;
+  gap: 15px;
+  width: 27vw;
+  padding: 1.2rem;
+  border-bottom: gray solid 1px;
+  background: #3f1f07;
+}
+.aside:hover {
+  cursor: pointer;
+  background: #94450d;
+}
+.aside-article {
+  position: relative;
+}
+.aside-article-title {
+  font-size: 0.8rem;
+  color: #cdc3bf;
+}
+.aside-article-time {
+  position: absolute;
+  right: 0;
+}
+.aside-article-summary {
+  font-size: 1rem;
+}
+.aside-image {
+  height: 30px;
+  width: 70px;
+}
+
+/*# sourceMappingURL=main.css.map */

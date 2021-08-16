@@ -1,0 +1,58 @@
+@import './variables';
+
+.article-1{
+    
+    &-title{
+        font-size: 2rem;
+        line-height: 1.2;
+        font-weight: 700;
+        &-span{
+            font-weight: 400;
+            font-size: 0.8rem;
+            color:$primary-color;
+        }
+    }
+
+    &-img{
+        height: 400px;
+        padding: 2rem 0;
+    }
+}
+.date-time{
+    color:$primary-color;
+    font-size: 1rem;
+    padding-right: 10px;
+    position: relative;
+    
+    &::after{
+        right: -7px;
+        position: absolute;
+        background: #5a4438;
+        height: 22px;
+        width: 1px;
+        content: "";
+    }
+
+}
+.text{
+    color: #80c2fb;
+    font-size: 1rem;
+}
+.article-main{
+
+    &-title{
+        font-weight: 700;
+        color: $primary-color;
+
+        &-h3{
+            color: #fff;
+            font-size: 0.7rem;
+        }
+    }
+
+    &-para{
+        padding:2rem 0;
+        color: $primary-color;
+        line-height: $line-height;
+    }
+}
