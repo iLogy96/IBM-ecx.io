@@ -42,3 +42,7 @@ body {
     color: $primary-color;
     padding-bottom: 2rem;
 }
+
+[class*="__image"]{
+    border: 1px solid transparentize(#fff, .5)
+}

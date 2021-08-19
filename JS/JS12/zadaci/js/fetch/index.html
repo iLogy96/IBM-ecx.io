@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+<label for="name">Name: </label>
+<input id="name" class="js-input-name" type="text">
+<button class="js-search-btn">Search</button>
+
+<ul class="js-list">
+</ul>
+
+<script>
+	document.querySelector('.js-search-btn').addEventListener('click', () => {
+		const value = document.querySelector('.js-input-name').value;
+		fetchData(value);
+	});
+
+	function fetchData (value) {
+		fetch('https://jsonplaceholder.typicode.com/users')
+		.then(response => response.json())
+		.then(data => data.find(user => user.name.includes(value)))
+		.then(user =>
+			fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`)
+			.then(response => response.json())
+			.then(posts => renderPosts(posts))
+		)
+		.catch(err => console.log(err));
+	}
+
+	function renderPosts (posts) {
+		const list = document.querySelector('.js-list');
+		const template = `
+<ul>{{#each data}}
+  	<li>{{title}}</li>
+  	{{/each}}
+</ul>
+  	`;
+
+		const compiledTemplate = Handlebars.compile(template);
+		list.innerHTML = compiledTemplate({ data: posts });
+	}
+</script>
+</body>
+</html>

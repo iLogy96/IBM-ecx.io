@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+      body {
+          font-size: 16px;
+          color: #2f2f2f;
+      }
+
+      .container {
+          display: flex;
+          flex-wrap: wrap;
+      }
+
+      .card-outter {
+          width: calc(33% - 20px);
+          margin: 10px;
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+          position: relative;
+          overflow: hidden;
+          background: blue;
+          background: linear-gradient(to right bottom, #ffffff 50%, rgba(0, 0, 255, 0.3) 50%);
+      }
+
+      .card-inner {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          border-left: 5px solid blue;
+          position: relative;
+          cursor: pointer;
+      }
+
+      .card-title {
+          font-size: 30px;
+          font-weight: bold;
+          margin-bottom: 8px;
+      }
+
+      .card-name {
+          font-size: 18px;
+          margin-bottom: 16px;
+          font-weight: bold;
+      }
+
+      .card-info {
+          font-size: 14px;
+          margin-bottom: 4px;
+          text-align: right;
+      }
+
+      label {
+          font-size: 18px;
+          font-weight: bold;
+      }
+
+      input {
+          padding: 8px;
+          border-radius: 4px;
+          border: 1px solid #b7b7b7;
+          margin-right: 16px;
+      }
+
+      select {
+          padding: 8px;
+          border-radius: 4px;
+          border: 1px solid #b7b7b7;
+      }
+
+      .filter-container {
+          margin: 20px;
+      }
+
+      .modal {
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          transition: all 0.3s ease;
+          top: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          visibility: visible;
+          opacity: 1;
+          transition-delay: 0s;
+      }
+
+      .modal-bg {
+          position: absolute;
+          background: rgba(0, 0, 0, 0.3);
+          width: 100%;
+          height: 100%;
+      }
+
+      .modal-container {
+          border-radius: 10px;
+          background: #fff;
+          position: relative;
+          padding: 30px;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .modal-close {
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          outline: none;
+          appearance: none;
+          color: red;
+          background: none;
+          border: 0px;
+          font-weight: bold;
+          cursor: pointer;
+      }
+
+      .location-button {
+          border-radius: 10px;
+          border: 2px solid blue;
+          background: white;
+          outline: none;
+          padding: 20px;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 18px;
+          margin-top: 10px;
+          font-weight: bold;
+          color: #2f2f2f;
+          align-self: flex-end;
+      }
+  </style>
+</head>
+<body>
+<div class="filter-container">
+  <label for="search">Search:</label>
+  <input id="search" type="text">
+  <label for="sorting">Sort:</label>
+  <select id="sorting">
+    <option selected>No sorting</option>
+    <option value="company">Sort by company</option>
+    <option value="name">Sort by owner</option>
+  </select>
+</div>
+
+<script id="cardTemplate" type="text/x-handlebars-template">
+  {{#each data}}
+    <div class="card-outter">
+      <div class="card-inner js-card" data-id="{{id}}" data-user="{{.}}">
+        <span class="card-title">{{company.name}}</span>
+        <span class="card-name">{{name}}</span>
+        <span class="card-info">{{address.street}}, {{address.city}}</span>
+        <span class="card-info">{{phone}}</span>
+        <span class="card-info">{{email}}</span>
+        <span class="card-info">{{website}}</span>
+      </div>
+    </div>
+  {{/each}}
+</script>
+
+<div class="container js-container">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>

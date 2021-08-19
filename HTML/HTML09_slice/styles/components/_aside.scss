@@ -1,13 +1,21 @@
 @import "./variables";
 .col-4 {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    height: 350px;
+    overflow: hidden;
     width: fit-content;
     overflow-y: scroll;
-    scrollbar-width: thin;
-    position: fixed;
-    right: 5rem;
+    position: sticky;
+    top:0;
+    right: 2rem;
+
+    &::-webkit-scrollbar{
+        width: 4px;
+
+        &-thumb{
+            background: transparentize(gray,.5);
+        }
+
+    }
 }
 .aside {
     display: flex;
@@ -35,7 +43,8 @@
         }
     }
     &-image {
-        height: 30px;
+        height: 45px;
         width: 70px;
+        border: 1px solid transparentize(#fff, .5)
     }
 }
