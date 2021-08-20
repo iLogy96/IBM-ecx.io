@@ -1,0 +1,8 @@
+$primary-color:#cdc3bf;
+$svg:#00adff;
+$body-color:#291708;
+$line-height:1.5;
+
+@mixin transition() {
+    transition: all 0.2s ease-in-out;
+}

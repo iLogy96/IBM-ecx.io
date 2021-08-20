@@ -1,0 +1,19 @@
+.social-wrapper{
+    display: flex;
+    gap:20px;
+    padding-top: 2rem;
+ 
+}
+.twitter,.facebook,.reddit {
+    padding: 0px 7px;
+}
+svg{
+    fill: $svg;
+    height: 20px;
+    width: 20px;
+    @include transition();
+    &:hover{
+        fill: white;
+        cursor:pointer;
+    }
+}

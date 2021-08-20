@@ -1,0 +1,50 @@
+@import "./variables";
+.col-4 {
+    height: 350px;
+    overflow: hidden;
+    width: fit-content;
+    overflow-y: scroll;
+    position: sticky;
+    top:0;
+    right: 2rem;
+
+    &::-webkit-scrollbar{
+        width: 4px;
+
+        &-thumb{
+            background: transparentize(gray,.5);
+        }
+
+    }
+}
+.aside {
+    display: flex;
+    gap: 15px;
+    width: 27vw;
+    padding: 1.2rem;
+    border-bottom: gray solid 1px;
+    background:#3f1f07;
+    &:hover {
+        cursor: pointer;
+        background: #94450d;
+    }
+    &-article {
+        position: relative;
+        &-title {
+            font-size: 0.8rem;
+            color: $primary-color;
+        }
+        &-time {
+            position: absolute;
+            right: 0;
+        }
+        &-summary {
+            font-size: 1rem;
+        }
+    }
+    &-image {
+        height: 45px;
+        width: 70px;
+        border: 1px solid transparentize(#fff, .5)
+    }
+}

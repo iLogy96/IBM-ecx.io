@@ -1,0 +1,48 @@
+@import './variables';
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.container {
+    max-width: 1100px;
+    margin:0 auto;
+    &--big {
+        max-width: 1400px;
+    }
+}
+body {
+    color: white;
+    background-color: $body-color;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.article-list {
+    list-style: decimal;
+    padding-left: 0.5rem;
+    line-height: $line-height;
+    margin-left: 1rem;
+    color: $primary-color;
+    padding-bottom: 2rem;
+}
+
+[class*="__image"]{
+    border: 1px solid transparentize(#fff, .5)
+}

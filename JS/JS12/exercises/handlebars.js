@@ -222,11 +222,11 @@
 //     },
 //   ];
 
-// const source = document.querySelector('#cardTemplate').innerHTML;
-// const div = document.querySelector('.wrapper');
-// const template = Handlebars.compile(source);
-// const output = template({data:data});
-// div.innerHTML = output;
+const source = document.querySelector('#cardTemplate').innerHTML;
+const div = document.querySelector('.wrapper');
+const template = Handlebars.compile(source);
+const output = template({data:data});
+div.innerHTML = output;
 
 //zadatak 6
 fetch("https://jsonplaceholder.typicode.com/users")
@@ -234,7 +234,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
     return data.json();
   })
   .then(function (json) {
-    let posts = json;
+    const posts = json;
     const source = document.querySelector("#cardTemplate").innerHTML;
     const div = document.querySelector(".wrapper");
     const template = Handlebars.compile(source);
