@@ -1,0 +1,35 @@
+.hero{
+    position: relative;
+
+    &__content{
+        width: 100%;
+        padding:1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        
+        @include mq-up('tablet') {
+            position: absolute;
+            top: 40%;            
+        }
+    }
+    
+    &__form{
+        display: flex;
+    }
+
+    &__input {
+        padding:.8rem;
+        border-radius: 0;
+        border: 1px solid $color-border;
+        min-width: 250px;
+    }
+
+    &__text{
+        display: none;
+        @include mq-up ('tablet') {
+            display: block;
+        }
+    }
+}

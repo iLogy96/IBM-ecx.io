@@ -1,0 +1,24 @@
+.card {
+    background-color: $color-bg;
+    text-align: center;
+
+    &__content {
+        padding: 1.5rem;
+    }
+
+    &--alt {
+        text-align: left;
+        background: rgba($color-bg, .8);
+        border: 1px solid $color-primary;
+        transition: all 200ms;
+
+        &:hover{
+            border-color: lighten($color-primary, 15);
+            background: rgba($color-bg, .6);
+        }
+    }
+    &__category {
+        color: rgba($color-text, .9);
+        margin-bottom: .5rem;
+    }
+}
