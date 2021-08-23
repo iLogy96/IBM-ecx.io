@@ -1,12 +1,11 @@
-@import "./variables";
 .col-4 {
-    height: 350px;
+    height: 100vh;
     overflow: hidden;
-    width: fit-content;
+    width: 400px;
     overflow-y: scroll;
     position: sticky;
     top:0;
-    right: 2rem;
+    right: 100px;
 
     &::-webkit-scrollbar{
         width: 4px;

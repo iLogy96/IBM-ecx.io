@@ -1,0 +1,57 @@
+.header{
+    position: relative;
+    padding: 3.5rem;
+    width: 100%;
+    color: $secondary-color;
+    font-size: 1.2rem;
+
+    &_main{
+        padding-left: 3rem;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $secondary-color;
+    }
+
+    &_list{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        @include transition();
+        &_item:hover{
+            cursor: pointer;
+            color: white;
+            
+        }
+        &-special{
+            display: flex;
+            gap: 1.5rem;
+            position: absolute;
+            right: 0;
+            padding-right: 2rem;        
+        }    
+    }
+
+    
+}
+.dropdown{
+    display: none;
+}
+.has-dropdown:hover .dropdown{
+    display: flex;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    &:not(:last-child){
+        border-bottom: 1px solid white;
+    }
+}
+.has-dropdown a{
+    text-decoration: none;
+    color: $secondary-color;
+}
+.has-dropdown:hover svg{
+    fill: white;
+}

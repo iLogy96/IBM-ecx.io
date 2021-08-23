@@ -10,18 +10,56 @@
 </head>
 
 <body>
-    <header>
-        <nav>
+    <header class="header">
+        <div class="header_main">
+            <nav class="header_nav">
+                <ul class="header_list">
+                    <li class="header_list_item">BLIZZARD</li>
+                    <li class="header_list_item">GAMES</li>
+                    <li class="header_list_item">SHOP</li>
+                    <li class="header_list_item">NEWS</li>
+                    <li class="header_list_item">ESPORTS</li>
+                    <div class="header_list-special">
+                        <li class="header_list_item has-dropdown">Support</li>
+                        <li class="header_list_item has-dropdown">
+                            My Account 
+                            <svg class = "svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
+                            </svg>            
+                            <div class="dropdown">
+                                <button class="dropdown_btn">Log in</button>
+                                <a href="" class="dropdown_settings">Account Settings</a>
+                                <a href="" class="dropdown_account">Create a free account</a>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+            </div>
+            <div class="header_side">
+                <span class="has-dropdown">All news</span>
+                <nav class="header_side_nav">
+                    <ul class="header_side_list dropdown">
+                        <li class="header_side_item">Diablo 3</li>
+                        <li class="header_side_item">Diablo 2</li>
+                        <li class="header_side_item">Diablo 1</li>
+                        <li class="header_side_item">Heartstone</li>
+                        <li class="header_side_item">Overwatch</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- <nav>
             <div class="container container--big">
                 <h2 class="visually-hidden">primary</h2>
+                
             </div>
         </nav>
         <nav>
             <h2 class="visually-hidden">secondary</h2>
-        </nav>
+        </nav> -->
     </header>
     <main class="container">
-
         <div class="row">
             <div class="col-8">
                 <article class="article-1">

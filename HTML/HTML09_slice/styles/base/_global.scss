@@ -46,3 +46,10 @@ body {
 [class*="__image"]{
     border: 1px solid transparentize(#fff, .5)
 }
+
+.svg{
+    fill: $primary-color;
+    transform: rotate(90deg);
+    width: 0.8rem;
+    height: 0.6rem;
+}
