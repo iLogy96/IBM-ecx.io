@@ -1,0 +1,20 @@
+.learn{
+    @include section-styles($url:'assets/bg-2.webp', $border:true);
+    padding: 65px 0;
+    opacity: 0.9;
+    width: 100%;
+    .card{
+        width: 300px;
+
+        &__image{
+            object-fit: cover;
+        }
+    }
+    &__title{
+        color: rgb(41 85 125);
+        text-transform: capitalize;
+        font-weight: lighter;
+        font-size: 2rem;
+        text-align: center;
+    }
+}

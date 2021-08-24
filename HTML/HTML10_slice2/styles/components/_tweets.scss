@@ -1,0 +1,35 @@
+.about{
+    @include section-styles($url:'assets/bg-3.webp', $border:true);
+    padding:65px 0;
+    opacity: 0.9;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    // &__article{
+        
+    // }
+    &__tweets{
+        display: block;
+        width: 30vw;
+        height: 50vh;
+        border-radius: 2%;
+        // overflow: hidden;
+        overflow: auto;
+    }
+    &__title{
+        font-weight: lighter;
+        font-size: 4.5rem;
+        text-transform:capitalize;
+    }
+    &__para{
+        font-size: 1rem;
+        width: 60%;
+        line-height: 1.5;
+    }
+
+}
+// .twitter-timeline {
+//     height: 10vh;
+//     width: 10wv;
+// }

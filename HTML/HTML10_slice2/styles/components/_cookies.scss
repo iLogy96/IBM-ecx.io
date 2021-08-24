@@ -1,0 +1,12 @@
+.cookies{
+    display: flex;
+    width: 100%;
+    background:#02141f;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    
+    &__settings,&__info{
+        padding: 1.5rem;
+
+    }
+}

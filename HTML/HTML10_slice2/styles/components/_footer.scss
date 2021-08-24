@@ -1,0 +1,115 @@
+.follow{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    max-width: 1000px;
+    &__title{
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 100;
+        margin-bottom: 50px;
+    }
+    &__para{
+        font-size: 0.9em;
+        color: transparentize($color-text, 0.2);
+        line-height: 1.6;
+    }
+}
+
+footer{
+    text-align: center;
+    margin:auto;
+}
+.footer {
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        background:url('assets/bg-1.jpg');
+    }
+
+    &-ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    &-listitem:not(:last-child)::after {
+        content: "";
+        display: inline-block;
+        height: 10px;
+        width: 1px;
+        background-color: lightgray;
+    }
+    &-copyright,
+    &-trademarks {
+        display: flex;
+        justify-content: center;
+        color: #b9babc;
+        font-size: 15px;
+        margin-bottom: 8px;
+        text-decoration: none;
+    }
+    &-listitem > a {
+        color: #c5c2bf;
+        padding: 0.3em;
+        text-decoration: none;
+        font-size: 1.3rem;
+        &:hover{
+            color:whitesmoke;
+        }
+    }
+    &-navbar {
+        padding: 5px;
+        margin-bottom: 10em;
+    }
+    &-ul-navbar {
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+    }
+    &-navbar-listitem:not(:last-child)::after {
+        content: "";
+        display: inline-block;
+        height: 8px;
+        width: 1px;
+        margin: 15px;
+        background-color: lightgray;
+    }
+    &-navbar-link{
+       text-decoration: none;
+       color: #c5c2bf;
+    }
+}
+.logo-container {
+    display: flex;
+    color: #ffffff;
+    justify-content: center;
+    font-family: sans-serif;
+    margin-top: 50px;
+    font-size: 32px;
+}
+.NavbarFooter-logoContainer{
+    margin: 30px 0;
+    height: 60px;
+}
+.NavbarFooter-logo{
+    color: blue;
+    display: block;
+    position: relative;
+    width: 124px;
+    height: 66px;
+    margin: 0 auto;
+}
+.link-trademark{
+   text-decoration: none;
+   color: #d3cecb;
+   font-weight: 700;
+   &:hover{
+       color: whitesmoke;
+   } 
+}

@@ -1,0 +1,23 @@
+.bg-blue{
+    @include section-styles($url:'assets/bg-3.webp', $border:true);
+    padding:65px 0;
+    opacity: 0.9;
+
+}
+
+.lead{
+    max-width: 70%;
+    margin-bottom: 7.5em;
+    text-align: center;
+    line-height: 1.7;
+    margin:0 auto 7.5em;
+    opacity: 0.8;
+}
+
+.bg-role {
+    padding: 120px 0 60px;
+    text-align: center;
+    background-image: url('assets/bg-4.webp');
+    background-repeat: no-repeat;
+    background-position-x: center;
+}

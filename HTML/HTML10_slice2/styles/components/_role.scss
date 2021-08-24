@@ -1,0 +1,35 @@
+.role {
+    @extend %card-styles;
+    padding: 2rem;
+    min-height: 315px;
+
+    .icon{
+        width: 120px;
+        fill: $color-secondary;
+    }
+    &__main-title{
+
+        font-size: 3rem;
+        line-height: 1.5;
+        margin-bottom: 1.2em;
+
+        .highlighted{
+            text-transform: initial;
+            color:$color-secondary;
+        }
+    }
+
+    // &__container {
+
+    // }
+
+    &__title{
+        margin-bottom: 1.5em 0 1em;
+    }
+
+    &__summary{
+        @extend %card-styles;
+        border:none;
+        font-size: 0.8rem;
+    }
+}

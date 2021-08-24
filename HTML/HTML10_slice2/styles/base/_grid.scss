@@ -15,3 +15,8 @@ $grid:(
         'min':$grid-breakpoint-l-min
     )
 );
+
+.container{
+    max-width: 1225px;
+    margin:auto;
+}

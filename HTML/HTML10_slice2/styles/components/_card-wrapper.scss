@@ -3,6 +3,8 @@
     grid-template-columns: 1fr;
     grid-gap:1rem;
 
+  
+
     @include mq-up('tablet') {
         grid-template-columns: repeat(3,1fr);
     }
