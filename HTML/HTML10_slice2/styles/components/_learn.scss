@@ -4,7 +4,7 @@
     opacity: 0.9;
     width: 100%;
     .card{
-        width: 300px;
+        max-width: 300px;
 
         &__image{
             object-fit: cover;

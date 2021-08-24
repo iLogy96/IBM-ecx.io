@@ -9,12 +9,15 @@
     // &__article{
         
     // }
+    .container{
+        display: flex;
+    }
     &__tweets{
         display: block;
+        margin: auto;
         width: 30vw;
         height: 50vh;
         border-radius: 2%;
-        // overflow: hidden;
         overflow: auto;
     }
     &__title{
