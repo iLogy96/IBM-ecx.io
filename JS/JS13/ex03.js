@@ -18,3 +18,20 @@ fetch(`https://restcountries.eu/rest/v2/all`)
   .catch((err) => {
     console.log(`Ne šljaka ${err.message}`);
   });
+
+// function getCountries() {
+//   const ul = document.querySelector("select");
+//   fetch(`https://restcountries.eu/rest/v2/all`)
+//     .then((response) => response.json())
+//     .then(function (json) {
+//       json.forEach((obj) => {
+//         let option = document.createElement("option");
+
+//         ul.appendChild(option);
+//         option.innerHTML = obj.name;
+//       });
+//       console.log(json);
+//     });
+// }
+
+// getCountries();

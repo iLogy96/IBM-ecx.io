@@ -24,6 +24,7 @@ function pokedex (pokemon){
     pokemonImage.style.height = "300px";
     pokemonImage.src = pokemon.sprites.front_default;
     pokemonName.appendChild(pokemonNameContent);
+
     pokemonAlbum.appendChild(pokemonImage);
     pokemonAlbum.appendChild(pokemonName);
 }
