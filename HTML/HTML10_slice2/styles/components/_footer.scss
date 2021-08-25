@@ -33,6 +33,7 @@
     &__ul,
     &__ul-navbar,&__listitem,&__navbar-listitem {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
         font-size: 1.3rem;

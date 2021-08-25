@@ -11,12 +11,12 @@
     // }
     .container{
         display: flex;
+        gap:7.5rem;
     }
     &__tweets{
         display: block;
-        margin: auto;
-        width: 30vw;
-        height: 50vh;
+        width: 500px;
+        height: 500px;
         border-radius: 2%;
         overflow: auto;
     }
@@ -27,7 +27,7 @@
     }
     &__para{
         font-size: 1rem;
-        width: 60%;
+        width: 400px;
         line-height: 1.5;
     }
 

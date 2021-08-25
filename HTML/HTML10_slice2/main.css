@@ -271,12 +271,12 @@ a {
 }
 .about .container {
   display: flex;
+  gap: 7.5rem;
 }
 .about__tweets {
   display: block;
-  margin: auto;
-  width: 30vw;
-  height: 50vh;
+  width: 500px;
+  height: 500px;
   border-radius: 2%;
   overflow: auto;
 }
@@ -287,7 +287,7 @@ a {
 }
 .about__para {
   font-size: 1rem;
-  width: 60%;
+  width: 400px;
   line-height: 1.5;
 }
 
@@ -359,6 +359,7 @@ a {
 }
 .footer__ul, .footer__ul-navbar, .footer__listitem, .footer__navbar-listitem {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   font-size: 1.3rem;

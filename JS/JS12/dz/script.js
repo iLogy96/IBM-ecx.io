@@ -1,7 +1,9 @@
 let articleTime = [];
 fetch("http://as-var-croapps.ecx.local:1337/blizzard-2008-s")
   .then((response) => response.json())
+  .then(articleData => articleData.map(article => ({...article,published:new Date(article.published)})))
   .then((data) => {
+    console.log(data)
     sortArticles(data);
     renderArticles(data);
   })
@@ -17,7 +19,7 @@ function renderArticles(article) {
   asideContainer.innerHTML = output;
 }
 function sortArticles(articles) {  
-  articles.sort((a, b) => a.published.localeCompare(b.published));
+  articles.sort((a, b) => b.published.getTime() - a.published.getTime());
   //     const dateCurrent = new Date();
   //     const dateThen = new Date (article.published)
   //     const diff = Math.floor((dateCurrent.getTime() - dateThen.getTime())/3600000);
