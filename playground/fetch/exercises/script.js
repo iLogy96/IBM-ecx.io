@@ -17,3 +17,4 @@ function renderPhoto(photos) {
     albumElement.appendChild(figureElement);
   });
 }
+

@@ -1,0 +1,25 @@
+.intro__section {
+    @include displayFlex(flex, column, center);
+    @include heroStyles(url("assets/apex-bg.jpg"));
+}
+
+.inside {
+    color: $primary-text-color;
+    margin-left: 260px; //ne ovo ovako radit
+    &__header {
+        @include displayFlex(flex, column, center);
+    }
+    &__box {
+        @include displayFlex(flex, column, center);
+        width: 50%;
+    }
+    &__logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    &__para {
+        @include paraStyles($primary-text-color);
+        text-align:center;
+    }
+}

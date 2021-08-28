@@ -1,0 +1,29 @@
+button {
+    @include buttonStyles();
+    transition: ease-in-out 100ms;
+    &:hover {
+        outline-offset: 3px;
+    }
+    
+}
+
+.button__container {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+
+    &__svg {
+        fill: #fff;
+        transform: rotate(90deg);
+        width: 1.2rem;
+        height: 0.7rem;
+    }
+}
+
+.legend__button{
+    @include buttonStyles();
+    outline: 2px solid tomato;
+    background:tomato;
+}
+
+

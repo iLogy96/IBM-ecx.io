@@ -1,0 +1,23 @@
+.seer__section {
+    @include displayFlex(flex, column, flex-start);
+    @include heroStyles(url("assets/apex-bg2.jpg"));
+}
+
+.seer{
+    color: $primary-text-color;
+    margin-left: 275px; //ne ovo ovako radit
+    &__box {
+        @include displayFlex(flex, column, flex-start);
+        width: 50%;
+    }
+    &__title {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    &__para {
+        @include paraStyles($primary-text-color);
+        width: 80%;
+        padding-bottom: 1rem;
+    }
+}

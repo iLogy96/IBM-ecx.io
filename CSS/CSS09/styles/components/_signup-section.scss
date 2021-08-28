@@ -1,0 +1,29 @@
+.signup__section {
+    @include heroStyles(url("assets/bg-final.jpg"));
+    padding: 1rem 0;
+}
+.signup{
+    @include displayFlex(flex, column, center);
+    color: $primary-text-color;
+    &__box {
+        @include displayFlex(flex, column, center);
+        // position: relative;
+        padding: 1rem 0;
+    }
+    &__title {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    &__para {
+        @include paraStyles($primary-text-color);
+        padding-bottom: 1rem;
+    }
+    &__policy{
+        text-align: center;
+        // position: absolute;
+        // bottom: 0;
+        width: 60%;
+        padding-top: 7rem;
+        color: $secondary-text-color;
+    }
+}

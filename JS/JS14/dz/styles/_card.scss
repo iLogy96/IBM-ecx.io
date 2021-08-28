@@ -1,0 +1,11 @@
+.card {
+    border: 2px solid black;
+    width: fit-content;
+    text-align: center;
+    background: cornflowerblue;
+
+    transition: ease-in-out 200ms;
+    &:hover{
+        background: lightblue;
+    }
+}

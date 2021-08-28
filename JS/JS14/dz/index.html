@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <label for="select">Countries</label>
+  <select name="select" id="select">
+    <option value="">--Default--</option>
+  </select> <br><br>
+  <div class="container">
+    <div class="grid">
+      
+    </div>
+  </div>
+  
+  <script id="cardTemplate" type="text/x-handlebars-template">
+    {{#each data}}
+      <div class="card">
+        <figure>
+          <img src="{{flag}}" alt="" />
+        </figure>
+        <div>
+          <h2>{{name}}</h2>
+        <ul>
+          <li>Capital: {{capital}}</li>
+          <li>Population: {{population}}</li>
+          <li>Currencies: {{currencies}}</li>
+          <li>Region: {{region}}</li>
+        </ul>
+        </div>
+        
+      </div>
+{{/each}}
+</script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+</body>
+</html>

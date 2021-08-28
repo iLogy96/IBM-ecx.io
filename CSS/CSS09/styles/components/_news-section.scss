@@ -1,0 +1,41 @@
+.news__section {
+    @include heroStyles(url("assets/bg-3.jpg"));
+}
+.news__title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.news {
+    @include displayFlex(flex, row, center);
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    &__article {
+        @include displayFlex(flex, column, flex-start);
+        border-bottom: 5px solid red;
+    }
+    &__summary {
+        background: $article-color;
+        height: 230px;
+        width: 375px;
+        padding: 1rem;
+    }
+    &__apex {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        color: hsl(0deg 67% 46%);
+    }
+    &__time,
+    &__header {
+        color: $primary-text-color;
+    }
+    &__para {
+        color: $secondary-text-color;
+    }
+    &__image {
+        object-fit: fill;
+        width: 375px;
+        height: 200px;
+    }
+}

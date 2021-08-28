@@ -1,0 +1,25 @@
+.legend__section {
+    @include heroStyles(url("assets/apex-bg3.jpg"));
+    padding: 5rem 0;
+}
+.legend{
+    @include displayFlex(flex, row, flex-start);
+    gap: 3rem;
+    &__box {
+        @include displayFlex(flex, column, flex-start);
+    }
+    &__title {
+        color: #000;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    &__para {
+        @include paraStyles(#000);
+        width: 60%;
+        padding-bottom: 1rem;
+    }
+    &__image{
+        width: fit-content;
+        height: 500px;
+    }
+}

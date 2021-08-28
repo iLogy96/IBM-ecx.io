@@ -1,0 +1,29 @@
+@mixin displayFlex ($display,$direction,$align) {
+    display: $display;
+    flex-direction: $direction;
+    align-items: $align;
+}
+@mixin buttonStyles () {
+    outline: 2px solid $primary-text-color;
+    border:none;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 1rem 2rem;
+    font-size: .9rem;
+    font-weight: lighter;
+    cursor: pointer;
+}
+@mixin heroStyles ($url) {
+    background-image: $url;
+    filter: brightness(1.2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding:10rem 0;
+}
+@mixin paraStyles($color){
+    color:$color;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    line-height: 1.5;
+}

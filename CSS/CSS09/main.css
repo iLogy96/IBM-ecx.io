@@ -1,0 +1,281 @@
+html {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  margin: auto;
+  max-width: 1225px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.intro__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("assets/apex-bg.jpg");
+  filter: brightness(1.2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 10rem 0;
+}
+
+.inside {
+  color: #fff;
+  margin-left: 260px;
+}
+.inside__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inside__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.inside__logo {
+  width: 200px;
+  height: 200px;
+}
+.inside__para {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  line-height: 1.5;
+  text-align: center;
+}
+
+button {
+  outline: 2px solid #fff;
+  border: none;
+  text-transform: uppercase;
+  background: transparent;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  cursor: pointer;
+  transition: ease-in-out 100ms;
+}
+button:hover {
+  outline-offset: 3px;
+}
+
+.button__container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+}
+.button__container__svg {
+  fill: #fff;
+  transform: rotate(90deg);
+  width: 1.2rem;
+  height: 0.7rem;
+}
+
+.legend__button {
+  outline: 2px solid #fff;
+  border: none;
+  text-transform: uppercase;
+  background: transparent;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  cursor: pointer;
+  outline: 2px solid tomato;
+  background: tomato;
+}
+
+.news__section {
+  background-image: url("assets/bg-3.jpg");
+  filter: brightness(1.2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 10rem 0;
+}
+
+.news__title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.news {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.news__article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 5px solid red;
+}
+.news__summary {
+  background: #171717;
+  height: 230px;
+  width: 375px;
+  padding: 1rem;
+}
+.news__apex {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #c42727;
+}
+.news__time, .news__header {
+  color: #fff;
+}
+.news__para {
+  color: #949494;
+}
+.news__image {
+  object-fit: fill;
+  width: 375px;
+  height: 200px;
+}
+
+.seer__section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: url("assets/apex-bg2.jpg");
+  filter: brightness(1.2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 10rem 0;
+}
+
+.seer {
+  color: #fff;
+  margin-left: 275px;
+}
+.seer__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+.seer__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.seer__para {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  line-height: 1.5;
+  width: 80%;
+  padding-bottom: 1rem;
+}
+
+.legend__section {
+  background-image: url("assets/apex-bg3.jpg");
+  filter: brightness(1.2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 10rem 0;
+  padding: 5rem 0;
+}
+
+.legend {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3rem;
+}
+.legend__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.legend__title {
+  color: #000;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.legend__para {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  line-height: 1.5;
+  width: 60%;
+  padding-bottom: 1rem;
+}
+.legend__image {
+  width: fit-content;
+  height: 500px;
+}
+
+.signup__section {
+  background-image: url("assets/bg-final.jpg");
+  filter: brightness(1.2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 10rem 0;
+  padding: 1rem 0;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.signup__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+.signup__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.signup__para {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  line-height: 1.5;
+  padding-bottom: 1rem;
+}
+.signup__policy {
+  text-align: center;
+  width: 60%;
+  padding-top: 7rem;
+  color: #949494;
+}
+
+/*# sourceMappingURL=main.css.map */
