@@ -131,6 +131,80 @@ a {
   margin: auto;
 }
 
+.header {
+  padding: 10px 0;
+  background-color: black;
+}
+.header__logo {
+  width: 80px;
+  fill: #006fb2;
+}
+
+.has-dropdown {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.has-dropdown:focus-within .dropdown {
+  display: block;
+}
+.has-dropdown:focus-within svg {
+  transform: rotate(180deg);
+}
+.has-dropdown svg {
+  fill: white;
+  width: 14px;
+  height: 14px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 150%;
+  right: 0;
+  display: none;
+  background-color: white;
+  color: black;
+  min-width: 300px;
+  max-height: 300px;
+  overflow: auto;
+}
+.dropdown__input {
+  background-color: lightgray;
+  padding: 10px;
+}
+.dropdown__input input {
+  padding: 0.8rem 1rem;
+  width: 100%;
+}
+.dropdown__list li {
+  padding: 20px 10px;
+  border-top: 1px solid #8d8d8d;
+  opacity: 0.5;
+}
+
+.navigation {
+  background-color: #092650;
+  border-bottom: 1px solid #0e3c7e;
+}
+.navigation__primary {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.navigation__primary--active {
+  border-bottom: 3px solid #006fb2;
+}
+.navigation__primary__list {
+  display: flex;
+  gap: 25px;
+}
+.navigation__primary__list li {
+  padding: 15px 0 12px;
+}
+
 .hero {
   position: relative;
 }

@@ -1,0 +1,50 @@
+.has-dropdown {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  &:focus-within {
+    .dropdown {
+      display: block;
+    }
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  svg {
+    fill: white;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 150%;
+  right: 0;
+  display: none;
+  background-color: white;
+  color: black;
+  min-width: 300px;
+  max-height: 300px;
+  overflow: auto;
+  &__input {
+    background-color: lightgray;
+    padding: 10px;
+    input {
+      padding: 0.8rem 1rem;
+      width: 100%;
+    }
+  }
+  &__list {
+    li {
+      padding: 20px 10px;
+      border-top: 1px solid lighten(gray, 5);
+      opacity: 0.5;
+    }
+  }
+}
