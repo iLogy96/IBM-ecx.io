@@ -4,9 +4,7 @@ button {
     &:hover {
         outline-offset: 3px;
     }
-    
 }
-
 .button__container {
     display: flex;
     gap: 1rem;
@@ -20,10 +18,8 @@ button {
     }
 }
 
-.legend__button{
+.legend__button {
     @include buttonStyles();
     outline: 2px solid tomato;
-    background:tomato;
+    background: tomato;
 }
-
-

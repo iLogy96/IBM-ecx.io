@@ -5,7 +5,7 @@
 
 .seer{
     color: $primary-text-color;
-    margin-left: 275px; //ne ovo ovako radit
+    // margin-left: 275px; //ne ovo ovako radit
     &__box {
         @include displayFlex(flex, column, flex-start);
         width: 50%;

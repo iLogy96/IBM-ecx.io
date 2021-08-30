@@ -5,7 +5,7 @@
 
 .inside {
     color: $primary-text-color;
-    margin-left: 260px; //ne ovo ovako radit
+    // margin-left: 260px; //ne ovo ovako radit
     &__header {
         @include displayFlex(flex, column, center);
     }
