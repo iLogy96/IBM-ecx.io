@@ -1,0 +1,35 @@
+.section__article{
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    // display: flex;
+    // gap: 2rem;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
+}
+.article{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid transparentize($secondary-text-color, 0.7);
+    &__summary{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__age{
+        color: tomato;
+    }
+    &__name{
+        color:$primary-text-color;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    &__price{
+        background: #fcdb00;
+        width: max-content;
+        padding:.2rem;
+        box-shadow: 2px 2px #e53f4d;
+        font-weight: bold;
+    }
+}

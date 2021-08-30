@@ -1,0 +1,7 @@
+@mixin footerArticleStyles(){
+    line-height: 1.7;
+    &__title{
+        font-weight: bold;
+        padding-bottom: 1rem;
+    }
+}

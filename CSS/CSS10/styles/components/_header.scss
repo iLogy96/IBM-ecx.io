@@ -1,0 +1,17 @@
+.primary-nav{
+    display: flex;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    &__primary{
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    &__logo{
+        width: 90px;
+        height: 70px;
+    }
+}
+
