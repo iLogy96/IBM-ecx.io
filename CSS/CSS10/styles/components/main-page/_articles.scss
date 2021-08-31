@@ -15,20 +15,14 @@
     }
 
     &__age {
-        color: tomato;
+        color: $error-color;
     }
 
     &__name {
-        color: $primary-text-color;
-        text-transform: uppercase;
-        font-weight: bold;
+        @include articleNameStyles();
     }
 
     &__price {
-        background: #fcdb00;
-        width: max-content;
-        padding: 0.2rem;
-        box-shadow: 2px 2px #e53f4d;
-        font-weight: bold;
+        @include discountedPrice();
     }
 }

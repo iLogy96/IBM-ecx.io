@@ -11,3 +11,50 @@
     align-items: $align;
     gap: $gap;
 }
+
+@mixin articleNameStyles (){
+    color: $primary-text-color;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@mixin discountedPrice (){
+    background: #fcdb00;
+    width: max-content;
+    padding: 0.2rem;
+    box-shadow: 2px 2px #e53f4d;
+    font-weight: bold;
+}
+
+@mixin svgStyles ($display,$border,$padding,$border-radius) {
+    display: $display;
+    border: $border;
+    padding:$padding;
+    border-radius: $border-radius;
+}
+
+@mixin imageSize ($width,$height){
+    width: $width;
+    height: $height;
+}
+
+@mixin sectionTitleStyles(){
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding:2rem 0;
+}
+
+@mixin availabilityStyles{
+    content: "";
+    width: .7rem;
+    height: .7rem;
+    background:$success-color;
+    border-radius: 50%;
+}
+
+@mixin sectionScrollStyles() {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}

@@ -2,7 +2,7 @@
     &__current {
         color: $secondary-text-color;
         padding: 1rem 0;
-        border-bottom: 1px solid transparentize($secondary-text-color, 0.7);
+        border-bottom: $border-bottom-gray;
         a {
             color: $secondary-text-color;
         }
@@ -18,7 +18,7 @@
         padding: 1rem 0;
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid transparentize($secondary-text-color, 0.7);
+        border-bottom: $border-bottom-gray;
     }
 
     &__list,

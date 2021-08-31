@@ -1,0 +1,32 @@
+.furniture__article__image {
+    padding: 0.5rem;
+    width: 380px;
+    height: 380px;
+}
+
+.furniture__aside__image {
+    width: 100px;
+    height: 100px;
+    border: solid 1px transparent;
+    cursor: pointer;
+
+    &:hover {
+        border: $border-bottom-gray;
+    }
+
+    &:focus {
+        outline: 1px solid black;
+    }
+}
+
+.similar__image {
+    @include imageSize(175px, 175px);
+}
+
+.also__image {
+    @include imageSize(275px, 270px);
+}
+
+.recent__image {
+    @include imageSize(150px,150px);
+}

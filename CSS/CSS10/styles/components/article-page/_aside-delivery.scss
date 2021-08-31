@@ -1,0 +1,26 @@
+.delivery__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &__delivery {
+        @include displayFlex(flex, center, 1rem);
+        border-bottom: $border-bottom-gray;
+        padding: 1rem 0;
+
+        &::after {
+            @include availabilityStyles();
+        }
+    }
+    &__stock {
+        @include displayFlex(flex, center, 1rem);
+
+        &::after {
+            @include availabilityStyles();
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}

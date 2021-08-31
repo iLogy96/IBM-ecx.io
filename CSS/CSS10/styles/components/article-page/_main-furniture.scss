@@ -1,0 +1,52 @@
+.furniture {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 3rem 0;
+
+    &__article {
+        grid-column: span 5;
+    }
+
+    &__para {
+        color: $secondary-text-color;
+        padding: 2rem 0;
+        width: 60%;
+        line-height: 1.5;
+    }
+
+    &__serial-tag {
+        color: $secondary-text-color;
+        padding: 0.5rem 0;
+    }
+
+    &__serial-number {
+        color: $white-color;
+        background: #000;
+        width: max-content;
+        padding: 0.3em 0.6em;
+    }
+
+    &__summary {
+        display: flex;
+        flex-direction: column;
+
+        &--details,
+        &--dimensions,
+        &--reviews {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: $border-bottom-gray;
+            height: 100px;
+
+            svg{
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        &--headline {
+            font-weight: bold;
+        }
+    }
+}

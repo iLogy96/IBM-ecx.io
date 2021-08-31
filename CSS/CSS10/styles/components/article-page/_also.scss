@@ -1,0 +1,29 @@
+.also {
+    display: grid;
+    grid-column: span 8;
+    padding: 1rem 0;
+
+    &__summary {
+        @include displayFlex(flex, flex-start, 8px);
+        flex-direction: column;
+    }
+
+    &__title {
+        @include sectionTitleStyles();
+    }
+
+    &__age {
+        color: $error-color;
+    }
+
+    &__name {
+        @include articleNameStyles();
+    }
+
+    &__price {
+        font-weight: bold;
+    }
+    &__scroll {
+        @include sectionScrollStyles();
+    }
+}

@@ -1,5 +1,7 @@
 $success-color:#3ba132;
+$error-color:tomato;
 $white-color:#fff;
 $primary-text-color:#111111;
 $secondary-text-color:#7a797a;
 $background-color:hsl(0deg 0% 96%);
+$border-bottom-gray: 1px solid transparentize($secondary-text-color, 0.7);

@@ -1,0 +1,33 @@
+.footer-button--gray {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border: $border-bottom-gray;
+    border-radius: 100px;
+    padding: 0.5rem;
+}
+
+.btn-wrapper-aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    &__button--blue {
+        color: $white-color;
+        background: #1958a3;
+        width: 100%;
+        border: none;
+        border-radius: 100px;
+        padding: 0.8rem;
+    }
+
+    &__button--fav {
+        @include svgStyles(block, $border-bottom-gray, 0.6rem 0.8rem, 50%);
+        background: none;
+        svg {
+            height: 20px;
+            width: 20px;
+        }
+    }
+}
