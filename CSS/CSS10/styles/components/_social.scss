@@ -1,0 +1,33 @@
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+    border-bottom: 1px solid transparentize($secondary-text-color, 0.7);
+
+    &__list {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    &__link--rounded {
+        border: 1px solid transparentize($secondary-text-color, 0.7);
+        border-radius: 100px;
+        padding: 0.3rem 0.3rem;
+    }
+
+    &__link--squared {
+        border: 1px solid transparentize($secondary-text-color, 0.7);
+        border-radius: 5px;
+        padding: 0.3rem 0.3rem;
+    }
+}
+
+.button--gray {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border: 1px solid transparentize($secondary-text-color, 0.7);
+    border-radius: 100px;
+    padding: 0.5rem;
+}

@@ -1,17 +1,17 @@
-.primary-nav{
+.primary-nav {
     display: flex;
 }
-.header{
+
+.header {
     display: flex;
     justify-content: space-between;
-    &__primary{
-        display: flex;
-        align-items: center;
-        gap: 2.5rem;
+
+    &__primary {
+        @include displayFlex(flex, center, 2.5rem);
     }
-    &__logo{
+
+    &__logo {
         width: 90px;
         height: 70px;
     }
 }
-

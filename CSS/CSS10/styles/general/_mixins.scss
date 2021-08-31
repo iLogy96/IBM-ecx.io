@@ -5,3 +5,9 @@
         padding-bottom: 1rem;
     }
 }
+
+@mixin displayFlex ($display,$align,$gap){
+    display: $display;
+    align-items: $align;
+    gap: $gap;
+}

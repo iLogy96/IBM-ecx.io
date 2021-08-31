@@ -6,11 +6,13 @@
     border: 1px solid transparent;
     background: $background-color;
     border-radius: 70px;
-    &:focus-within{
-        outline:none;
+
+    &:focus-within {
+        outline: none;
     }
     transition: 200ms ease-in-out;
-    &:hover{
+
+    &:hover {
         background: #e2e2e2;
     }
 }

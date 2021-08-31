@@ -9,12 +9,50 @@
     padding: 3.5rem 0;
 
     article {
+        
         &:first-of-type {
             grid-column: 1/3;
         }
     }
 }
 
-.planner,.services,.help,.ikea{
-    @include footerArticleStyles()
+.planner,
+.services,
+.help,
+.ikea {
+    @include footerArticleStyles();
+}
+
+.family {
+    width: 80%;
+    line-height: 1.2;
+    font-size: 0.9em;
+
+    &__title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding-bottom: 1rem;
+    }
+
+    &__text {
+        padding-bottom: 2rem;
+    }
+
+    &__link {
+        text-decoration: underline;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            color: lighten($primary-text-color, 50%);
+        }
+    }
+
+    &__button {
+        color: $white-color;
+        background: #000;
+        border: none;
+        border-radius: 100px;
+        padding: 0.8rem;
+    }
 }
