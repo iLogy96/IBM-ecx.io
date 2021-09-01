@@ -1,24 +1,24 @@
-@mixin footerArticleStyles(){
+@mixin footerArticleStyles() {
     line-height: 1.7;
-    &__title{
+    &__title {
         font-weight: bold;
         padding-bottom: 1rem;
     }
 }
 
-@mixin displayFlex ($display,$align,$gap){
+@mixin displayFlex($display, $align, $gap) {
     display: $display;
     align-items: $align;
     gap: $gap;
 }
 
-@mixin articleNameStyles (){
+@mixin articleNameStyles() {
     color: $primary-text-color;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-@mixin discountedPrice (){
+@mixin discountedPrice() {
     background: #fcdb00;
     width: max-content;
     padding: 0.2rem;
@@ -26,29 +26,29 @@
     font-weight: bold;
 }
 
-@mixin svgStyles ($display,$border,$padding,$border-radius) {
+@mixin svgStyles($display, $border, $padding, $border-radius) {
     display: $display;
     border: $border;
-    padding:$padding;
+    padding: $padding;
     border-radius: $border-radius;
 }
 
-@mixin imageSize ($width,$height){
+@mixin imageSize($width, $height) {
     width: $width;
     height: $height;
 }
 
-@mixin sectionTitleStyles(){
+@mixin sectionTitleStyles() {
     font-weight: bold;
     font-size: 1.5rem;
-    padding:2rem 0;
+    padding: 2rem 0;
 }
 
-@mixin availabilityStyles{
+@mixin availabilityStyles {
     content: "";
-    width: .7rem;
-    height: .7rem;
-    background:$success-color;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: $success-color;
     border-radius: 50%;
 }
 
@@ -58,3 +58,19 @@
     overflow-x: scroll;
     overflow-y: hidden;
 }
+
+@mixin mq-up($name) {
+    $min: map-get($grid, $name, "min");
+
+    @media (min-width: $min) {
+        @content;
+    }
+}
+
+@mixin mq-down($name) {
+    $max: map-get($grid, $name, "max");
+
+    @media (max-width: $max) {
+        @content;
+    }
+} 

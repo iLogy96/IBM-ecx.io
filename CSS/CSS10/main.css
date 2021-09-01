@@ -410,6 +410,7 @@ sup {
 .furniture__summary {
   display: flex;
   flex-direction: column;
+  padding: 1rem 0;
 }
 .furniture__summary--details, .furniture__summary--dimensions, .furniture__summary--reviews {
   display: flex;
