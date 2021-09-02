@@ -30,8 +30,7 @@ function renderCountries(country) {
 }
 
 const select = document.querySelector("select");
-fetch(`https://restcountries.eu/rest/v2/all`)
-  .then((response) => response.json())
+fetchCountries()
   .then((data) => {
     renderCountries(data);
   })
