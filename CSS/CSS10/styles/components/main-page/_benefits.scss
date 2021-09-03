@@ -6,11 +6,15 @@
     padding: 0.5rem;
     gap: 3rem;
 
+
+
+    
     &__item {
         @include displayFlex(flex,center,5px);
         padding: 0.5rem;
         color: $white-color;
         fill: $white-color;
+    
 
         svg {
             margin-right: 10px;

@@ -2,6 +2,12 @@
     grid-column: span 3;
     line-height: 1.8;
 
+    @include mq-down("tablet") {
+        width: max-content;
+        margin-left: 2rem;
+    }
+
+
     &__age {
         color: $error-color;
     }

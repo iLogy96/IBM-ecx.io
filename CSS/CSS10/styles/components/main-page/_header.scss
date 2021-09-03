@@ -1,17 +1,30 @@
 .primary-nav {
     display: flex;
+
+    @include mq-down("tablet") {
+        overflow-x: scroll;
+    }
+
+    @include mq-down("phone") {
+        overflow-x: scroll;
+    }
+
+
+
 }
 
 .header {
     display: flex;
     justify-content: space-between;
 
+    
     &__primary {
         @include displayFlex(flex, center, 2.5rem);
     }
-
+    
     &__logo {
         width: 90px;
         height: 70px;
     }
+
 }

@@ -3,6 +3,11 @@
     grid-column: span 8;
     padding: 1rem 0;
 
+    @include mq-down("tablet") {
+        width: 100%;
+        margin-left: 2rem;
+    }
+
     &__summary {
         @include displayFlex(flex, flex-start, 8px);
         flex-direction: column;

@@ -8,6 +8,7 @@ html {
 *::after {
     font-family: inherit;
     box-sizing: inherit;
+
 }
 .container{
     max-width: 1300px;
@@ -22,6 +23,7 @@ a{
 }
 button {
     border: none;
+    background: none;
 }
 img{
     width: 300px;
