@@ -1,0 +1,44 @@
+.basket {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    padding: 4rem 0;
+    border-bottom: $border-bottom-gray;
+
+    article:not(:last-of-type) {
+        border-bottom: $border-bottom-gray;
+    }
+
+    &__section {
+        grid-column: span 5;
+    }
+
+    &__intro {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 3rem;
+    }
+
+    &__dots {
+        font-size: 1.2rem;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    &__image {
+        @include imageSize(150px, 150px);
+    }
+
+    &__summary__wrapper {
+        @include displayFlex(flex, flex-start, 0.5rem);
+        flex-direction: column;
+    }
+    
+    &__article {
+        @include displayFlex(flex, flex-start, 1rem);
+        justify-content: space-between;
+        padding: 2rem 0;
+    }
+}

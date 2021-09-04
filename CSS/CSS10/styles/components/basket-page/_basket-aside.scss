@@ -1,0 +1,39 @@
+.basket__aside {
+    display: grid;
+    grid-column-start: 7;
+    grid-column-end: 11;
+
+    &__wrapper,
+    .order__summary {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+}
+.order__summary {
+
+    &__delivery,
+    &__price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 0;
+        font-size: 0.9rem;
+    }
+
+    &__delivery{
+        border-bottom: black 2px solid;
+    }
+
+    &__price{
+        font-weight: bold;
+
+        span:nth-child(2){
+            font-size: 1.3rem;
+        }
+    }
+}

@@ -6,7 +6,7 @@
     border-radius: 100px;
     padding: 0.5rem;
 }
-
+//aside na article-page
 .btn-wrapper-aside {
     display: flex;
     align-items: center;
@@ -28,6 +28,25 @@
         svg {
             height: 20px;
             width: 20px;
+        }
+    }
+}
+
+//button na checkout-page
+.basket__summary__add{
+    @include displayFlex(flex,center,1rem);
+    padding: 2rem 0;
+    &--button{
+        @include svgStyles(block, $border-bottom-gray, .6rem 1rem, 100px);
+        width: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        svg{
+            width: 10px;
+            height: 10px;
+            transform: rotate(90deg);
         }
     }
 }

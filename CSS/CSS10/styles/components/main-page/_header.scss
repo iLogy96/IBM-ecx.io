@@ -4,10 +4,15 @@
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    //napomena, space between i dva ul napraviti u headeru
 
     &__primary {
         @include displayFlex(flex, center, 2.5rem);
+
+        &__item{
+            padding: 0 .5rem;
+        }
     }
 
     &__logo {

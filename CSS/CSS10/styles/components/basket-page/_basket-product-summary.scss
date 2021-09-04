@@ -1,0 +1,21 @@
+.basket__summary {
+    @include displayFlex(flex, flex-start, 1.3rem);
+
+    &__title {
+        @include articleNameStyles();
+        font-size: 0.8rem;
+    }
+
+    &__description,
+    &__stock,
+    &__remove,
+    &__save {
+        color: $secondary-text-color;
+        font-size: 0.9rem;
+    }
+
+    &__price {
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+}
