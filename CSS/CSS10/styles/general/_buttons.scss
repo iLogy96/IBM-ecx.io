@@ -33,20 +33,42 @@
 }
 
 //button na checkout-page
-.basket__summary__add{
-    @include displayFlex(flex,center,1rem);
+.basket__summary__add {
+    @include displayFlex(flex, center, 1rem);
     padding: 2rem 0;
-    &--button{
-        @include svgStyles(block, $border-bottom-gray, .6rem 1rem, 100px);
+
+    &--button {
+        @include svgStyles(block, $border-bottom-gray, 0.6rem 1rem, 100px);
         width: 5rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        svg{
+        svg {
             width: 10px;
             height: 10px;
             transform: rotate(90deg);
         }
     }
+}
+
+.button--wishlist {
+    position: absolute;
+    right: 0;
+    top:0;
+    svg{
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.button--cart {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    fill: #fff;
+    background: $color-blue;
+    border: transparent;
+    border-radius: 100px;
+    padding: 0.6rem;
 }

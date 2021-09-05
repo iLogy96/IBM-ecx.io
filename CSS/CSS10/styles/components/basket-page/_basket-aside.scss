@@ -7,6 +7,7 @@
     .order__summary {
         display: flex;
         flex-direction: column;
+        gap: 1.8rem;
     }
 
     &__title {
@@ -15,7 +16,6 @@
     }
 }
 .order__summary {
-
     &__delivery,
     &__price {
         display: flex;
@@ -25,15 +25,16 @@
         font-size: 0.9rem;
     }
 
-    &__delivery{
+    &__delivery {
         border-bottom: black 2px solid;
     }
 
-    &__price{
+    &__price {
         font-weight: bold;
 
-        span:nth-child(2){
+        span:nth-child(2) {
             font-size: 1.3rem;
         }
     }
 }
+

@@ -49,4 +49,8 @@
             fill: transparentize(#000, .5);
         }
     }
+
+    &__stars{
+        @include displayFlex(flex,center,5px)
+    }
 }
