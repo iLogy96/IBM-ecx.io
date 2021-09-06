@@ -1,10 +1,8 @@
 .footer-button--gray {
+    @include svgStyles(flex,$border-bottom-gray,0.5rem,100px);
     display: flex;
     gap: 5px;
     align-items: center;
-    border: $border-bottom-gray;
-    border-radius: 100px;
-    padding: 0.5rem;
 }
 //aside na article-page
 .btn-wrapper-aside {
@@ -14,12 +12,10 @@
     gap: 1rem;
 
     &__button--blue {
+        @include svgStyles(block,$border-bottom-gray,0.8rem,100px);
         color: $white-color;
-        background: #1958a3;
+        background: $color-blue;
         width: 100%;
-        border: none;
-        border-radius: 100px;
-        padding: 0.8rem;
     }
 
     &__button--fav {
@@ -55,8 +51,8 @@
 .button--wishlist {
     position: absolute;
     right: 0;
-    top:0;
-    svg{
+    top: 0;
+    svg {
         width: 18px;
         height: 18px;
     }
@@ -71,4 +67,56 @@
     border: transparent;
     border-radius: 100px;
     padding: 0.6rem;
+}
+
+.mini__get--button {
+    @include svgStyles(block, $border-bottom-gray, 0.8rem, 100px);
+    color: #000;
+    background: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup--button {
+    @include svgStyles(block, $border-bottom-gray, .5rem .6rem, 100px);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #fff;
+    cursor: pointer;
+
+    svg {
+        width: 11px;
+        height: 11px;
+    }
+}
+
+.dimensions--button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+
+    svg {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+.takeaway--button{
+    @include svgStyles(block,$border-bottom-gray,0.6rem,100px);
+    background: #fdfefe;
+    fill: black;
+    cursor: pointer;
+
+    svg{
+        width: 15px;
+        height: 15px;
+    }
+}
+.takeaway__button--blue {
+    @include svgStyles(block,$border-bottom-gray,0.8rem,100px);
+    color: $white-color;
+    background: $color-blue;
+    width: 100%;
 }

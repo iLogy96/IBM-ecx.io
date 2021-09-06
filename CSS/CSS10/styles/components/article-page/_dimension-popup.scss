@@ -1,0 +1,64 @@
+.dimensions {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 33%;
+    right: 0;
+    top: 0;
+    padding: 2rem;
+    background: transparentize($secondary-text-color,0.6);
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__title {
+        color: #000;
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    &__serial {
+        padding: 1rem 0;
+    }
+
+    &__serial-number {
+        color: $white-color;
+        background: #000;
+        width: max-content;
+        padding: 0.3em 0.6em;
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+
+    &__summary {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+
+        &--details,
+        &--dimensions,
+        &--reviews {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: $border-bottom-gray;
+            height: 100px;
+
+            svg {
+                transform:rotate(90deg);
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        &--headline {
+            font-weight: bold;
+        }
+    }
+}

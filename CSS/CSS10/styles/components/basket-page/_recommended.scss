@@ -23,10 +23,6 @@
         @include sectionTitleStyles();
     }
 
-    &__age {
-        color: $error-color;
-    }
-
     &__name {
         @include articleNameStyles();
     }

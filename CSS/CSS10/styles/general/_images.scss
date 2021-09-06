@@ -27,6 +27,10 @@
     @include imageSize(275px, 270px);
 }
 
-.recent__image {
+.recent__image,.popup__image {
     @include imageSize(150px,150px);
+}
+
+.takeaway__image{
+    @include imageSize(75px,75px);
 }
