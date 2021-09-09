@@ -1,0 +1,1 @@
+klase i extendovi u javascriptu

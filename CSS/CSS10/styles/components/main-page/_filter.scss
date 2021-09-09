@@ -50,7 +50,7 @@
             text-align: center;
             background: $background-color;
             border: $background-color solid 2px;
-            border-radius: 50%;
+            border-radius: 100px;
 
             @include mq-down ('tablet') {
                 padding:.3rem;

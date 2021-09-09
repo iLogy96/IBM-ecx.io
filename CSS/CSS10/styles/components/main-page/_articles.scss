@@ -3,20 +3,32 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    @include mq-down ('tablet') {
-        grid-template-columns: repeat(2,1fr);
+    @include mq-down("tablet") {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    @include mq-down ('phone') {
-        grid-template-columns: repeat(1,1fr);
+    @include mq-down("phone") {
+        grid-template-columns: repeat(1, 1fr);
     }
-
+}
+.--hidden {
+    display: none;
 }
 .article {
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
     border-bottom: 1px solid transparentize($secondary-text-color, 0.7);
+    
+    &__image {
+        position: relative;
+
+        &:hover .--hidden {
+            position: absolute;
+            display: block;
+            top: 0;
+        }
+    }
 
     &__summary {
         @include displayFlex(flex, flex-start, 10px);

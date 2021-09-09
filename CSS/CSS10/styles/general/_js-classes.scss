@@ -1,0 +1,12 @@
+.js-add-to-cart {
+position: relative;
+    &-number{
+        position: absolute;
+        bottom: 10px;
+        background: $color-blue;
+        color: #fff;
+        border: 1px solid $color-blue;
+        border-radius: 30px;
+        padding: 2px 5px;
+    }
+}
