@@ -1,12 +1,12 @@
 .dimensions {
-    display: none;
     position: fixed;
     height: 100%;
     width: 33%;
     right: 0;
     top: 0;
     padding: 2rem;
-    background: transparentize($secondary-text-color,0.6);
+    background: #fff;
+    transition: ease-in-out 300ms;
 
     &__intro {
         display: flex;
@@ -51,7 +51,7 @@
             height: 100px;
 
             svg {
-                transform:rotate(90deg);
+                transform: rotate(90deg);
                 width: 15px;
                 height: 15px;
             }
@@ -59,6 +59,39 @@
 
         &--headline {
             font-weight: bold;
+        }
+    }
+}
+
+.dimensions__summary--more {
+    display: none;
+    line-height: 1.5;
+    &__title {
+        font-weight: bold;
+    }
+    div:nth-child(3) {
+        font-size: 0.8rem;
+        padding-top: 0.5rem;
+    }
+    div:nth-child(4) {
+        color: #fff;
+        font-size: 0.8rem;
+        background: #000;
+        width: max-content;
+        padding: 0.3em 0.6em;
+    }
+    div:nth-child(5) {
+        padding-top: 0.5rem;
+    }
+    div:nth-child(5),
+    div:nth-child(6),
+    div:nth-child(7),
+    div:nth-child(8),
+    div:nth-child(9) {
+        font-weight: bold;
+
+        span{
+            font-weight: normal;
         }
     }
 }

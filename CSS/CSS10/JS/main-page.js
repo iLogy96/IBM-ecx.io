@@ -4,6 +4,7 @@ const sectionArticle = document.querySelector(".section__article");
 const cartNumber = document.querySelector(".js-cart-number");
 let id = 0;
 
+
 //fetch podataka
 
 const fetchData = (id) => {
@@ -29,37 +30,53 @@ const handlebars = (article) => {
 const renderPosts = (id) => {
   fetchData(id)
     .then((article) => {
-      console.log(article);
       handlebars(article.moreProducts.productWindow);
     })
 
     .then(() => {
-      sectionArticle.addEventListener("click", addToCart);
+      bindEventListeners();
     });
 };
 renderPosts(id);
 
-const handleEventListeners = () => {
+//svi event listeneri
+const bindEventListeners = () => {
+  sectionArticle.addEventListener("click", addToCart);
   //prikaži sljedeći fetch
   showMoreButton.addEventListener("click", showMore);
 };
 
-handleEventListeners();
-
+//prikaži više
 function showMore() {
   id++;
   renderPosts(id);
 }
 
+//add to cart
+let product = [];
 function addToCart(e) {
   if (e.target.closest(".add-to-cart__button")) {
     let productId = e.target.closest(".add-to-cart__button").dataset.id;
-    let product = JSON.parse(localStorage.getItem("product")) || [];
+    product = JSON.parse(localStorage.getItem("product")) || [];
     product.push(productId);
     localStorage.setItem("product", JSON.stringify(product));
+    
     cartNumber.innerHTML = product.length;
     cart.classList.add("js-add-to-cart");
     cartNumber.classList.add("js-add-to-cart-number");
   }
   e.preventDefault();
 }
+
+//check local storage
+const checkStorage = () =>{
+  if (JSON.parse(localStorage.getItem("product"))){
+    product = JSON.parse(localStorage.getItem("product"));
+    cart.classList.add("js-add-to-cart");
+    cartNumber.classList.add("js-add-to-cart-number");
+    cartNumber.innerHTML = product.length;
+  }
+};
+checkStorage();
+
+

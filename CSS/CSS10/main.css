@@ -80,6 +80,7 @@ a {
 }
 
 button {
+  cursor: pointer;
   border: none;
   background: none;
 }
@@ -201,13 +202,13 @@ sup {
   height: 11px;
 }
 
-.dimensions--button {
+.dimensions--button--close {
   position: absolute;
   top: 10px;
   right: 15px;
   cursor: pointer;
 }
-.dimensions--button svg {
+.dimensions--button--close svg {
   width: 13px;
   height: 13px;
 }
@@ -295,19 +296,6 @@ sup {
 .takeaway__image {
   width: 75px;
   height: 75px;
-}
-
-.js-add-to-cart {
-  position: relative;
-}
-.js-add-to-cart-number {
-  position: absolute;
-  bottom: 10px;
-  background: #1958a3;
-  color: #fff;
-  border: 1px solid #1958a3;
-  border-radius: 30px;
-  padding: 2px 5px;
 }
 
 .benefit-box {
@@ -683,12 +671,17 @@ sup {
   justify-content: space-between;
   border-top: 1px solid rgba(122, 121, 122, 0.3);
   height: 100px;
+  cursor: pointer;
+}
+.furniture__summary--details:hover, .furniture__summary--dimensions:hover, .furniture__summary--reviews:hover {
+  text-decoration: underline;
 }
 .furniture__summary--details svg, .furniture__summary--dimensions svg, .furniture__summary--reviews svg {
   width: 15px;
   height: 15px;
 }
 .furniture__summary--headline {
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -1148,7 +1141,7 @@ sup {
 .popup {
   display: none;
   position: fixed;
-  height: 100%;
+  height: 100vh;
   width: 33%;
   right: 0;
   top: 0;
@@ -1185,7 +1178,7 @@ sup {
 .popup__scroll {
   padding: 2rem;
   overflow-y: scroll;
-  height: 700px;
+  height: 85vh;
 }
 .popup__summary {
   display: flex;
@@ -1219,14 +1212,14 @@ sup {
 }
 
 .dimensions {
-  display: none;
   position: fixed;
   height: 100%;
   width: 33%;
   right: 0;
   top: 0;
   padding: 2rem;
-  background: rgba(122, 121, 122, 0.4);
+  background: #fff;
+  transition: ease-in-out 300ms;
 }
 .dimensions__intro {
   display: flex;
@@ -1270,6 +1263,42 @@ sup {
 }
 .dimensions__summary--headline {
   font-weight: bold;
+}
+
+.dimensions__summary--more {
+  display: none;
+  line-height: 1.5;
+}
+.dimensions__summary--more__title {
+  font-weight: bold;
+}
+.dimensions__summary--more div:nth-child(3) {
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+}
+.dimensions__summary--more div:nth-child(4) {
+  color: #fff;
+  font-size: 0.8rem;
+  background: #000;
+  width: max-content;
+  padding: 0.3em 0.6em;
+}
+.dimensions__summary--more div:nth-child(5) {
+  padding-top: 0.5rem;
+}
+.dimensions__summary--more div:nth-child(5),
+.dimensions__summary--more div:nth-child(6),
+.dimensions__summary--more div:nth-child(7),
+.dimensions__summary--more div:nth-child(8),
+.dimensions__summary--more div:nth-child(9) {
+  font-weight: bold;
+}
+.dimensions__summary--more div:nth-child(5) span,
+.dimensions__summary--more div:nth-child(6) span,
+.dimensions__summary--more div:nth-child(7) span,
+.dimensions__summary--more div:nth-child(8) span,
+.dimensions__summary--more div:nth-child(9) span {
+  font-weight: normal;
 }
 
 .takeaway {
@@ -1448,6 +1477,43 @@ sup {
   color: #7a797a;
   text-align: center;
   width: max-content;
+}
+
+.js-add-to-cart {
+  position: relative;
+}
+.js-add-to-cart-number {
+  position: absolute;
+  bottom: 10px;
+  background: #1958a3;
+  color: #fff;
+  border: 1px solid #1958a3;
+  border-radius: 30px;
+  padding: 2px 5px;
+}
+
+.overlay {
+  opacity: 0.4;
+  background-color: #323232;
+}
+.overlay img {
+  opacity: 0.3;
+}
+
+.js--dimensions--active {
+  transform: translate(100%);
+}
+
+.js--display--more {
+  display: block;
+}
+
+.rotate--button svg {
+  transform: rotate(270deg);
+}
+
+.js--popup--active {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

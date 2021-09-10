@@ -1,6 +1,6 @@
 .js-add-to-cart {
-position: relative;
-    &-number{
+    position: relative;
+    &-number {
         position: absolute;
         bottom: 10px;
         background: $color-blue;
@@ -10,3 +10,70 @@ position: relative;
         padding: 2px 5px;
     }
 }
+
+.overlay {
+    opacity: 0.4;
+    background-color: rgb(50, 50, 50);
+
+    img{
+        opacity: .3;
+    }
+}
+
+.js--dimensions--active {
+    transform: translate(100%);
+}
+
+.js--display--more{
+    display: block;
+}
+
+.rotate--button{
+    svg{
+        transform: rotate(270deg);
+    }
+}
+.js--popup--active{
+    display: block;
+}
+
+// .takeaway__js--hidden {
+//     display: none;
+// }
+
+// .js--one {
+//     grid-column-start: 2;
+//     grid-column-end: 6;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 15px;
+//     border-bottom: $border-bottom-gray;
+//     padding: 1rem 0;
+
+//     &__info {
+//         display: flex;
+//         justify-content: space-between;
+//         padding-bottom: 1rem;
+//     }
+
+//     &__title{
+//         font-weight: bold;
+//     }
+
+//     &__link{
+//         text-decoration: underline;
+//     }
+
+//     &__delivery,&__address,&__date{
+//         display: flex;
+//         flex-direction: column;
+//         gap: 5px;
+
+//         span:first-child {
+//             font-weight: bold;
+//         }
+//         span:nth-child(2){
+//             color: $secondary-text-color;
+//         }
+//     }
+// }
