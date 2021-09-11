@@ -84,9 +84,12 @@
         </div>
     </header>
     <main class="container">
+      
         <section class="takeaway">
           <div class="takeaway__number --one"><span>1</span></div>
-          <!-- <section class="js--one">
+
+          
+          <section class="section__show">
             <div class="js--one__info">
               <h1 class="js--one__title">Informacije o dostavi</h1>
               <a class="js--one__link" href="#">Uredi</a>
@@ -103,10 +106,10 @@
               <span>Datum dostave</span>
               <span>Dostava: 2-7 radnih dana</span>
             </div>
+          </section>
 
 
-          </section> -->
-            <section class="takeaway__section takeaway__js--hidden">
+            <section class="takeaway__section">
                 <h1 class="takeaway__section__title">Kako želiš preuzeti svoju narudžbu</h1>
                 <div class="takeaway__address">
                     <div>Dostavi na</div>
@@ -198,6 +201,60 @@
           <div class="takeaway__number --two"><span>2</span></div>
           <section class="takeaway__section">
                 <h1 class="takeaway__section__title--alternative">Gdje trebamo poslati narudžbu</h1>
+                <form class="form takeaway__js--hidden" action="#" method="POST">
+                  <div class="form__radio">
+                    <input type="radio" id="buyer" name="buyer-radio">
+                    <label for="buyer-radio">Privatni kupac</label>
+                  </div>
+                  <div class="form__radio">
+                    <input type="radio" id="buyer" name="buyer-radio">
+                    <label for="buyer-radio">Tvrtka</label>
+                  </div>
+                    <input class="form__input" type="text" placeholder="Ime">
+                    <input class="form__input" type="text" placeholder="Prezime">
+                    <input class="form__input" type="text" placeholder="Ulica">
+                  <div class="form__add-address">
+                    + Dodaj drugu adresu
+                  </div>
+                  <div class="form__current-address">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+                        <div class="form__postnumber">
+                          <span>Poštanski broj</span>
+                          <span>100000</span>
+                        </div>
+                    </div>
+                    <a class="form__link" href="#">Izmijeni</a>
+                  </div>
+
+                  <input class="form__input" type="text" placeholder="Grad">
+                  <input class="form__input" type="email" placeholder="Adresa e-pošte">
+                  <input class="form__input" type="text" placeholder="Broj telefona">
+                  
+                  <div class="form__credentials">
+                    <div class="form__credentials__checkbox">
+                      <input type="checkbox" id="checkbox" name="checkbox">
+                      <label for="checkbox">Dodaj adresu za plaćanje</label>
+                    </div>
+                    <a class="form__link" href="#">Što je ovo</a>
+                  </div>
+                  <div class="form__card">
+                    <input class="form__input" type="text" placeholder="Unesi broj svoje IKEA Family kartice">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 4h-20c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-12c0-1.104-.896-2-2-2zm0 13.5c0 .276-.224.5-.5.5h-19c-.276 0-.5-.224-.5-.5v-6.5h20v6.5zm0-9.5h-20v-1.5c0-.276.224-.5.5-.5h19c.276 0 .5.224.5.5v1.5zm-9 6h-9v-1h9v1zm-3 2h-6v-1h6v1zm10-2h-3v-1h3v1z"/></svg>
+                  </div>
+                  <div class="form__credentials__checkbox">
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                    <label for="checkbox">Klikom Nastavi slažeš se s uvjetima naših <a class="form__link" href="#">Pravila o zaštiti podataka</a></label>
+                  </div>
+                  <button class="form__button">Nastavi</button>
+                  <p class="takeaway__para">
+                    Koristimo najnoviju SSl tehnologiju kako bismo zaštitili
+                    sve osobne podatke koje nam pružiš putem naše internetske stranice
+                  </p>  
+                </form>
+
+
+
             </section>
             <div class="takeaway__number --three"><span>3</span></div>
             <section class="takeaway__section">

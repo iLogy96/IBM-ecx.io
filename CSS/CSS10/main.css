@@ -1367,7 +1367,8 @@ sup {
 .--three,
 .--four {
   display: flex;
-  align-items: center;
+  align-items: start;
+  padding: 1.8rem 0;
   border-bottom: 1px solid rgba(122, 121, 122, 0.3);
 }
 .--two span,
@@ -1479,6 +1480,66 @@ sup {
   width: max-content;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form__input {
+  border: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #7a797a;
+  outline: none;
+}
+.form__add-address {
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+.form__current-address, .form__credentials, .form__card {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.form__current-address div, .form__credentials div, .form__card div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.form__current-address div svg, .form__credentials div svg, .form__card div svg {
+  height: 20px;
+  width: 20px;
+}
+.form__current-address div span:nth-child(2), .form__credentials div span:nth-child(2), .form__card div span:nth-child(2) {
+  font-weight: bold;
+}
+.form__postnumber {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form__link {
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+.form__card input {
+  width: 100%;
+}
+.form__credentials__checkbox {
+  font-size: 0.9rem;
+}
+.form__button {
+  display: block;
+  border: 1px solid rgba(122, 121, 122, 0.3);
+  padding: 0.8rem;
+  border-radius: 100px;
+  color: #fff;
+  background: gray;
+  width: 100%;
+}
+
 .js-add-to-cart {
   position: relative;
 }
@@ -1514,6 +1575,67 @@ sup {
 
 .js--popup--active {
   display: block;
+}
+
+.takeaway__js--hidden {
+  display: none;
+}
+
+.--one-closed span {
+  background: transparent;
+  color: #7a797a;
+  border: 1px solid #7a797a;
+  border-radius: 100px;
+  padding: 0.3rem 0.6rem;
+}
+
+.--two-open span {
+  background: #000;
+  color: white;
+  border: transparent;
+  border-radius: 100px;
+  padding: 0.3rem 0.5rem;
+}
+
+.section__show {
+  display: none;
+}
+
+.js--one {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-bottom: 1px solid rgba(122, 121, 122, 0.3);
+  padding: 1rem 0;
+}
+.js--one__info {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+.js--one__title {
+  font-weight: bold;
+}
+.js--one__link {
+  text-decoration: underline;
+}
+.js--one__delivery, .js--one__address, .js--one__date {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.js--one__delivery span:first-child, .js--one__address span:first-child, .js--one__date span:first-child {
+  font-weight: bold;
+}
+.js--one__delivery span:nth-child(2), .js--one__address span:nth-child(2), .js--one__date span:nth-child(2) {
+  color: #7a797a;
+}
+
+.takeaway__title__bold {
+  font-size: 2.1rem;
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */

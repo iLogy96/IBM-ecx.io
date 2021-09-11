@@ -70,7 +70,8 @@
 .--three,
 .--four {
     display: flex;
-    align-items: center;
+    align-items: start;
+    padding: 1.8rem 0;
     border-bottom: $border-bottom-gray;
 
     span {

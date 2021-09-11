@@ -1,3 +1,4 @@
+//number above cart svg
 .js-add-to-cart {
     position: relative;
     &-number {
@@ -10,70 +11,104 @@
         padding: 2px 5px;
     }
 }
-
+//dimmed overlay after popup
 .overlay {
     opacity: 0.4;
     background-color: rgb(50, 50, 50);
 
-    img{
-        opacity: .3;
+    img {
+        opacity: 0.3;
     }
 }
 
+//dimenzije proizvoda u popupu i animacija svg-a
 .js--dimensions--active {
     transform: translate(100%);
 }
 
-.js--display--more{
+.js--display--more {
     display: block;
 }
 
-.rotate--button{
-    svg{
+.rotate--button {
+    svg {
         transform: rotate(270deg);
     }
 }
-.js--popup--active{
+.js--popup--active {
     display: block;
 }
 
-// .takeaway__js--hidden {
-//     display: none;
-// }
+//"prihvaćanje" informacija i zatvaranje prvog menu-a
+.takeaway__js--hidden {
+    display: none;
+}
 
-// .js--one {
-//     grid-column-start: 2;
-//     grid-column-end: 6;
-//     display: flex;
-//     flex-direction: column;
-//     gap: 15px;
-//     border-bottom: $border-bottom-gray;
-//     padding: 1rem 0;
+//mijenjanje stilova brojeva pored menu-a
+.--one-closed {
+    span {
+        background: transparent;
+        color: $secondary-text-color;
+        border: 1px solid $secondary-text-color;
+        border-radius: 100px;
+        padding: 0.3rem 0.6rem;
+    }
+}
+.--two-open{
+    span{
+        background: #000;
+        color: white;
+        border: transparent;
+        border-radius: 100px;
+        padding: 0.3rem 0.5rem;
+    }
+}
 
-//     &__info {
-//         display: flex;
-//         justify-content: space-between;
-//         padding-bottom: 1rem;
-//     }
+//prikaz nove sekcije s prihvaćenim informacijama
+.section__show{
+    display: none;
+}
 
-//     &__title{
-//         font-weight: bold;
-//     }
+.js--one {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: $border-bottom-gray;
+    padding: 1rem 0;
 
-//     &__link{
-//         text-decoration: underline;
-//     }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+    }
 
-//     &__delivery,&__address,&__date{
-//         display: flex;
-//         flex-direction: column;
-//         gap: 5px;
+    &__title {
+        font-weight: bold;
+    }
 
-//         span:first-child {
-//             font-weight: bold;
-//         }
-//         span:nth-child(2){
-//             color: $secondary-text-color;
-//         }
-//     }
-// }
+    &__link {
+        text-decoration: underline;
+    }
+
+    &__delivery,
+    &__address,
+    &__date {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        span:first-child {
+            font-weight: bold;
+        }
+        span:nth-child(2) {
+            color: $secondary-text-color;
+        }
+    }
+}
+
+.takeaway__title__bold {
+    font-size: 2.1rem;
+    color: black;
+}
