@@ -73,4 +73,87 @@
     @media (max-width: $max) {
         @content;
     }
-} 
+}
+
+@mixin checkboxStyles {
+    .checkbox {
+        display: flex;
+
+        &__input {
+            display: none;
+        }
+
+        &__box {
+            width: 1.25em;
+            height: 1.25em;
+            border: 2px solid #cccccc;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            flex-shrink: 0;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        &__box::after {
+            content: "\2713";
+            color: white;
+            transform: scale(0);
+            transition: transform 0.15s;
+        }
+
+        &__input:checked + .checkbox__box {
+            background: blue;
+            border-color: blue;
+        }
+
+        &__input:checked + .checkbox__box::after {
+            transform: scale(1);
+        }
+    }
+}
+
+@mixin radioStyles() {
+    .radio {
+        display: flex;
+        align-items: center;
+
+        &__input {
+            display: none;
+        }
+
+        &__box {
+            width: 1.25em;
+            height: 1.25em;
+            border: 2px solid #cccccc;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            flex-shrink: 0;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        &__box::after {
+            content:"\A";
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            border: white 1px solid;
+            transform: scale(0);
+            transition: transform 0.15s;
+        }
+
+        &__input:checked + .radio__box {
+            background: blue;
+            border-color: blue;
+        }
+
+        &__input:checked + .radio__box::after {
+            transform: scale(1);
+        }
+    }
+}

@@ -14,6 +14,8 @@
 @import './components/main-page/footer';
 @import './components/main-page/social';
 @import './components/main-page/copyright';
+@import './components/main-page/main-js';
+@import './components/main-page/section-burger';
 @import './components/article-page/main-furniture';
 @import './components/article-page/aside-furniture';
 @import './components/article-page/aside-delivery';
@@ -29,8 +31,11 @@
 @import './components/basket-page/mini-cart';
 @import './components/article-page/popup';
 @import './components/article-page/dimension-popup';
+@import './components/article-page/article-js';
 @import './components/takeaway-page/takeaway';
 @import './components/takeaway-page/takeaway-aside';
 @import './components/takeaway-page/takeaway-summary';
 @import './components/takeaway-page/takeaway-form';
-@import './general/js-classes';
+@import './components/takeaway-page/takeaway-js';
+@import './components/takeaway-page/takeaway-payment';
+

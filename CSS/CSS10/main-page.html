@@ -10,6 +10,7 @@
   <body>
     <div class="body__wrapper">
     <header>
+
       <div class="benefit-box">
         <a href="#" class="benefit-box__item">
             <svg
@@ -52,6 +53,7 @@
             Naš odgovor na COVID-19
         </a>
       </div>
+
       <div class="header container">
         <nav class="primary-nav">
           <ul class="header__primary">
@@ -195,8 +197,16 @@
           </ul>
         </nav>
       </div>
+
     </header>
+    <div class="menu-icon">
+      <span class="line-1"></span>
+      <span class="line-2"></span>
+      <span class="line-3"></span>
+    </div> 
+
     <main class="container">
+
       <section class="filter">
         <div class="filter__current">
           <a href="#">Novo > </a> 
@@ -234,7 +244,7 @@
                   <span class="article__name">{{name}}</span>
                   <span class="article__description">{{typeName}}</span>
                   <span class="article__price">{{priceNumeral}} kn</span>
-                  <a class="add-to-cart__button" data-id ="{{id}}" href="#">
+                  <a class="add-to-cart__button" data-id ="{{id}}" data-name = "{{name}}" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.558 7l4.701-4.702c.199-.198.46-.298.721-.298.613 0 1.02.505 1.02 1.029 0 .25-.092.504-.299.711l-3.26 3.26h-2.883zm12.001 0h2.883l-4.701-4.702c-.199-.198-.46-.298-.721-.298-.613 0-1.02.505-1.02 1.029 0 .25.092.504.299.711l3.26 3.26zm3.703 4l-.016.041-3.598 8.959h-9.296l-3.597-8.961-.016-.039h16.523zm3.738-2h-24v2h.643c.534 0 1.021.304 1.256.784l4.101 10.216h12l4.102-10.214c.233-.481.722-.786 1.256-.786h.642v-2z"/></svg>
                   </a>  
                 </div>
@@ -248,490 +258,205 @@
       </div>
     </div>
    <!--hidden popup za dodavanje u cart-->
-      <div class="popup">
-                      <div class="popup__intro">
-                        <button class="popup--button">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
-                        </button>
-                        <h1 class="popup__title">VIPPART je dodan/a u košaricu</h1>
-                        <a class="popup__link" href="#">Nastavi do košarice</a>
-                      </div>
-                      <div class="popup__scroll__wrapper">
-                        <h2 class="popup__article__title">Povezani proizvodi</h2>
-                        <div class="popup__scroll">
-                          <article class="popup__article">
-                            <img
-                              class="popup__image"
-                              src="./assets/images/cushion-image-1.webp"
-                              alt=""
-                            />
-                            <div class="popup__summary">
-                              <div class="popup__name">Malinda</div>
-                              <div class="popup__description">
-                                Ukrasna jastučnica, 50x50 cm
-                              </div>
-                              <div class="popup__price">39<sup>.90</sup> kn</div>
-                              <div class="popup__stars">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <span>(10)</span>
-                              </div>
-                            </div>
-                          </article>
-                          <article class="popup__article">
-                            <img
-                              class="popup__image"
-                              src="./assets/images/cushion-image-1.webp"
-                              alt=""
-                            />
-                            <div class="popup__summary">
-                              <div class="popup__name">Malinda</div>
-                              <div class="popup__description">
-                                Ukrasna jastučnica, 50x50 cm
-                              </div>
-                              <div class="popup__price">39<sup>.90</sup> kn</div>
-                              <div class="popup__stars">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <span>(10)</span>
-                              </div>
-                            </div>
-                          </article>
-                          <article class="popup__article">
-                            <img
-                              class="popup__image"
-                              src="./assets/images/cushion-image-1.webp"
-                              alt=""
-                            />
-                            <div class="popup__summary">
-                              <div class="popup__name">Malinda</div>
-                              <div class="popup__description">
-                                Ukrasna jastučnica, 50x50 cm
-                              </div>
-                              <div class="popup__price">39<sup>.90</sup> kn</div>
-                              <div class="popup__stars">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <span>(10)</span>
-                              </div>
-                            </div>
-                          </article>
-                          <article class="popup__article">
-                            <img
-                              class="popup__image"
-                              src="./assets/images/cushion-image-1.webp"
-                              alt=""
-                            />
-                            <div class="popup__summary">
-                              <div class="popup__name">Malinda</div>
-                              <div class="popup__description">
-                                Ukrasna jastučnica, 50x50 cm
-                              </div>
-                              <div class="popup__price">39<sup>.90</sup> kn</div>
-                              <div class="popup__stars">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <span>(10)</span>
-                              </div>
-                            </div>
-                          </article>
-                          <article class="popup__article">
-                            <img
-                              class="popup__image"
-                              src="./assets/images/cushion-image-1.webp"
-                              alt=""
-                            />
-                            <div class="popup__summary">
-                              <div class="popup__name">Malinda</div>
-                              <div class="popup__description">
-                                Ukrasna jastučnica, 50x50 cm
-                              </div>
-                              <div class="popup__price">39<sup>.90</sup> kn</div>
-                              <div class="popup__stars">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <span>(10)</span>
-                              </div>
-                            </div>
-                          </article>
-                          <article class="popup__article">
-                            <img
-                              class="popup__image"
-                              src="./assets/images/cushion-image-1.webp"
-                              alt=""
-                            />
-                            <div class="popup__summary">
-                              <div class="popup__name">Malinda</div>
-                              <div class="popup__description">
-                                Ukrasna jastučnica, 50x50 cm
-                              </div>
-                              <div class="popup__price">39<sup>.90</sup> kn</div>
-                              <div class="popup__stars">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <span>(10)</span>
-                              </div>
-                            </div>
-                          </article>
-                          <article class="popup__article">
-                            <img
-                              class="popup__image"
-                              src="./assets/images/cushion-image-1.webp"
-                              alt=""
-                            />
-                            <div class="popup__summary">
-                              <div class="popup__name">Malinda</div>
-                              <div class="popup__description">
-                                Ukrasna jastučnica, 50x50 cm
-                              </div>
-                              <div class="popup__price">39<sup>.90</sup> kn</div>
-                              <div class="popup__stars">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="15"
-                                  height="15"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
-                                  />
-                                </svg>
-                                <span>(10)</span>
-                              </div>
-                            </div>
-                          </article>
-                        </div>
-                      </div>
+      <div class="popup js--popup--active">
+        <div class="popup__intro">
+          <button class="popup--button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+          </button>
+          <h1 class="popup__title"><span class="popup__article--name">VIPPART</span> je dodan/a u košaricu</h1>
+          <a class="popup__link" href="takeaway-page.html">Nastavi do košarice</a>
+        </div>
+        <div class="popup__scroll__wrapper">
+          <h2 class="popup__article__title">Povezani proizvodi</h2>
+          <div class="popup__scroll">
+            <article class="popup__article">
+              <img
+                class="popup__image"
+                src="./assets/images/cushion-image-1.webp"
+                alt=""
+              />
+              <div class="popup__summary">
+                <div class="popup__name">Malinda</div>
+                <div class="popup__description">
+                  Ukrasna jastučnica, 50x50 cm
+                </div>
+                <div class="popup__price">39<sup>.90</sup> kn</div>
+                <div class="popup__stars">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+                    />
+                  </svg>
+                  <span>(10)</span>
+                </div>
+              </div>
+            </article>
+            <article class="popup__article">
+              <img
+                class="popup__image"
+                src="./assets/images/cushion-image-1.webp"
+                alt=""
+              />
+              <div class="popup__summary">
+                <div class="popup__name">Malinda</div>
+                <div class="popup__description">
+                  Ukrasna jastučnica, 50x50 cm
+                </div>
+                <div class="popup__price">39<sup>.90</sup> kn</div>
+                <div class="popup__stars">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"
+                    />
+                  </svg>
+                  <span>(10)</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
-              
+      
+      <div class="section__burger">
+        <button class="section__burger--close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg>
+        </button>
+        <div class="section__burger__container">
+          <svg class="header__logo" version="1.1" id="IKEA" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:version="0.48.2 r9819" sodipodi:docname="AJAX1.svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="300px" viewBox="-23 -86.5 400 300" enable-background="new -23 -86.5 400 300" xml:space="preserve">
+            <path id="blue" fill="#003399" d="M4.191,0.636v123.993h345.617V0.636H4.191z"></path>
+            <path id="yellow" fill="#FFCC00" d="M176.988,6.443c-93.173,0-168.717,25.31-168.717,56.531c0,31.217,75.544,56.546,168.717,56.546
+                  c93.177,0,168.729-25.327,168.729-56.546C345.717,31.752,270.164,6.443,176.988,6.443z"></path>
+            <path id="k" fill="#003399" d="M171.726,81.099l-1.152-0.883l-15.375-24.57l12.758-18.143l-29.319-0.033
+                  c0,0,0.485,0.808,0.485,1.304c0,0.789-0.221,1.335-0.221,1.335l-10.671,13.961l0.018-14.403l0.254-1.285l0.494-0.646H99.538
+                  l0.481,0.606l0.257,1.163l0.011,40.189l-0.253,1.313l-0.485,0.663h29.448l-0.506-0.663l-0.265-1.225l-0.041-15.339l9.314,14.683
+                  c0,0,0.374,1.013,0.15,2.054c-0.036,0.146-0.18,0.33-0.325,0.49h35.71L171.726,81.099z"></path>
+            <polygon id="i" fill="#003399" points="83.461,38.383 83.952,37.736 54.496,37.736 54.841,38.364 54.96,39.549 54.96,79.781 
+                  54.854,81.181 54.508,82.018 83.94,82.098 83.461,81.274 83.201,79.901 83.213,39.668 "></polygon>
+            <polygon id="e" fill="#003399" points="230.068,68.68 228.567,68.979 207.266,68.979 207.266,64.908 223.581,64.889 224.854,65.14 
+                  225.717,65.644 225.74,53.224 224.92,53.703 223.581,53.947 207.266,54.01 207.266,50.428 228.451,50.428 229.851,50.526 
+                  230.688,50.882 230.648,37.399 179.214,37.302 179.712,38.152 179.929,39.549 179.929,79.784 179.723,81.187 179.25,82.024 
+                  230.855,82.125 230.808,68.11 "></polygon>
+            <path id="a" fill="#003399" d="M312.837,82.02l-0.768-0.701l-0.554-0.869l-17.428-40.827c0,0-0.218-0.798-0.128-1.41
+                  c0.086-0.628,0.497-0.851,0.497-0.851L254.54,37.35c0,0,0.408,0.235,0.493,0.848c0.094,0.627-0.125,1.414-0.125,1.414L240.089,79.48
+                  c0,0,0.076-0.048-0.318,0.787c-0.483,1.057-1.357,1.403-1.357,1.403h25.42c0,0-0.517-0.727-0.517-1.585
+                  c0-0.441,0.213-0.491,0.213-0.491l2.243-5.734h13.722l2.047,5.735c0,0,0.157,0.582,0.206,1.034c0.05,0.425-0.434,1.445-0.434,1.445
+                  L312.837,82.02z M269.167,64.098l3.463-7.79l3.474,7.79H269.167z"></path>
+          </svg>
+          <div class="section__burger__main">
+            <a class="section__burger__main--link" href="#">Proizvodi</a>
+            <a class="section__burger__main--link" href="#">Prostorije</a>
+            <a class="section__burger__main--link" href="#">Posebne ponude</a>
+            <a class="section__burger__main--link" href="#">Novo</a>
+            <a class="section__burger__main--link" href="#">Ideje</a>
+            <a class="section__burger__main--link" href="#">IKEA for Business</a>
+          </div>
+          <div class="section__burger__side">
+            <a class="section__burger__side--link" href="#">Moj profil</a>
+            <a class="section__burger__side--link" href="#">Kontakt</a>
+            <a class="section__burger__side--link" href="#">IKEA Family</a>
+            <a class="section__burger__side--link" href="#">Prati svoju narudžbu</a>
+            <a class="section__burger__side--link" href="#">Robna kuća</a>
+            <a class="section__burger__side--link" href="#">Dostavni centri</a>
+          </div>
+          <div class="section__burger__country social__button">
+            <button class="button-wrap footer-button--gray">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 16.057v-3.057h2.994c-.059 1.143-.212 2.24-.456 3.279-.823-.12-1.674-.188-2.538-.222zm1.957 2.162c-.499 1.33-1.159 2.497-1.957 3.456v-3.62c.666.028 1.319.081 1.957.164zm-1.957-7.219v-3.015c.868-.034 1.721-.103 2.548-.224.238 1.027.389 2.111.446 3.239h-2.994zm0-5.014v-3.661c.806.969 1.471 2.15 1.971 3.496-.642.084-1.3.137-1.971.165zm2.703-3.267c1.237.496 2.354 1.228 3.29 2.146-.642.234-1.311.442-2.019.607-.344-.992-.775-1.91-1.271-2.753zm-7.241 13.56c-.244-1.039-.398-2.136-.456-3.279h2.994v3.057c-.865.034-1.714.102-2.538.222zm2.538 1.776v3.62c-.798-.959-1.458-2.126-1.957-3.456.638-.083 1.291-.136 1.957-.164zm-2.994-7.055c.057-1.128.207-2.212.446-3.239.827.121 1.68.19 2.548.224v3.015h-2.994zm1.024-5.179c.5-1.346 1.165-2.527 1.97-3.496v3.661c-.671-.028-1.329-.081-1.97-.165zm-2.005-.35c-.708-.165-1.377-.373-2.018-.607.937-.918 2.053-1.65 3.29-2.146-.496.844-.927 1.762-1.272 2.753zm-.549 1.918c-.264 1.151-.434 2.36-.492 3.611h-3.933c.165-1.658.739-3.197 1.617-4.518.88.361 1.816.67 2.808.907zm.009 9.262c-.988.236-1.92.542-2.797.9-.89-1.328-1.471-2.879-1.637-4.551h3.934c.058 1.265.231 2.488.5 3.651zm.553 1.917c.342.976.768 1.881 1.257 2.712-1.223-.49-2.326-1.211-3.256-2.115.636-.229 1.299-.435 1.999-.597zm9.924 0c.7.163 1.362.367 1.999.597-.931.903-2.034 1.625-3.257 2.116.489-.832.915-1.737 1.258-2.713zm.553-1.917c.27-1.163.442-2.386.501-3.651h3.934c-.167 1.672-.748 3.223-1.638 4.551-.877-.358-1.81-.664-2.797-.9zm.501-5.651c-.058-1.251-.229-2.46-.492-3.611.992-.237 1.929-.546 2.809-.907.877 1.321 1.451 2.86 1.616 4.518h-3.933z"/></svg>
+              Promjeni zemlju
+            </button>
+          </div>
+        </div>
+      </div>
+
     </main>
     <footer class="footer">
       <div class="container grid-wrapper">

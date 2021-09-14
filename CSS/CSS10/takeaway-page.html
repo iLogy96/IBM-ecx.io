@@ -84,7 +84,6 @@
         </div>
     </header>
     <main class="container">
-      
         <section class="takeaway">
           <div class="takeaway__number --one"><span>1</span></div>
           <section class="takeaway__section">
@@ -130,7 +129,7 @@
           <section class="section__show">
               <div class="js--one__info">
                 <h1 class="js--one__title">Informacije o dostavi</h1>
-                <a class="js--one__link" href="#">Uredi</a>
+                <a class="js--one__link" href="#">Izmijeni</a>
               </div>
               <div class="js--one__delivery">
                 <span>Način dostave</span>
@@ -204,7 +203,7 @@
 
           <div class="takeaway__number --two"><span>2</span></div>
           <section class="takeaway__section">
-                <h1 class="takeaway__section__title--alternative">Gdje trebamo poslati narudžbu</h1>
+                <!-- <h1 class="takeaway__section__title--alternative">Gdje trebamo poslati narudžbu</h1> -->
                 <form class="form takeaway__js--hidden" action="#" method="POST">
                   <div class="form__radio">
                     <input type="radio" id="buyer" name="buyer-radio">
@@ -257,21 +256,94 @@
                   </p>  
                 </form>
 
-
+                <section class="takeaway__accepted"> <!--dodati klasu hidden-->
+                  <div class="takeaway__accepted__info">
+                    <h1 class="takeaway__accepted__title">Tvoji detalji</h1>
+                    <a class="takeaway__accepted__link" href="#">Izmijeni</a>
+                  </div>
+                  <div class="takeaway__accepted__details">
+                    <span>John Doe</span>
+                    <span>jane.doe@test.com</span>
+                    <span>0123456789</span>
+                    <span>Pinky Street 123b, Some detail, Some detail</span>
+                    <span>10000, Wels</span>
+                  </div>    
+                </section>
 
           </section>
 
 
           <div class="takeaway__number --three"><span>3</span></div>
           <section class="takeaway__section">
-                <h1 class="takeaway__section__title--alternative">Pomozi nam da izvršimo dostavu što brže i efikasnije</h1>
+                <!-- <h1 class="takeaway__section__title--alternative">Na koji način želiš platiti</h1> -->
+              <div class="takeaway__payment">
+                <h1 class="takeaway__payment__title">Na koji način želiš platiti</h1>
+                <a href="#" class="takeaway__link">Iskoristi IKEA karticu</a>
+                <div class="takeaway__payment__radio">
+                  <div>
+                    <label class="radio">
+                      <input class="radio__input" type="radio" name="method" value="giftcard">
+                        <div class="radio__box">
+                        </div>
+                        <span>
+                          Kreditna kartica
+                        </span>
+                      </label>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 4h-20c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-12c0-1.104-.896-2-2-2zm0 13.5c0 .276-.224.5-.5.5h-19c-.276 0-.5-.224-.5-.5v-6.5h20v6.5zm0-9.5h-20v-1.5c0-.276.224-.5.5-.5h19c.276 0 .5.224.5.5v1.5zm-9 6h-9v-1h9v1zm-3 2h-6v-1h6v1zm10-2h-3v-1h3v1z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 4h-20c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-12c0-1.104-.896-2-2-2zm0 13.5c0 .276-.224.5-.5.5h-19c-.276 0-.5-.224-.5-.5v-6.5h20v6.5zm0-9.5h-20v-1.5c0-.276.224-.5.5-.5h19c.276 0 .5.224.5.5v1.5zm-9 6h-9v-1h9v1zm-3 2h-6v-1h6v1zm10-2h-3v-1h3v1z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 4h-20c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-12c0-1.104-.896-2-2-2zm0 13.5c0 .276-.224.5-.5.5h-19c-.276 0-.5-.224-.5-.5v-6.5h20v6.5zm0-9.5h-20v-1.5c0-.276.224-.5.5-.5h19c.276 0 .5.224.5.5v1.5zm-9 6h-9v-1h9v1zm-3 2h-6v-1h6v1zm10-2h-3v-1h3v1z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 4h-20c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-12c0-1.104-.896-2-2-2zm0 13.5c0 .276-.224.5-.5.5h-19c-.276 0-.5-.224-.5-.5v-6.5h20v6.5zm0-9.5h-20v-1.5c0-.276.224-.5.5-.5h19c.276 0 .5.224.5.5v1.5zm-9 6h-9v-1h9v1zm-3 2h-6v-1h6v1zm10-2h-3v-1h3v1z"/></svg>
+                </div>
+                <div class="takeaway__payment__radio">
+                  <div>
+                    <label class="radio">
+                      <input class="radio__input" type="radio" id="giftcard" name="method" value="giftcard">
+                        <div class="radio__box">
+                        </div>
+                        <span>
+                          Plaćanje na rate
+                        </span>
+                      </label>
+                  </div>
+                </div>
+                <div class="takeaway__payment__card">
+                  <label for="cardnumber">Broj kartice
+                    <input type="text" id="cardnumber" name="cardnumber" placeholder="Broj kartice">
+                  </label>
+                  <label for="cardnumber">Datum isteka
+                    <input type="text" id="cardnumber" name="cardnumber" placeholder="MM / GG">
+                  </label>
+                  <label for="cardnumber">CVV broj (na poleđini kartice, tri znamenke)
+                    <input type="text" id="cardnumber" name="cardnumber" placeholder="CVV broj (na poleđini kartice, tri znamenke)">
+                  </label>
+                </div>
+                <div class="checkboxes">
+                  <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="giftcard" name="method" value="giftcard">
+                    <div class="checkbox__box">
+                    </div>
+                    <span>
+                      Pročitao/-la sam i suglasan sam sa IKEA <span class="checkbox-link">Uvjeti poslovanja</span> i IKEA <span class="checkbox-link">Izjavi o zaštiti privatnosti</span>.
+                    </span>
+                  </label>
+                </div>
+                <div class="takeaway__payment__button">
+                  <button class="takeaway__payment__button--blue">Plati 173,70kn</button>
+                  <a class="takeaway__payment__button--svg" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
+                  </a>
+                </div>
+                <div class="takeaway__payment__more">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 4h-20c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-12c0-1.104-.896-2-2-2zm0 13.5c0 .276-.224.5-.5.5h-19c-.276 0-.5-.224-.5-.5v-6.5h20v6.5zm0-9.5h-20v-1.5c0-.276.224-.5.5-.5h19c.276 0 .5.224.5.5v1.5zm-9 6h-9v-1h9v1zm-3 2h-6v-1h6v1zm10-2h-3v-1h3v1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 4h-20c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-12c0-1.104-.896-2-2-2zm0 13.5c0 .276-.224.5-.5.5h-19c-.276 0-.5-.224-.5-.5v-6.5h20v6.5zm0-9.5h-20v-1.5c0-.276.224-.5.5-.5h19c.276 0 .5.224.5.5v1.5zm-9 6h-9v-1h9v1zm-3 2h-6v-1h6v1zm10-2h-3v-1h3v1z"/></svg>
+                  </div>
+                  <a href="#" class="takeaway__link">Saznaj više o sigurnosnom protokolu EMV 3D</a>
+                </div>
+              </div>
           </section>
 
-
-          <div class="takeaway__number --four"><span>4</span></div>
-          <section class="takeaway__section">
-                <h1 class="takeaway__section__title--alternative">Na koji način želiš platiti</h1>
-          </section>
         </section>
     </main>
 

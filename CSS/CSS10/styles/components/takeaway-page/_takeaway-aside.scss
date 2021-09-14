@@ -1,4 +1,6 @@
 .takeaway__aside {
+    position: sticky;
+    top: 40px;
     display: grid;
     grid-column-start: 7;
     grid-column-end: 10;

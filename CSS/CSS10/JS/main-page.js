@@ -6,6 +6,9 @@ const popupCart = document.querySelector(".popup");
 const cartSvg = document.querySelector('.js-cart');
 const buttonClose = document.querySelector('.popup--button');
 const overlay = document.querySelector(".body__wrapper");
+const burgerButton = document.querySelector('.menu-icon');
+const burgerSection = document.querySelector('.section__burger')
+const burgerButtonClose = document.querySelector('.section__burger--close')
 let id = 0;
 
 //fetch podataka
@@ -47,8 +50,10 @@ const bindEventListeners = () => {
   sectionArticle.addEventListener("click", addToCart);
   //prikaži sljedeći fetch
   showMoreButton.addEventListener("click", showMore);
-  cartSvg.addEventListener("click", openCart);
-  buttonClose.addEventListener("click",openCart);
+  cartSvg.addEventListener("click", expandCart);
+  buttonClose.addEventListener("click",expandCart);
+  burgerButton.addEventListener("click",expandBurgerMenu)
+  burgerButtonClose.addEventListener("click",expandBurgerMenu)
 };
 
 //prikaži više
@@ -69,14 +74,27 @@ function addToCart(e) {
     cartNumber.innerHTML = product.length;
     cart.classList.add("js-add-to-cart");
     cartNumber.classList.add("js-add-to-cart-number");
+
+    //display article name added to cart
+    let productName = e.target.closest(".add-to-cart__button").dataset.name;
+    const articleName = document.querySelector('.popup__article--name')
+    articleName.innerHTML = productName;
+    if(popupCart.classList.contains('js--popup--active')){
+      expandCart();
+    }
   }
   e.preventDefault();
 }
 
 //open cart
-function openCart() {
-  console.log(popupCart)
+function expandCart() {
   popupCart.classList.toggle("js--popup--active");
+  overlay.classList.toggle("overlay");
+}
+
+//open burger menu
+function expandBurgerMenu() {
+  burgerSection.classList.toggle("is--active");
   overlay.classList.toggle("overlay");
 }
 

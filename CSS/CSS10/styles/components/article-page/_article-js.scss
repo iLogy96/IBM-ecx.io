@@ -1,0 +1,24 @@
+//dimmed overlay after popup
+.overlay {
+    opacity: 0.4;
+    background-color: rgb(50, 50, 50);
+
+    img {
+        opacity: 0.3;
+    }
+}
+
+//dimenzije proizvoda u popupu i animacija svg-a
+.js--dimensions--active,.js--popup--active {
+    transform: translate(100%);
+}
+
+.js--display--more {
+    display: block;
+}
+
+.rotate--button {
+    svg {
+        transform: rotate(270deg);
+    }
+}

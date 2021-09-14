@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -328,6 +329,7 @@ sup {
   display: flex;
 }
 .header__primary {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 3.5rem;
@@ -619,6 +621,97 @@ sup {
   gap: 15px;
 }
 
+.js-add-to-cart {
+  position: relative;
+}
+.js-add-to-cart-number {
+  position: absolute;
+  bottom: 10px;
+  background: #1958a3;
+  color: #fff;
+  border: 1px solid #1958a3;
+  border-radius: 30px;
+  padding: 2px 5px;
+}
+
+.section__burger {
+  background: #fff;
+  position: fixed;
+  height: 100vh;
+  width: 30%;
+  left: 0;
+  top: 0;
+  transition: transform 300ms ease-in-out;
+  transform: translate(-100%);
+}
+.section__burger__container {
+  padding-left: 150px;
+}
+.section__burger__main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 1rem 0;
+}
+.section__burger__main--link {
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.section__burger__main--link:last-child {
+  font-size: 0.8rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.section__burger__side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.section__burger__side--link {
+  font-size: 0.8rem;
+}
+.section__burger__country {
+  position: absolute;
+  bottom: 50px;
+}
+.section__burger--close {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+.section__burger--close svg {
+  fill: #7a797a;
+  width: 15px;
+  height: 15px;
+}
+
+.is--active {
+  transform: translate(0%);
+}
+
+.menu-icon {
+  position: fixed;
+  top: 80px;
+  left: 200px;
+  display: grid;
+  place-items: center;
+  height: 20px;
+  width: 35px;
+  cursor: pointer;
+}
+.menu-icon span {
+  width: 25px;
+  height: 2px;
+  background: black;
+  display: block;
+}
+.menu-icon:hover {
+  border: transparent;
+  border-radius: 100px;
+  background: lightgray;
+}
+
 .furniture {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -686,6 +779,8 @@ sup {
 }
 
 .furniture__aside {
+  position: sticky;
+  top: 40px;
   grid-column: span 3;
   line-height: 1.8;
 }
@@ -1139,12 +1234,13 @@ sup {
 }
 
 .popup {
-  display: none;
   position: fixed;
   height: 100vh;
   width: 33%;
   right: 0;
   top: 0;
+  transition: transform ease-in-out 300ms;
+  transform: translate(0%);
 }
 .popup__scroll__wrapper {
   background: #fff;
@@ -1301,6 +1397,26 @@ sup {
   font-weight: normal;
 }
 
+.overlay {
+  opacity: 0.4;
+  background-color: #323232;
+}
+.overlay img {
+  opacity: 0.3;
+}
+
+.js--dimensions--active, .js--popup--active {
+  transform: translate(100%);
+}
+
+.js--display--more {
+  display: block;
+}
+
+.rotate--button svg {
+  transform: rotate(270deg);
+}
+
 .takeaway {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -1316,7 +1432,7 @@ sup {
   padding: 1rem 0;
 }
 .takeaway__section__title {
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 .takeaway__section__title--alternative {
@@ -1394,6 +1510,8 @@ sup {
 }
 
 .takeaway__aside {
+  position: sticky;
+  top: 40px;
   display: grid;
   grid-column-start: 7;
   grid-column-end: 10;
@@ -1484,6 +1602,7 @@ sup {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  transition: ease-in-out 300ms;
 }
 .form__input {
   border: none;
@@ -1540,44 +1659,34 @@ sup {
   width: 100%;
 }
 
-.js-add-to-cart {
-  position: relative;
+.takeaway__accepted {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-.js-add-to-cart-number {
-  position: absolute;
-  bottom: 10px;
-  background: #1958a3;
-  color: #fff;
-  border: 1px solid #1958a3;
-  border-radius: 30px;
-  padding: 2px 5px;
+.takeaway__accepted__info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
 }
-
-.overlay {
-  opacity: 0.4;
-  background-color: #323232;
+.takeaway__accepted__title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: gray;
+  padding-bottom: 2rem;
 }
-.overlay img {
-  opacity: 0.3;
+.takeaway__accepted__link {
+  text-decoration: underline;
+  font-size: 0.9rem;
 }
-
-.js--dimensions--active {
-  transform: translate(100%);
-}
-
-.js--display--more {
-  display: block;
+.takeaway__accepted__details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.9rem;
 }
 
-.rotate--button svg {
-  transform: rotate(270deg);
-}
-
-.js--popup--active {
-  display: block;
-}
-
-.takeaway__js--hidden {
+.is--hidden {
   display: none;
 }
 
@@ -1636,6 +1745,147 @@ sup {
 .takeaway__title__bold {
   font-size: 2.1rem;
   color: black;
+}
+
+.checkbox {
+  display: flex;
+}
+.checkbox__input {
+  display: none;
+}
+.checkbox__box {
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #cccccc;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s;
+}
+.checkbox__box::after {
+  content: "✓";
+  color: white;
+  transform: scale(0);
+  transition: transform 0.15s;
+}
+.checkbox__input:checked + .checkbox__box {
+  background: blue;
+  border-color: blue;
+}
+.checkbox__input:checked + .checkbox__box::after {
+  transform: scale(1);
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+}
+.radio__input {
+  display: none;
+}
+.radio__box {
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #cccccc;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s;
+}
+.radio__box::after {
+  content: "\a";
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  border: white 1px solid;
+  transform: scale(0);
+  transition: transform 0.15s;
+}
+.radio__input:checked + .radio__box {
+  background: blue;
+  border-color: blue;
+}
+.radio__input:checked + .radio__box::after {
+  transform: scale(1);
+}
+
+.takeaway__payment {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.takeaway__payment__title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+}
+.takeaway__payment__radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 0;
+}
+.takeaway__payment__card label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+.takeaway__payment__card input {
+  outline: none;
+  font-size: 1rem;
+  border: 1px solid rgba(122, 121, 122, 0.3);
+  padding: 0.5rem;
+}
+.takeaway__payment__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  padding: 2rem 0;
+}
+.takeaway__payment .checkbox-link {
+  text-decoration: underline;
+  color: #7a797a;
+  cursor: pointer;
+}
+.takeaway__payment__button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+  background: #1958a3;
+  padding: 2rem 1.5rem;
+  border: transparent;
+  border-radius: 5px;
+}
+.takeaway__payment__button--blue {
+  color: white;
+  font-size: 1.1rem;
+}
+.takeaway__payment__button--svg {
+  background: #fdfefe;
+  fill: black;
+  border: transparent;
+  border-radius: 100px;
+  padding: 0.6rem;
+}
+.takeaway__payment__more {
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+  padding: 2rem 1.5rem;
+  border: transparent;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */
