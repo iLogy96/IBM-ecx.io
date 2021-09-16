@@ -66,10 +66,29 @@ function showMore() {
 let product = [];
 function addToCart(e) {
   if (e.target.closest(".add-to-cart__button")) {
+    //dodavanje novog objekta u local storage
     let productId = e.target.closest(".add-to-cart__button").dataset.id;
+
+    let myArticles = {
+      id : productId,
+      quantity : 1
+    }
+
     product = JSON.parse(localStorage.getItem("product")) || [];
-    product.push(productId);
-    localStorage.setItem("product", JSON.stringify(product));
+    
+    let productFind = product.findIndex(obj => obj.id === productId);
+    if(productFind>=0){
+      product[productFind].quantity+=1 
+      localStorage.setItem("product", JSON.stringify(product));
+    }
+
+    else{
+      product.push(myArticles);
+      localStorage.setItem("product", JSON.stringify(product));
+    }
+
+
+
 
     cartNumber.innerHTML = product.length;
     cart.classList.add("js-add-to-cart");
@@ -85,6 +104,9 @@ function addToCart(e) {
   }
   e.preventDefault();
 }
+
+
+
 
 //open cart
 function expandCart() {

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const toggleDimensionsPopup = (event) => {
   const btnOpen = event.target.closest(".button--productInfo--active");
-  if (btnOpen && btnOpen === furnitureSummary.querySelectorAll("button")[0]) {
+  if (btnOpen && btnOpen === furnitureSummary.querySelectorAll("button")[0] || btnOpen === furnitureSummary.querySelectorAll("button")[1] || btnOpen === furnitureSummary.querySelectorAll("button")[2]) {
     overlay.classList.toggle("overlay");
     popup.classList.toggle("js--dimensions--active");
   }

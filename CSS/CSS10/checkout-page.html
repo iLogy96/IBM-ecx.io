@@ -205,90 +205,36 @@
                     </h1>
                     <button class="basket__dots">...</button>
                 </div>
-                <article class="basket__article">
+
+                <script id="cartTemplate" type="text/x-handlebars-template">
+                  
+                  <article class="basket__article" data-id ={{data.id}}>
                     <div class="basket__image__wrapper">
-                        <img class="basket__image" src="./assets/images/cushion-image-1.webp" alt="basket-image">
+                      <img class="basket__image" src="{{data.mainImageUrl}}" alt="{{data.mainImageAlt}}">
                     </div>
-                    <div class="basket__summary">
-                        <div class="basket__summary__wrapper">
-                            <h2 class="basket__summary__title">Kalas</h2>
-                            <div class="basket__summary__description">Čaša, raznobojno</div>
-                            <div class="basket__summary__stock">6 kom/pak.</div>
-                            <div class="basket__summary__add">
-                                <button class="basket__summary__add--button">
-                                    1
-                                    <svg class="button--add" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
-                                </button>
-                                <span class="basket__summary__remove">Ukloni proizvod</span>
-                                <span class="basket__summary__save">Spremi na popis za kupovinu</span>
-                            </div>
-                        </div>
-                        <div class="basket__summary__price">14,90kn</div>
-                    </div>
+                     <div class="basket__summary">
+                      <div class="basket__summary__wrapper">
+                          <h2 class="basket__summary__title">{{data.name}}</h2>
+                          <div class="basket__summary__description">{{data.typeName}}</div>
+                          <div class="basket__summary__stock">{{data.priceUnit}}</div>
+                          <div class="basket__summary__add">
+                              <select class="basket__summary__add--button">
+                                {{#each data.quantities}}
+                                  <option class="basket__summary--option" {{selected}} value="{{value}}">{{text}}</option>
+                                {{/each}}
+                                  <svg class="button--add" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                              </select>
+                              <button data-id = {{data.id}} class="basket__summary__remove">Ukloni proizvod</button>
+                              <button class="basket__summary__save">Spremi za popis za kupovinu</button>
+                          </div>
+                      </div>
+                      <div class="basket__summary__price">{{data.priceNumeral}} kn</div>
+                  </div>
                 </article>
-                <article class="basket__article">
-                    <div class="basket__image__wrapper">
-                        <img class="basket__image" src="./assets/images/cushion-image-1.webp" alt="basket-image">
-                    </div>
-                    <div class="basket__summary">
-                        <div class="basket__summary__wrapper">
-                            <h2 class="basket__summary__title">Kalas</h2>
-                            <div class="basket__summary__description">Čaša, raznobojno</div>
-                            <div class="basket__summary__stock">6 kom/pak.</div>
-                            <div class="basket__summary__add">
-                                <button class="basket__summary__add--button">
-                                    1
-                                    <svg class="button--add" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
-                                </button>
-                                <span class="basket__summary__remove">Ukloni proizvod</span>
-                                <span class="basket__summary__save">Spremi na popis za kupovinu</span>
-                            </div>
-                        </div>
-                        <div class="basket__summary__price">14,90kn</div>
-                    </div>
-                </article>
-                <article class="basket__article">
-                    <div class="basket__image__wrapper">
-                        <img class="basket__image" src="./assets/images/cushion-image-1.webp" alt="basket-image">
-                    </div>
-                    <div class="basket__summary">
-                        <div class="basket__summary__wrapper">
-                            <h2 class="basket__summary__title">Kalas</h2>
-                            <div class="basket__summary__description">Čaša, raznobojno</div>
-                            <div class="basket__summary__stock">6 kom/pak.</div>
-                            <div class="basket__summary__add">
-                                <button class="basket__summary__add--button">
-                                    1
-                                    <svg class="button--add" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
-                                </button>
-                                <span class="basket__summary__remove">Ukloni proizvod</span>
-                                <span class="basket__summary__save">Spremi na popis za kupovinu</span>
-                            </div>
-                        </div>
-                        <div class="basket__summary__price">14,90kn</div>
-                    </div>
-                </article>
-                <article class="basket__article">
-                    <div class="basket__image__wrapper">
-                        <img class="basket__image" src="./assets/images/cushion-image-1.webp" alt="basket-image">
-                    </div>
-                    <div class="basket__summary">
-                        <div class="basket__summary__wrapper">
-                            <h2 class="basket__summary__title">Kalas</h2>
-                            <div class="basket__summary__description">Čaša, raznobojno</div>
-                            <div class="basket__summary__stock">6 kom/pak.</div>
-                            <div class="basket__summary__add">
-                                <button class="basket__summary__add--button">
-                                    1
-                                    <svg class="button--add" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
-                                </button>
-                                <span class="basket__summary__remove">Ukloni proizvod</span>
-                                <span class="basket__summary__save">Spremi na popis za kupovinu</span>
-                            </div>
-                        </div>
-                        <div class="basket__summary__price">14,90kn</div>
-                    </div>
-                </article>
+
+                </script>  
+        
+
             </section>
             <aside class="basket__aside">
                 <div class="basket__aside__wrapper">
@@ -1028,4 +974,6 @@
       </div>
     </footer>  
 </body>
+<script src="./JS/checkout-page.js"></script>
+<script src="./JS/handlebars-v4.7.7.js"></script>
 </html>
