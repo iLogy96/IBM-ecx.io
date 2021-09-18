@@ -1525,11 +1525,17 @@ sup {
   display: flex;
   justify-content: space-between;
 }
+.takeaway__aside__images--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .takeaway__aside__images {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 5px;
-  justify-content: space-between;
+  overflow-x: scroll;
+  width: 60%;
 }
 .takeaway__aside__link {
   text-decoration: underline;
@@ -1747,8 +1753,13 @@ sup {
   color: black;
 }
 
+.js--title {
+  width: 80%;
+}
+
 .checkbox {
   display: flex;
+  align-items: center;
 }
 .checkbox__input {
   display: none;

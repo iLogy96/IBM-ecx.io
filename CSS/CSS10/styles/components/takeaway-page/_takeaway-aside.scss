@@ -16,9 +16,16 @@
         justify-content: space-between;
     }
 
-    &__images {
-        @include displayFlex(flex, center, 5px);
+    &__images--wrapper {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+
+    &__images {
+        @include displayFlex(flex, start, 5px);
+        overflow-x: scroll;
+        width: 60%;
     }
 
     &__link {

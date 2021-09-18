@@ -78,6 +78,7 @@
 @mixin checkboxStyles {
     .checkbox {
         display: flex;
+        align-items: center;
 
         &__input {
             display: none;

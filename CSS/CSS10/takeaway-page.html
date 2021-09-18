@@ -87,19 +87,19 @@
         <section class="takeaway">
           <div class="takeaway__number --one"><span>1</span></div>
           <section class="takeaway__section">
-              <!-- <div class="takeaway__section--hidden"> -->
                 <h1 class="takeaway__section__title">Kako želiš preuzeti svoju narudžbu</h1>
                 <div class="takeaway__address">
                     <div>Dostavi na</div>
                     <div>10000 Zagreb <a class="takeaway__link" href="#">Izmijeni</a></div>
                 </div>
                 <div class="takeaway__choice">
-                  <button>
+                  <button class="takeaway__choice__delivery--btn">
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M3 18h-2c-.552 0-1-.448-1-1v-13c0-.552.448-1 1-1h13c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-6c0 1.656-1.344 3-3 3s-3-1.344-3-3zm3-1.2c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm12 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-13v2h1.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h7.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm-2-9h-11v7h11v-7zm3 4v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705z"/>
                     </svg>
                       Dostava
                   </button>
-                  <button>
+
+                  <button class="takeaway__choice__takeaway--btn">
 
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21 22h2v2h-22v-2h2v-22h18v22zm-10-3h-2v4h2v-4zm4 0h-2v4h2v-4zm4-17h-14v20h2v-5h10v5h2v-20zm-12 11h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8-3h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8-3h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8-3h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/>
                     </svg>
@@ -108,21 +108,20 @@
                 </div>
                 <div class="takeaway__description">
                   <div class="takeaway__description__order">
-                    <span>Paketna dostava</span>
-                    <span>59 kn</span>
+                    <span class="js--title">Paketna dostava</span>
+                    <span class="js--price">59 kn</span>
                   </div>
-                  <p class="takeaway__description__para">
+                  <p class="takeaway__description__para js--para">
                     Uobičajeni rok za paketnu dostavu je od 2 do 7 radnih dana
                     od trenutka plaćanja narudžbe
                   </p>
-                  <span class="takeaway__description__delivery">Dostava: 2-7 radnih dana</span>
+                  <span class="takeaway__description__delivery js--description">Dostava: 2-7 radnih dana</span>
                 </div>
                 <button class="takeaway__button--blue">Sljedeće</button>
                 <p class="takeaway__para">
                   Koristimo najnoviju SSl tehnologiju kako bismo zaštitili
                   sve osobne podatke koje nam pružiš putem naše internetske stranice
                 </p>
-              <!-- </div> -->    
           </section>
 
           <!--section koji je summary takeaway__section, prikazuje se nakon prihvaćanja podataka-->
@@ -145,23 +144,29 @@
               </div>
           </section>
 
-  
+
+          
+
+          <script id="asideTemplate" type="text/x-handlebars-template">
+              <div>
+                <img class="takeaway__image" src="{{data.mainImageUrl}}" alt="{{data.mainImageAlt}}">
+              </div>
+          </script>
+
+
           <aside class="takeaway__aside">
               <div class="takeaway__aside__wrapper">
                 <div class="takeaway__aside__title__wrapper">
                   <h1 class="takeaway__aside__title">Tvoja narudžba</h1>
                   <a class="takeaway__aside__link" href="#">Uredi</a>
                 </div>
+                <div class="takeaway__aside__images--wrapper">
                   <figure class="takeaway__aside__images">
-                    <div>
-                      <img class="takeaway__image" src="./assets/images/cushion-image-1.webp" alt="takeaway-image">
-                      <img class="takeaway__image" src="./assets/images/cushion-image-1.webp" alt="takeaway-image">
-                      <img class="takeaway__image" src="./assets/images/cushion-image-1.webp" alt="takeaway-image">
-                    </div>
-                    <button class="takeaway--button">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
-                    </button>
                   </figure>
+                  <button class="takeaway--button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                  </button>
+                </div>
                   <div class="takeaway__summary">
                     <h2 class="takeaway__summary__title">Sažetak narudžbe</h2>
                       <div class="takeaway__summary__shipping">
@@ -183,11 +188,17 @@
                   </div>
                   <div class="takeaway__footer">
                     <div class="takeaway__profile__checkbox">
-                      <div class="takeaway__checkbox">
-                        <input class="button--checkbox" type="checkbox" name="checkbox" >
-                        <label for="checkbox">Prikaži cijenu s PDV-om</label>
+                      <div class="checkboxes">
+                        <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" id="giftcard" name="method" value="giftcard">
+                          <div class="checkbox__box">
+                          </div>
+                          <span>
+                            Prikaži cijenu s PDV-om
+                          </span>
+                        </label>
                       </div>
-                    </div>
+                          </div>
                     <div class="order__footer__safety">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.222 18.917c5.666-5.905-.629-10.828-5.011-7.706l1.789 1.789h-6v-6l1.832 1.832c7.846-6.07 16.212 4.479 7.39 10.085z"/></svg>
                       <span>365 dana za promjenu mišljenja</span>
@@ -203,15 +214,35 @@
 
           <div class="takeaway__number --two"><span>2</span></div>
           <section class="takeaway__section">
-                <!-- <h1 class="takeaway__section__title--alternative">Gdje trebamo poslati narudžbu</h1> -->
-                <form class="form takeaway__js--hidden" action="#" method="POST">
+                <h1 class="takeaway__section__title--alternative js-title--alternative">Gdje trebamo poslati narudžbu</h1>
+                <form class="form is--hidden" action="#" method="POST">
                   <div class="form__radio">
-                    <input type="radio" id="buyer" name="buyer-radio">
-                    <label for="buyer-radio">Privatni kupac</label>
+                    <div class="takeaway__payment__radio">
+                      <div>
+                        <label class="radio">
+                          <input class="radio__input" type="radio" id="giftcard" name="method" value="giftcard">
+                            <div class="radio__box">
+                            </div>
+                            <span>
+                              Privatni kupac
+                            </span>
+                        </label>
+                      </div>
+                    </div>
                   </div>
                   <div class="form__radio">
-                    <input type="radio" id="buyer" name="buyer-radio">
-                    <label for="buyer-radio">Tvrtka</label>
+                    <div class="takeaway__payment__radio">
+                      <div>
+                        <label class="radio">
+                          <input class="radio__input" type="radio" id="giftcard" name="method" value="giftcard">
+                            <div class="radio__box">
+                            </div>
+                            <span>
+                              Tvrtka
+                            </span>
+                        </label>
+                      </div>
+                    </div>
                   </div>
                     <input class="form__input" type="text" placeholder="Ime">
                     <input class="form__input" type="text" placeholder="Prezime">
@@ -236,9 +267,17 @@
                   
                   <div class="form__credentials">
                     <div class="form__credentials__checkbox">
-                      <input type="checkbox" id="checkbox" name="checkbox">
-                      <label for="checkbox">Dodaj adresu za plaćanje</label>
-                    </div>
+                      <div class="checkboxes">
+                        <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" id="giftcard" name="method" value="giftcard">
+                          <div class="checkbox__box">
+                          </div>
+                          <span>
+                            Dodaj adresu za plaćanje
+                          </span>
+                        </label>
+                      </div>
+                      </div>
                     <a class="form__link" href="#">Što je ovo</a>
                   </div>
                   <div class="form__card">
@@ -246,8 +285,17 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 4h-20c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-12c0-1.104-.896-2-2-2zm0 13.5c0 .276-.224.5-.5.5h-19c-.276 0-.5-.224-.5-.5v-6.5h20v6.5zm0-9.5h-20v-1.5c0-.276.224-.5.5-.5h19c.276 0 .5.224.5.5v1.5zm-9 6h-9v-1h9v1zm-3 2h-6v-1h6v1zm10-2h-3v-1h3v1z"/></svg>
                   </div>
                   <div class="form__credentials__checkbox">
-                    <input type="checkbox" id="checkbox" name="checkbox">
-                    <label for="checkbox">Klikom Nastavi slažeš se s uvjetima naših <a class="form__link" href="#">Pravila o zaštiti podataka</a></label>
+                    <div class="checkboxes">
+                      <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox" id="giftcard" name="method" value="giftcard">
+                        <div class="checkbox__box">
+                        </div>
+                        <span>
+                          Klikom Nastavi slažeš se s uvjetima naših <a class="form__link" href="#">Pravila o zaštiti podataka</a>
+                        </span>
+                      </label>
+                    </div>
+    
                   </div>
                   <button class="form__button">Nastavi</button>
                   <p class="takeaway__para">
@@ -256,7 +304,7 @@
                   </p>  
                 </form>
 
-                <section class="takeaway__accepted"> <!--dodati klasu hidden-->
+                <section class="takeaway__accepted is--hidden">
                   <div class="takeaway__accepted__info">
                     <h1 class="takeaway__accepted__title">Tvoji detalji</h1>
                     <a class="takeaway__accepted__link" href="#">Izmijeni</a>
@@ -304,7 +352,7 @@
                         <span>
                           Plaćanje na rate
                         </span>
-                      </label>
+                    </label>
                   </div>
                 </div>
                 <div class="takeaway__payment__card">
@@ -497,4 +545,5 @@
     </footer>  
 </body>
 <script src="./JS/takeaway-page.js"></script>
+<script src="./JS/handlebars-v4.7.7.js"></script>
 </html>
