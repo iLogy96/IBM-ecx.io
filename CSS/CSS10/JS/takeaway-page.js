@@ -3,13 +3,20 @@ const deliveryChoiceSection = document.querySelector(".takeaway__choice");
 const takeawayNumberArray = Array.from(
   document.querySelectorAll(".takeaway__number")
 );
-const form = document.querySelector('.form')
+const form = document.querySelector(".form");
+const email = document.querySelector(".form__input--email");
+const allAlternativeTitles = Array.from(
+  document.querySelectorAll(".js-title--alternative")
+);
+
 //bindanje svih evenata
 const bindEventListeners = () => {
   deliveryChoiceSection.addEventListener("click", deliveryOption);
   takeawayGrid.addEventListener("click", storeAndChangeInfo);
   takeawayGrid.addEventListener("click", openNextSection);
-  form.addEventListener("click", changeButtonStyle)
+  email.addEventListener("keyup", emailValidation);
+  form.addEventListener("change", allInputsEntered);
+  takeawayGrid.addEventListener("click", openLastSection);
 };
 
 //rješavanje košarice i local storagea
@@ -97,17 +104,57 @@ const storeAndChangeInfo = (event) => {
 
 const openNextSection = (event) => {
   if (event.target.closest(".takeaway__button--blue")) {
-    document
-      .querySelector(".js-title--alternative")
-      .classList.toggle("is--hidden");
+    allAlternativeTitles[0].classList.toggle("is--hidden");
     document.querySelector(".form").classList.toggle("is--hidden");
     document.querySelector(".take");
     takeawayNumberArray[1].classList.toggle("takeaway__number--active");
   }
 };
 
-const changeButtonStyle = (event) => {
-  if(event.target.closest('.checkboxes')){
-    console.log('hello')
+const emailValidation = () => {
+  const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (emailFormat.test(email.value)) {
+    email.style.border = "1px solid green";
+  } else if (email.value === "") {
+    email.style.border = "transparent";
+    email.style.borderBottom = "gray 1px solid";
+  } else {
+    email.style.border = "1px solid red";
   }
+};
+
+const allInputsEntered = () => {
+  const formInputs = Array.from(
+    document.querySelectorAll(".form__input--text")
+  );
+  const checkboxInput = document.querySelector(".checkbox__input--rules");
+  formInputs.forEach((input) => {
+    if (input.value === "" || checkboxInput.checked !== true) {
+      document.querySelector(".form__button").style.background = "gray";
+    } else {
+      document.querySelector(".form__button").style.background = "#1958a3";
+    }
+  });
+};
+
+const saveInputsInfo = () => {
+  
 }
+
+const openLastSection = (event) => {
+  if (
+    event.target.closest(".form__button") ||
+    event.target.closest(".takeaway__accepted__link")
+  ) {
+    form.classList.toggle("is--hidden");
+    document
+      .querySelector(".takeaway__accepted")
+      .classList.toggle("is--hidden");
+    takeawayNumberArray[1].classList.toggle("takeaway__number--active");
+    takeawayNumberArray[2].classList.toggle("takeaway__number--active");
+    allAlternativeTitles[1].classList.toggle("is--hidden");
+
+    document.querySelector(".takeaway__payment").classList.toggle("is--hidden");
+  }
+  event.preventDefault();
+};

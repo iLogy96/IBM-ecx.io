@@ -192,7 +192,7 @@
                     <div class="takeaway__profile__checkbox">
                       <div class="checkboxes">
                         <label for="pdv" class="checkbox">
-                        <input class="checkbox__input" type="checkbox" id="pdv" name="method" value="pdv">
+                        <input class="checkbox__input" type="checkbox" id="pdv" name="method">
                           <div class="checkbox__box">
                           </div>
                           <span>
@@ -222,14 +222,13 @@
                     <div class="takeaway__payment__radio">
                       <div>
                         <label class="radio">
-                          <input class="radio__input" type="radio" id="giftcard" name="method" value="giftcard">
+                          <input class="radio__input" type="radio" id="giftcard" name="method" checked>
                             <div class="radio__box">
                             </div>
                             <span>
                               Privatni kupac
                             </span>
                         </label>
-
                       </div>
                     </div>
                   </div>
@@ -237,7 +236,7 @@
                     <div class="takeaway__payment__radio">
                       <div>
                         <label class="radio">
-                          <input class="radio__input" type="radio" id="giftcard" name="method" value="giftcard">
+                          <input class="radio__input" type="radio" id="giftcard" name="method">
                             <div class="radio__box">
                             </div>
                             <span>
@@ -247,9 +246,9 @@
                       </div>
                     </div>
                   </div>
-                    <input class="form__input" type="text" placeholder="Ime">
-                    <input class="form__input" type="text" placeholder="Prezime">
-                    <input class="form__input" type="text" placeholder="Ulica">
+                    <input class="form__input form__input--text" required = "required" type="text" placeholder="Ime">
+                    <input class="form__input form__input--text" required = "required" type="text" placeholder="Prezime">
+                    <input class="form__input form__input--text" required = "required" type="text" placeholder="Ulica">
                   <div class="form__add-address">
                     + Dodaj drugu adresu
                   </div>
@@ -264,15 +263,15 @@
                     <a class="form__link" href="#">Izmijeni</a>
                   </div>
 
-                  <input class="form__input" type="text" placeholder="Grad">
-                  <input class="form__input" type="email" placeholder="Adresa e-pošte">
-                  <input class="form__input" type="text" placeholder="Broj telefona">
+                  <input class="form__input form__input--text" required = "required" type="text" placeholder="Grad">
+                  <input class="form__input form__input--email form__input--text" required= "required" type="email" placeholder="Adresa e-pošte">
+                  <input class="form__input form__input--text" required = "required" type="text" placeholder="Broj telefona">
                   
                   <div class="form__credentials">
                     <div class="form__credentials__checkbox">
                       <div class="checkboxes">
                         <label for="payment" class="checkbox">
-                        <input class="checkbox__input" type="checkbox" id="payment" name="method">
+                        <input class="checkbox__input form__input" type="checkbox" id="payment" name="method">
                           <div class="checkbox__box">
                           </div>
                           <span>
@@ -290,7 +289,7 @@
                   <div class="form__credentials__checkbox">
                     <div class="checkboxes">
                       <label for="rules" class="checkbox">
-                      <input class="checkbox__input" type="checkbox" id="rules" name="method">
+                      <input class="checkbox__input checkbox__input--rules" type="checkbox" id="rules" name="method">
                         <div class="checkbox__box">
                         </div>
                         <span>
@@ -324,16 +323,16 @@
           </section>
 
 
-          <div class="takeaway__number --inactive"><span>3</span></div>
+          <div class="takeaway__number"><span>3</span></div>
           <section class="takeaway__section">
-                <h1 class="takeaway__section__title--alternative">Na koji način želiš platiti</h1>
+                <h1 class="takeaway__section__title--alternative js-title--alternative">Na koji način želiš platiti</h1>
               <div class="takeaway__payment is--hidden">
                 <h1 class="takeaway__payment__title">Na koji način želiš platiti</h1>
                 <a href="#" class="takeaway__link">Iskoristi IKEA karticu</a>
                 <div class="takeaway__payment__radio">
                   <div>
                     <label class="radio">
-                      <input class="radio__input" type="radio" name="method" value="giftcard">
+                      <input class="radio__input" type="radio" name="method">
                         <div class="radio__box">
                         </div>
                         <span>
@@ -349,7 +348,7 @@
                 <div class="takeaway__payment__radio">
                   <div>
                     <label class="radio">
-                      <input class="radio__input" type="radio" id="giftcard" name="method" value="giftcard">
+                      <input class="radio__input" type="radio" id="giftcard" name="method">
                         <div class="radio__box">
                         </div>
                         <span>
@@ -371,7 +370,7 @@
                 </div>
                 <div class="checkboxes">
                   <label class="checkbox">
-                  <input class="checkbox__input" type="checkbox" id="giftcard" name="method" value="giftcard">
+                  <input class="checkbox__input" type="checkbox" id="giftcard" name="method">
                     <div class="checkbox__box">
                     </div>
                     <span>
