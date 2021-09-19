@@ -1,11 +1,3 @@
-// const getFromLocalStorage = () => {
-//   let addedProducts = JSON.parse(localStorage.getItem("product") || []);
-//     addedProducts.forEach((product) => {
-//       productID = product.id;
-//     });
-//   console.log(addedProducts);
-// };
-
 const basketSection = document.querySelector(".basket__section");
 const addedProducts = JSON.parse(localStorage.getItem("product") || []);
 const addedProductsID = addedProducts.map((product) => product.id);
@@ -86,6 +78,7 @@ const renderProducts = () => {
         handlebars(product);
       }
     });
+    updatePrice();
     bindEventListeners();
   });
 };
@@ -104,13 +97,29 @@ const productQuantities = (product) => {
 };
 
 const bindEventListeners = () => {
-  basketSection.addEventListener("click", deleteProduct);
+  document
+    .querySelector(".checkbox__input")
+    .addEventListener("click", priceWithPDV);
 };
 
-const deleteProduct = (event) => {
-  let bntRemove = event.target.closest(".basket__summary__remove").dataset.id;
-  const basketArticle = document.querySelector(".basket__article");
-  if (bntRemove && bntRemove === basketSection.querySelectorAll("button")[1]) {
-    basketArticle.innerHTML = "";
+let price = 0;
+const updatePrice = () => {
+  fetchData().then((data) => {
+    data.moreProducts.productWindow.forEach((product) => {
+      if (addedProductsID.includes(product.itemNo)) {
+        price += product.priceNumeral;
+      }
+      document.querySelector(".js--price").innerHTML = `${price} kn`;
+    });
+  });
+};
+const priceWithPDV = (event) => {
+  console.log(event.target.checked);
+  if (event.target.checked) {
+    document.querySelector(".js--price").innerHTML = `${
+      price + price * 0.25
+    } kn`;
+  } else {
+    document.querySelector(".js--price").innerHTML = `${price} kn`;
   }
 };

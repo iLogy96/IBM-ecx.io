@@ -8,6 +8,8 @@ const email = document.querySelector(".form__input--email");
 const allAlternativeTitles = Array.from(
   document.querySelectorAll(".js-title--alternative")
 );
+let creditCard = document.querySelector("#cardnumber");
+let creditCardValue = creditCard.value;
 
 //bindanje svih evenata
 const bindEventListeners = () => {
@@ -16,7 +18,15 @@ const bindEventListeners = () => {
   takeawayGrid.addEventListener("click", openNextSection);
   email.addEventListener("keyup", emailValidation);
   form.addEventListener("change", allInputsEntered);
-  takeawayGrid.addEventListener("click", openLastSection);
+  document
+    .querySelector(".form__button")
+    .addEventListener("click", openLastSection);
+  document
+    .querySelector(".takeaway__accepted__link")
+    .addEventListener("click", openLastSection);
+  document
+    .querySelector(".checkbox__input")
+    .addEventListener("click", priceWithPDV);
 };
 
 //rješavanje košarice i local storagea
@@ -49,6 +59,7 @@ const renderProducts = () => {
           handlebars(product);
         }
       });
+      updatePrice();
       bindEventListeners();
     });
 };
@@ -137,24 +148,50 @@ const allInputsEntered = () => {
   });
 };
 
-const saveInputsInfo = () => {
-  
-}
+const creditCardFormat = () => {
+  const creditCard = document.querySelector("#cardnumber");
+  creditCard.addEventListener("keyup", (event) => {
+    console.log(event.target.value);
+  });
+};
+
+creditCardFormat();
 
 const openLastSection = (event) => {
-  if (
-    event.target.closest(".form__button") ||
-    event.target.closest(".takeaway__accepted__link")
-  ) {
-    form.classList.toggle("is--hidden");
-    document
-      .querySelector(".takeaway__accepted")
-      .classList.toggle("is--hidden");
-    takeawayNumberArray[1].classList.toggle("takeaway__number--active");
-    takeawayNumberArray[2].classList.toggle("takeaway__number--active");
-    allAlternativeTitles[1].classList.toggle("is--hidden");
+  form.classList.toggle("is--hidden");
+  document.querySelector(".takeaway__accepted").classList.toggle("is--hidden");
+  takeawayNumberArray[1].classList.toggle("takeaway__number--active");
+  takeawayNumberArray[2].classList.toggle("takeaway__number--active");
+  allAlternativeTitles[1].classList.toggle("is--hidden");
 
-    document.querySelector(".takeaway__payment").classList.toggle("is--hidden");
-  }
+  document.querySelector(".takeaway__payment").classList.toggle("is--hidden");
+
   event.preventDefault();
+};
+
+let price = 0;
+let priceDOM = document.querySelector(".takeaway-js--price");
+const updatePrice = () => {
+  fetchData().then((data) => {
+    data.moreProducts.productWindow.forEach((product) => {
+      if (cartProductsID.includes(product.itemNo)) {
+        price += product.priceNumeral;
+      }
+      priceDOM.innerHTML = `${price.toFixed(2)} kn`;
+      document.querySelector('.js-without-pdv').innerHTML = `${price.toFixed(2)} kn`
+      document.querySelector('.js-pdv').innerHTML = `${(price * 0.25).toFixed(2)} kn`
+    });
+  });
+};
+
+updatePrice();
+
+const priceWithPDV = (event) => {
+  if (event.target.checked) {
+    document.querySelector(".takeaway-js--price").innerHTML = `${
+      (price + price * 0.25).toFixed(2)
+    } kn`;
+  } else {
+    document.querySelector(".takeaway-js--price").innerHTML = `${price.toFixed(2)} kn`;
+  }
 };

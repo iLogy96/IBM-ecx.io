@@ -177,15 +177,15 @@
                       </div>
                       <div class="takeaway__summary__withoutPDV">
                         <span>Ukupno bez PDV-a</span>
-                        <span>59 kn</span>
+                        <span class="js-without-pdv">59 kn</span>
                       </div>
                       <div class="takeaway__summary__pdv">
                         <span>PDV</span>
-                        <span>59 kn</span>
+                        <span class="js-pdv">59 kn</span>
                       </div>
                       <div class="takeaway__summary__total">
                         <span>Ukupno</span>
-                        <span>59 kn</span>
+                        <span class="takeaway-js--price">129,60 kn</span>
                       </div>
                   </div>
                   <div class="takeaway__footer">
@@ -326,13 +326,13 @@
           <div class="takeaway__number"><span>3</span></div>
           <section class="takeaway__section">
                 <h1 class="takeaway__section__title--alternative js-title--alternative">Na koji način želiš platiti</h1>
-              <div class="takeaway__payment is--hidden">
+              <div class="takeaway__payment is--hidden"> <!--dodati is hidden-->
                 <h1 class="takeaway__payment__title">Na koji način želiš platiti</h1>
                 <a href="#" class="takeaway__link">Iskoristi IKEA karticu</a>
                 <div class="takeaway__payment__radio">
                   <div>
                     <label class="radio">
-                      <input class="radio__input" type="radio" name="method">
+                      <input class="radio__input" checked type="radio" name="method">
                         <div class="radio__box">
                         </div>
                         <span>
@@ -359,13 +359,13 @@
                 </div>
                 <div class="takeaway__payment__card">
                   <label for="cardnumber">Broj kartice
-                    <input type="text" id="cardnumber" name="cardnumber" placeholder="Broj kartice">
+                    <input type="text" id="cardnumber" name="cardnumber" placeholder="Broj kartice" pattern="^4[0-9]{12}(?:[0-9]{3})?$">
                   </label>
-                  <label for="cardnumber">Datum isteka
-                    <input type="text" id="cardnumber" name="cardnumber" placeholder="MM / GG">
+                  <label for="date">Datum isteka
+                    <input type="text" id="date" maxlength="5" name="date" placeholder="MM / GG">
                   </label>
-                  <label for="cardnumber">CVV broj (na poleđini kartice, tri znamenke)
-                    <input type="text" id="cardnumber" name="cardnumber" placeholder="CVV broj (na poleđini kartice, tri znamenke)">
+                  <label for="cvv">CVV broj (na poleđini kartice, tri znamenke)
+                    <input type="text" id="cvv" maxlength="3" name="cvv" placeholder="CVV broj (na poleđini kartice, tri znamenke)">
                   </label>
                 </div>
                 <div class="checkboxes">
