@@ -3,13 +3,13 @@ const deliveryChoiceSection = document.querySelector(".takeaway__choice");
 const takeawayNumberArray = Array.from(
   document.querySelectorAll(".takeaway__number")
 );
-const formCheckbox = document.querySelector('.js-checkbox')
+const form = document.querySelector('.form')
 //bindanje svih evenata
 const bindEventListeners = () => {
   deliveryChoiceSection.addEventListener("click", deliveryOption);
   takeawayGrid.addEventListener("click", storeAndChangeInfo);
   takeawayGrid.addEventListener("click", openNextSection);
-  formCheckbox.addEventListener("click", checkboxButtonStyle);
+  form.addEventListener("click", changeButtonStyle)
 };
 
 //rješavanje košarice i local storagea
@@ -106,11 +106,8 @@ const openNextSection = (event) => {
   }
 };
 
-const checkboxButtonStyle = (event) => {
-  console.log(event.target.closest('.checkboxes'))
-  if (event.target.closest(".checkboxes")) {
-    document
-      .querySelector(".form__button")
-      .classList.toggle("takeaway__button--blue");
+const changeButtonStyle = (event) => {
+  if(event.target.closest('.checkboxes')){
+    console.log('hello')
   }
-};
+}

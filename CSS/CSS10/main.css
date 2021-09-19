@@ -1875,4 +1875,8 @@ sup {
   border-radius: 5px;
 }
 
+.is--hidden {
+  display: none;
+}
+
 /*# sourceMappingURL=main.css.map */
