@@ -1,13 +1,15 @@
-const takeawayButtonBlue = document.querySelector(".takeaway__button--blue");
-const changeLink = document.querySelector(".js--one__link");
-const buttonGray = document.querySelector(".form__button");
+const takeawayGrid = document.querySelector(".takeaway");
 const deliveryChoiceSection = document.querySelector(".takeaway__choice");
-
+const takeawayNumberArray = Array.from(
+  document.querySelectorAll(".takeaway__number")
+);
+const formCheckbox = document.querySelector('.js-checkbox')
 //bindanje svih evenata
 const bindEventListeners = () => {
   deliveryChoiceSection.addEventListener("click", deliveryOption);
-  takeawayButtonBlue.addEventListener("click", storeInfo);
-  changeLink.addEventListener("click", storeInfo);
+  takeawayGrid.addEventListener("click", storeAndChangeInfo);
+  takeawayGrid.addEventListener("click", openNextSection);
+  formCheckbox.addEventListener("click", checkboxButtonStyle);
 };
 
 //rješavanje košarice i local storagea
@@ -76,13 +78,39 @@ const deliveryOption = (e) => {
 };
 
 //storing info from the first section
-const storeInfo = () => {
-  document.querySelector(".takeaway__section").classList.toggle("is--hidden");
-  document.querySelector(".section__show").classList.toggle("js--one");
-  document.querySelector(".--one").classList.toggle("--one-closed");
-  document.querySelector(".--two").classList.toggle("--two-open");
-  document
-    .querySelector(".js-title--alternative")
-    .classList.toggle("is--hidden");
-  document.querySelector(".form").classList.toggle("is--hidden");
+const storeAndChangeInfo = (event) => {
+  if (event.target.closest(".takeaway__button--blue")) {
+    document.querySelector(".takeaway__section").classList.toggle("is--hidden");
+    document.querySelector(".js--one").classList.toggle("is--hidden");
+    takeawayNumberArray[0].classList.toggle("takeaway__number--active");
+  } else if (event.target.closest(".js--one__link")) {
+    document.querySelector(".takeaway__section").classList.toggle("is--hidden");
+    document.querySelector(".js--one").classList.toggle("is--hidden");
+    document.querySelector(".form").classList.toggle("is--hidden");
+    document
+      .querySelector(".js-title--alternative")
+      .classList.toggle("is--hidden");
+    takeawayNumberArray[0].classList.toggle("takeaway__number--active");
+    takeawayNumberArray[1].classList.toggle("takeaway__number--active");
+  }
+};
+
+const openNextSection = (event) => {
+  if (event.target.closest(".takeaway__button--blue")) {
+    document
+      .querySelector(".js-title--alternative")
+      .classList.toggle("is--hidden");
+    document.querySelector(".form").classList.toggle("is--hidden");
+    document.querySelector(".take");
+    takeawayNumberArray[1].classList.toggle("takeaway__number--active");
+  }
+};
+
+const checkboxButtonStyle = (event) => {
+  console.log(event.target.closest('.checkboxes'))
+  if (event.target.closest(".checkboxes")) {
+    document
+      .querySelector(".form__button")
+      .classList.toggle("takeaway__button--blue");
+  }
 };

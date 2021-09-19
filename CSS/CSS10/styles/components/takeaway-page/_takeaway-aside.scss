@@ -23,8 +23,9 @@
     }
 
     &__images {
-        @include displayFlex(flex, start, 5px);
+        @include displayFlex(flex, start, 15px);
         overflow-x: scroll;
+        overflow-y: hidden;
         width: 60%;
     }
 

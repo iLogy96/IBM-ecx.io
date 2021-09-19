@@ -85,7 +85,7 @@
     </header>
     <main class="container">
         <section class="takeaway">
-          <div class="takeaway__number --one"><span>1</span></div>
+          <div class="takeaway__number takeaway__number--active"><span>1</span></div>
           <section class="takeaway__section">
                 <h1 class="takeaway__section__title">Kako želiš preuzeti svoju narudžbu</h1>
                 <div class="takeaway__address">
@@ -125,7 +125,7 @@
           </section>
 
           <!--section koji je summary takeaway__section, prikazuje se nakon prihvaćanja podataka-->
-          <section class="section__show">
+          <section class="is--hidden js--one">
               <div class="js--one__info">
                 <h1 class="js--one__title">Informacije o dostavi</h1>
                 <a class="js--one__link" href="#">Izmijeni</a>
@@ -149,7 +149,9 @@
 
           <script id="asideTemplate" type="text/x-handlebars-template">
               <div>
-                <img class="takeaway__image" src="{{data.mainImageUrl}}" alt="{{data.mainImageAlt}}">
+                <a href="{{data.pipUrl}}">
+                  <img class="takeaway__image" src="{{data.mainImageUrl}}" alt="{{data.mainImageAlt}}">
+                </a>
               </div>
           </script>
 
@@ -212,7 +214,7 @@
           </aside>
 
 
-          <div class="takeaway__number --two"><span>2</span></div>
+          <div class="takeaway__number"><span>2</span></div>
           <section class="takeaway__section">
                 <h1 class="takeaway__section__title--alternative js-title--alternative">Gdje trebamo poslati narudžbu</h1>
                 <form class="form is--hidden" action="#" method="POST">
@@ -227,6 +229,7 @@
                               Privatni kupac
                             </span>
                         </label>
+
                       </div>
                     </div>
                   </div>
@@ -268,7 +271,7 @@
                   <div class="form__credentials">
                     <div class="form__credentials__checkbox">
                       <div class="checkboxes">
-                        <label class="checkbox">
+                        <label for="giftcard" class="checkbox">
                         <input class="checkbox__input" type="checkbox" id="giftcard" name="method" value="giftcard">
                           <div class="checkbox__box">
                           </div>
@@ -276,8 +279,8 @@
                             Dodaj adresu za plaćanje
                           </span>
                         </label>
-                      </div>
-                      </div>
+                    </div>
+                  </div>
                     <a class="form__link" href="#">Što je ovo</a>
                   </div>
                   <div class="form__card">
@@ -285,7 +288,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 4h-20c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-12c0-1.104-.896-2-2-2zm0 13.5c0 .276-.224.5-.5.5h-19c-.276 0-.5-.224-.5-.5v-6.5h20v6.5zm0-9.5h-20v-1.5c0-.276.224-.5.5-.5h19c.276 0 .5.224.5.5v1.5zm-9 6h-9v-1h9v1zm-3 2h-6v-1h6v1zm10-2h-3v-1h3v1z"/></svg>
                   </div>
                   <div class="form__credentials__checkbox">
-                    <div class="checkboxes">
+                    <div class="checkboxes js-checkbox">
                       <label class="checkbox">
                       <input class="checkbox__input" type="checkbox" id="giftcard" name="method" value="giftcard">
                         <div class="checkbox__box">
@@ -295,8 +298,8 @@
                         </span>
                       </label>
                     </div>
-    
                   </div>
+
                   <button class="form__button">Nastavi</button>
                   <p class="takeaway__para">
                     Koristimo najnoviju SSl tehnologiju kako bismo zaštitili
@@ -321,7 +324,7 @@
           </section>
 
 
-          <div class="takeaway__number --three"><span>3</span></div>
+          <div class="takeaway__number --inactive"><span>3</span></div>
           <section class="takeaway__section">
                 <!-- <h1 class="takeaway__section__title--alternative">Na koji način želiš platiti</h1> -->
               <div class="takeaway__payment">
@@ -502,10 +505,11 @@
             </li>
             <li class="social__link social__link--squared">
               <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21.5 6c.276 0 .5.224.5.5v11c0 .276-.224.5-.5.5h-19c-.276 0-.5-.224-.5-.5v-11c0-.276.224-.5.5-.5h19zm2.5 0c0-1.104-.896-2-2-2h-20c-1.105 0-2 .896-2 2v12c0 1.104.895 2 2 2h20c1.104 0 2-.896 2-2v-12zm-13.553 3.63h1.295l-.81 4.753h-1.295l.81-4.753zm3.907 1.908c-.453-.22-.73-.367-.727-.589 0-.198.235-.409.742-.409.424-.007.73.086.97.182l.116.055.176-1.03c-.257-.096-.659-.2-1.161-.2-1.28 0-2.182.645-2.189 1.568-.007.683.644 1.064 1.135 1.291.504.233.674.381.671.59-.003.318-.403.464-.775.464-.518 0-.794-.072-1.219-.249l-.167-.076-.182 1.064c.303.133.862.248 1.443.254 1.362 0 2.246-.637 2.256-1.624.003-.541-.342-.952-1.089-1.291zm5.646 2.846h-1.202l-.158-.712-1.659-.002-.273.714h-1.36l1.924-4.355c.136-.309.368-.394.678-.394h1.001l1.049 4.749zm-1.571-1.686l-.3-1.372-.088-.41-.172.454-.516 1.328h1.076zm-9.879-3.065l-1.268 3.241-.135-.659-.454-2.184c-.079-.3-.306-.39-.588-.401h-2.089l-.016.099c.508.123.962.3 1.361.521l1.152 4.128 1.371-.002 2.039-4.743h-1.373z"/></svg>            </a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21.5 6c.276 0 .5.224.5.5v11c0 .276-.224.5-.5.5h-19c-.276 0-.5-.224-.5-.5v-11c0-.276.224-.5.5-.5h19zm2.5 0c0-1.104-.896-2-2-2h-20c-1.105 0-2 .896-2 2v12c0 1.104.895 2 2 2h20c1.104 0 2-.896 2-2v-12zm-13.553 3.63h1.295l-.81 4.753h-1.295l.81-4.753zm3.907 1.908c-.453-.22-.73-.367-.727-.589 0-.198.235-.409.742-.409.424-.007.73.086.97.182l.116.055.176-1.03c-.257-.096-.659-.2-1.161-.2-1.28 0-2.182.645-2.189 1.568-.007.683.644 1.064 1.135 1.291.504.233.674.381.671.59-.003.318-.403.464-.775.464-.518 0-.794-.072-1.219-.249l-.167-.076-.182 1.064c.303.133.862.248 1.443.254 1.362 0 2.246-.637 2.256-1.624.003-.541-.342-.952-1.089-1.291zm5.646 2.846h-1.202l-.158-.712-1.659-.002-.273.714h-1.36l1.924-4.355c.136-.309.368-.394.678-.394h1.001l1.049 4.749zm-1.571-1.686l-.3-1.372-.088-.41-.172.454-.516 1.328h1.076zm-9.879-3.065l-1.268 3.241-.135-.659-.454-2.184c-.079-.3-.306-.39-.588-.401h-2.089l-.016.099c.508.123.962.3 1.361.521l1.152 4.128 1.371-.002 2.039-4.743h-1.373z"/></svg>          
+              </a>
             </li>
             <li class="social__link social__link--squared">
-              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M22 22h-20c-1.104 0-2-.896-2-2v-12c0-1.104.896-2 2-2h1.626l.078.283c.194.631.518 1.221.95 1.717h-2.154c-.276 0-.5.224-.5.5v5.5h20v-5.5c0-.276-.224-.5-.5-.5h-2.154c.497-.569.853-1.264 1.029-2h1.625c1.104 0 2 .896 2 2v12c0 1.104-.896 2-2 2zm-20-5v2.5c0 .276.224.5.5.5h19c.276 0 .5-.224.5-.5v-2.5h-20zm8.911-5h-2.911c.584-1.357 1.295-2.832 2-4-.647-.001-1.572.007-2 0-2.101-.035-2.987-1.806-3-3-.016-1.534 1.205-3.007 3-3 1.499.006 2.814.872 4 2.313 1.186-1.441 2.501-2.307 4-2.313 1.796-.007 3.016 1.466 3 3-.013 1.194-.899 2.965-3 3-.428.007-1.353-.001-2 0 .739 1.198 1.491 2.772 2 4h-2.911c-.241-1.238-.7-2.652-1.089-3.384-.388.732-.902 2.393-1.089 3.384zm-2.553-7.998c-1.131 0-1.507 1.918.12 1.998.237.012 2.235 0 2.235 0-1.037-1.44-1.52-1.998-2.355-1.998zm7.271 0c1.131 0 1.507 1.918-.12 1.998-.237.012-2.222 0-2.222 0 1.037-1.44 1.507-1.998 2.342-1.998z"/></svg>        </ul>
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M22 22h-20c-1.104 0-2-.896-2-2v-12c0-1.104.896-2 2-2h1.626l.078.283c.194.631.518 1.221.95 1.717h-2.154c-.276 0-.5.224-.5.5v5.5h20v-5.5c0-.276-.224-.5-.5-.5h-2.154c.497-.569.853-1.264 1.029-2h1.625c1.104 0 2 .896 2 2v12c0 1.104-.896 2-2 2zm-20-5v2.5c0 .276.224.5.5.5h19c.276 0 .5-.224.5-.5v-2.5h-20zm8.911-5h-2.911c.584-1.357 1.295-2.832 2-4-.647-.001-1.572.007-2 0-2.101-.035-2.987-1.806-3-3-.016-1.534 1.205-3.007 3-3 1.499.006 2.814.872 4 2.313 1.186-1.441 2.501-2.307 4-2.313 1.796-.007 3.016 1.466 3 3-.013 1.194-.899 2.965-3 3-.428.007-1.353-.001-2 0 .739 1.198 1.491 2.772 2 4h-2.911c-.241-1.238-.7-2.652-1.089-3.384-.388.732-.902 2.393-1.089 3.384zm-2.553-7.998c-1.131 0-1.507 1.918.12 1.998.237.012 2.235 0 2.235 0-1.037-1.44-1.52-1.998-2.355-1.998zm7.271 0c1.131 0 1.507 1.918-.12 1.998-.237.012-2.222 0-2.222 0 1.037-1.44 1.507-1.998 2.342-1.998z"/></svg>        
             </li>  
               <div class="social__button">
                 <button class="button-wrap footer-button--gray">

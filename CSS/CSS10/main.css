@@ -1465,48 +1465,27 @@ sup {
 }
 .takeaway__number {
   grid-column-start: 1;
-}
-
-.--one {
-  padding-top: 1.5rem;
-  border-bottom: 1px solid rgba(122, 121, 122, 0.3);
-}
-.--one span {
-  background: #000;
-  color: white;
-  border: transparent;
-  border-radius: 100px;
-  padding: 0.3rem 0.6rem;
-}
-
-.--two,
-.--three,
-.--four {
   display: flex;
   align-items: start;
-  padding: 1.8rem 0;
+  padding: 1.2rem 0;
   border-bottom: 1px solid rgba(122, 121, 122, 0.3);
 }
-.--two span,
-.--three span,
-.--four span {
+.takeaway__number span {
   background: transparent;
   color: #7a797a;
   border: 1px solid #7a797a;
   border-radius: 100px;
   padding: 0.3rem 0.5rem;
 }
-
-.--two {
-  grid-row-start: 2;
+.takeaway__number--active {
+  padding-top: 1.3rem;
 }
-
-.--three {
-  grid-row-start: 3;
-}
-
-.--four {
-  grid-row-start: 4;
+.takeaway__number--active span {
+  background: #000;
+  color: white;
+  border: transparent;
+  border-radius: 100px;
+  padding: 0.3rem 0.6rem;
 }
 
 .takeaway__aside {
@@ -1533,8 +1512,9 @@ sup {
 .takeaway__aside__images {
   display: flex;
   align-items: start;
-  gap: 5px;
+  gap: 15px;
   overflow-x: scroll;
+  overflow-y: hidden;
   width: 60%;
 }
 .takeaway__aside__link {
@@ -1692,10 +1672,6 @@ sup {
   font-size: 0.9rem;
 }
 
-.is--hidden {
-  display: none;
-}
-
 .--one-closed span {
   background: transparent;
   color: #7a797a;
@@ -1710,10 +1686,6 @@ sup {
   border: transparent;
   border-radius: 100px;
   padding: 0.3rem 0.5rem;
-}
-
-.section__show {
-  display: none;
 }
 
 .js--one {
@@ -1755,6 +1727,10 @@ sup {
 
 .js--title {
   width: 80%;
+}
+
+.is--hidden {
+  display: none;
 }
 
 .checkbox {

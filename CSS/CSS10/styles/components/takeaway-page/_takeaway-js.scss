@@ -1,8 +1,3 @@
-//"prihvaćanje" informacija i zatvaranje prvog menu-a u takeaway pageu
-.is--hidden {
-    display: none;
-}
-
 //mijenjanje stilova brojeva pored menu-a
 .--one-closed {
     span {
@@ -13,8 +8,8 @@
         padding: 0.3rem 0.6rem;
     }
 }
-.--two-open{
-    span{
+.--two-open {
+    span {
         background: #000;
         color: white;
         border: transparent;
@@ -24,10 +19,6 @@
 }
 
 //prikaz nove sekcije s prihvaćenim informacijama
-.section__show {
-    display: none;
-}
-
 .js--one {
     grid-column-start: 2;
     grid-column-end: 6;
@@ -74,4 +65,8 @@
 
 .js--title {
     width: 80%;
+}
+//"prihvaćanje" informacija i zatvaranje prvog menu-a u takeaway pageu
+.is--hidden {
+    display: none;
 }

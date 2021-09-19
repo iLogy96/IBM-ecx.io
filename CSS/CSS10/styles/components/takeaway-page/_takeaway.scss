@@ -3,7 +3,7 @@
     grid-template-columns: repeat(10, 1fr);
     padding: 2rem 0;
     // position: relative;
-    
+
     &__section {
         grid-column-start: 2;
         grid-column-end: 6;
@@ -46,49 +46,38 @@
         @include displayFlex(flex, center, 10px);
         border-bottom: $border-bottom-gray;
 
-        button:focus{
+        button:focus {
             border-bottom: 3px solid $color-blue;
         }
     }
 
     &__number {
         grid-column-start: 1;
-    }
-}
-.--one {
-    padding-top: 1.5rem;
-    border-bottom: $border-bottom-gray;
+        display: flex;
+        align-items: start;
+        padding: 1.2rem 0;
+        border-bottom: $border-bottom-gray;
 
-    span {
-        background: #000;
-        color: white;
-        border: transparent;
-        border-radius: 100px;
-        padding: 0.3rem 0.6rem;
-    }
-}
-.--two,
-.--three,
-.--four {
-    display: flex;
-    align-items: start;
-    padding: 1.8rem 0;
-    border-bottom: $border-bottom-gray;
+        span {
+            background: transparent;
+            color: $secondary-text-color;
+            border: 1px solid $secondary-text-color;
+            border-radius: 100px;
+            padding: 0.3rem 0.5rem;
+        }
 
-    span {
-        background: transparent;
-        color: $secondary-text-color;
-        border: 1px solid $secondary-text-color;
-        border-radius: 100px;
-        padding: 0.3rem 0.5rem;
+        &--active {
+            padding-top: 1.3rem;
+
+            span {
+                background: #000;
+                color: white;
+                border: transparent;
+                border-radius: 100px;
+                padding: 0.3rem 0.6rem;
+            }
+        }
     }
 }
-.--two {
-    grid-row-start: 2;
-}
-.--three {
-    grid-row-start: 3;
-}
-.--four {
-    grid-row-start: 4;
-}
+
+
