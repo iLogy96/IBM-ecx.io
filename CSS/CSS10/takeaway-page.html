@@ -246,9 +246,9 @@
                       </div>
                     </div>
                   </div>
-                    <input class="form__input form__input--text" required = "required" type="text" placeholder="Ime">
-                    <input class="form__input form__input--text" required = "required" type="text" placeholder="Prezime">
-                    <input class="form__input form__input--text" required = "required" type="text" placeholder="Ulica">
+                    <input class="form__input form__input--text form__input--name" required = "required" type="text" placeholder="Ime">
+                    <input class="form__input form__input--text form__input--surname" required = "required" type="text" placeholder="Prezime">
+                    <input class="form__input form__input--text form__input--street" required = "required" type="text" placeholder="Ulica">
                   <div class="form__add-address">
                     + Dodaj drugu adresu
                   </div>
@@ -263,9 +263,9 @@
                     <a class="form__link" href="#">Izmijeni</a>
                   </div>
 
-                  <input class="form__input form__input--text" required = "required" type="text" placeholder="Grad">
-                  <input class="form__input form__input--email form__input--text" required= "required" type="email" placeholder="Adresa e-pošte">
-                  <input class="form__input form__input--text" required = "required" type="text" placeholder="Broj telefona">
+                  <input class="form__input form__input--text form__input--city" required = "required" type="text" placeholder="Grad">
+                  <input class="form__input form__input--text form__input--email " required= "required" type="email" placeholder="Adresa e-pošte">
+                  <input class="form__input form__input--text form__input--tel" required = "required" type="text" placeholder="Broj telefona">
                   
                   <div class="form__credentials">
                     <div class="form__credentials__checkbox">
@@ -312,11 +312,12 @@
                     <a class="takeaway__accepted__link" href="#">Izmijeni</a>
                   </div>
                   <div class="takeaway__accepted__details">
-                    <span>John Doe</span>
-                    <span>jane.doe@test.com</span>
-                    <span>0123456789</span>
-                    <span>Pinky Street 123b, Some detail, Some detail</span>
-                    <span>10000, Wels</span>
+                    <span class="takeaway__accepted__details--name">John </span>
+                    <span class="takeaway__accepted__details--surname">Doe</span>
+                    <span class="takeaway__accepted__details--email">jane.doe@test.com</span>
+                    <span class="takeaway__accepted__details--number">0123456789</span>
+                    <span class="takeaway__accepted__details--address">Pinky Street 123b, Some detail, Some detail</span>
+                    <span >10000, <span class="takeaway__accepted__details--city">Wels</span></span>
                   </div>    
                 </section>
 

@@ -2,7 +2,14 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     padding: 2rem 0;
-    // position: relative;
+    
+    @include mq-down("tablet") {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 1rem;
+        margin-left: 2rem;
+    }
 
     &__section {
         grid-column-start: 2;
@@ -12,6 +19,13 @@
         gap: 15px;
         border-bottom: $border-bottom-gray;
         padding: 1rem 0;
+
+        @include mq-down("tablet") {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 1rem;
+        }
 
         &__title {
             font-size: 1.5rem;
@@ -79,5 +93,3 @@
         }
     }
 }
-
-

@@ -5,6 +5,10 @@
     grid-column-start: 7;
     grid-column-end: 10;
 
+    @include mq-down("tablet") {
+        position: inherit;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: column;

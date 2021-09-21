@@ -68,6 +68,7 @@ function addToCart(e) {
   if (e.target.closest(".add-to-cart__button")) {
     //dodavanje novog objekta u local storage
     let productId = e.target.closest(".add-to-cart__button").dataset.id;
+    console.log(productId)
 
     let myArticles = {
       id : productId,
