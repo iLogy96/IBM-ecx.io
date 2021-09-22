@@ -1,0 +1,31 @@
+.about {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: $color-primary;
+
+    &__icon {
+        height: 50px;
+        width: 50px;
+        fill: $color-primary;
+        padding: 1rem;
+        border: 1px solid $color-primary;
+        border-radius: 50%;
+    }
+
+    &__article {
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding: 0.7rem 0;
+    }
+
+    &__para {
+        color: transparentize($color-primary, 0.3);
+        font-size: 0.9rem;
+    }
+}

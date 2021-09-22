@@ -1,0 +1,5 @@
+@mixin whiteParallelogram {
+    background: white;
+    padding: 2rem 0;
+    clip-path: polygon(0 13%, 100% 0%, 100% 87%, 0% 100%);
+}

@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-primary;
+
+    &__logo {
+        font-size: 1.4rem;
+
+        span {
+            color: $color-secondary;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__list__item {
+        font-size: 0.9rem;
+        transition: all ease-in-out 300ms;
+
+        &--link:hover,
+        &--link:focus {
+            color: $color-secondary;
+        }
+
+        &:not(:last-child)::after {
+            content: "";
+            display: inline-block;
+            height: 14px;
+            margin: 0 10px 0;
+            width: 1px;
+            background-color: #000;
+        }
+    }
+}
