@@ -34,7 +34,7 @@
     }
 
     &__title--alt {
-        color: $text-color-secondary;
+        color: $text-color-pink;
         padding-top: 1.5rem;
 
         @include mq-down("phone") {

@@ -14,7 +14,7 @@
     }
 
     &__title--alt {
-        color: $text-color-secondary;
+        color: $text-color-pink;
 
         @include mq-down("phone") {
             font-size: 0.8rem;
