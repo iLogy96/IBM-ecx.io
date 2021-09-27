@@ -1,0 +1,51 @@
+html {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+*,
+*::before,
+*::after {
+    font-family: inherit;
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: $color-primary;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: .9rem;
+    left: -1.2rem;
+    background: $color-primary;
+    width: 300px;
+
+
+    &__list {
+        padding: 2rem .5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        
+    }
+    
+    &--link {
+        display: block;
+        font-weight: normal;
+        font-size: 1.1em;
+        color: $color-secondary;
+        padding: .3rem;
+        &:hover {
+            border-bottom: 1px solid white;
+            width: max-content;
+        }
+    }
+}

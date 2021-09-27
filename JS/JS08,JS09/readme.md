@@ -1,0 +1,1 @@
+objekti, arrayi i manipulacije domovima i podacima.

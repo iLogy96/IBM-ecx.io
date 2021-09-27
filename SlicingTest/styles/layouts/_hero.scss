@@ -1,0 +1,35 @@
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 10rem 0;
+    background: $color-secondary;
+
+    &__image {
+        height: 400px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__title--main {
+        font-weight: bold;
+        font-size: 3.2rem;
+    }
+
+    &__title--alt {
+        color: $text-color-secondary;
+    }
+
+    &__amper {
+        @include amperStyles();
+    }
+    &__para{
+        color: $gray-primary;
+        padding-bottom: 2rem;
+    }
+
+}
+

@@ -1,0 +1,1 @@
+For, do, while i if petlje.

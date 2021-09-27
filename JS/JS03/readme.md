@@ -1,0 +1,1 @@
+Ugrađene metode s datumima, jednostavne matematičke funkcije za račun površine i opsega.

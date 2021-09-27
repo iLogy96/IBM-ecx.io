@@ -1,0 +1,44 @@
+.primary-nav {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    //napomena, space between i dva ul napraviti u headeru
+
+    &__primary {
+        position: relative;
+        @include displayFlex(flex, center, 3.5rem);
+
+    }
+
+    &__logo {
+        width: 90px;
+        height: 70px;
+    }
+}
+
+.--search {
+    position: relative;
+
+    &__magnifier,&__camera {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        margin: 0.7rem;
+    }
+
+    &__camera {
+        margin: 0.7rem -2.2rem;
+    }
+
+    @include mq-down("tablet") {
+        width: max-content;
+    }
+}
+
+.--is-hidden {
+    @include mq-down("tablet") {
+        display: none;
+    }
+}

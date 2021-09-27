@@ -1,0 +1,27 @@
+.takeaway__description {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 2px solid $color-blue;
+    border-radius: 5px;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+
+    &__order {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+    }
+
+    &__delivery {
+        font-weight: bold;
+        padding-top: 2rem;
+    }
+}
+
+.takeaway__para {
+    font-size: 0.65rem;
+    color: $secondary-text-color;
+    text-align: center;
+    width: max-content;
+}

@@ -1,0 +1,33 @@
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+    border-bottom: 1px solid transparentize($secondary-text-color, 0.7);
+
+    @include mq-down ('tablet') {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    &__list {
+        display: flex;
+        gap: 1.5rem;
+
+        @include mq-down ('phone') {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+    }
+
+    &__link--rounded {
+        @include svgStyles(block, $border-bottom-gray, 0.3rem 0.5rem, 100px);
+    }
+
+    &__link--squared {
+        @include svgStyles(block, $border-bottom-gray, 0.3rem 0.3rem, 5px);
+    }
+}
+

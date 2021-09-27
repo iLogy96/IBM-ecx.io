@@ -1,0 +1,64 @@
+.filter {
+    &__current {
+        color: $secondary-text-color;
+        padding: 1rem 0;
+        border-bottom: $border-bottom-gray;
+        a {
+            color: $secondary-text-color;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 2rem;
+        padding: 3rem 0;
+    }
+
+    &__values {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: $border-bottom-gray;
+
+
+    }
+
+    &__list,
+    &__result {
+        display: flex;
+        gap: 10px;
+        @include mq-down ('tablet') {
+            display: flex;
+            align-items: center;
+        }
+        &__item {
+            padding: 0.3rem;
+
+
+    
+        }
+
+        @include mq-down ('tablet') {
+            width: 40%;
+            overflow-x: scroll;
+        }
+    
+    }
+
+    &__list {
+        &__item {
+            text-align: center;
+            background: $background-color;
+            border: $background-color solid 2px;
+            border-radius: 100px;
+
+            @include mq-down ('tablet') {
+                padding:.3rem;
+                text-align: start;
+                border: none;
+            }
+    
+            
+        }
+    }
+}

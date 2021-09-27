@@ -1,0 +1,40 @@
+.mini {
+    display: none;
+}
+
+.order__footer:focus-within .mini {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    &__code {
+        @include displayFlex(flex, center, 5px);
+        border-top: $border-bottom-gray;
+        padding: 1rem 0;
+    }
+
+    &__link {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    &__use {
+        @include displayFlex(flex, center, 10px);
+    }
+
+    &__info {
+        fill: $color-blue;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__promo {
+        border-bottom: $border-bottom-gray;
+        padding: 1rem 0;
+    }
+
+    &__get {
+        display: flex;
+        justify-content: center;
+    }
+}

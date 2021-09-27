@@ -1,0 +1,1 @@
+switch caseovi i brdo jednostavnijih zadataka za vježbu

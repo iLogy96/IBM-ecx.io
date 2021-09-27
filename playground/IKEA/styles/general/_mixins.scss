@@ -1,0 +1,160 @@
+@mixin footerArticleStyles() {
+    line-height: 1.7;
+    &__title {
+        font-weight: bold;
+        padding-bottom: 1rem;
+    }
+}
+
+@mixin displayFlex($display, $align, $gap) {
+    display: $display;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin articleNameStyles() {
+    color: $primary-text-color;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@mixin discountedPrice() {
+    background: #fcdb00;
+    width: max-content;
+    padding: 0.2rem;
+    box-shadow: 2px 2px #e53f4d;
+    font-weight: bold;
+}
+
+@mixin svgStyles($display, $border, $padding, $border-radius) {
+    display: $display;
+    border: $border;
+    padding: $padding;
+    border-radius: $border-radius;
+}
+
+@mixin imageSize($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin sectionTitleStyles() {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+}
+
+@mixin availabilityStyles {
+    content: "";
+    width: 0.7rem;
+    height: 0.7rem;
+    background: $success-color;
+    border-radius: 50%;
+}
+
+@mixin sectionScrollStyles() {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+@mixin mq-up($name) {
+    $min: map-get($grid, $name, "min");
+
+    @media (min-width: $min) {
+        @content;
+    }
+}
+
+@mixin mq-down($name) {
+    $max: map-get($grid, $name, "max");
+
+    @media (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin checkboxStyles {
+    .checkbox {
+        display: flex;
+        align-items: center;
+
+        &__input {
+            display: none;
+        }
+
+        &__box {
+            width: 1.25em;
+            height: 1.25em;
+            border: 2px solid #cccccc;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            flex-shrink: 0;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        &__box::after {
+            content: "\2713";
+            color: white;
+            transform: scale(0);
+            transition: transform 0.15s;
+        }
+
+        &__input:checked + .checkbox__box {
+            background: blue;
+            border-color: blue;
+        }
+
+        &__input:checked + .checkbox__box::after {
+            transform: scale(1);
+        }
+    }
+}
+
+@mixin radioStyles() {
+    .radio {
+        display: flex;
+        align-items: center;
+
+        &__input {
+            display: none;
+        }
+
+        &__box {
+            width: 1.25em;
+            height: 1.25em;
+            border: 2px solid #cccccc;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            flex-shrink: 0;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        &__box::after {
+            content:"\A";
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            border: white 1px solid;
+            transform: scale(0);
+            transition: transform 0.15s;
+        }
+
+        &__input:checked + .radio__box {
+            background: blue;
+            border-color: blue;
+        }
+
+        &__input:checked + .radio__box::after {
+            transform: scale(1);
+        }
+    }
+}

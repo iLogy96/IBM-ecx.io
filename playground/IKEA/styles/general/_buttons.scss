@@ -1,0 +1,144 @@
+.footer-button--gray {
+    @include svgStyles(flex, $border-bottom-gray, 0.5rem, 100px);
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+//aside na article-page
+.btn-wrapper-aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    &__button--blue {
+        @include svgStyles(block, $border-bottom-gray, 0.8rem, 100px);
+        color: $white-color;
+        background: $color-blue;
+        width: 100%;
+    }
+
+    &__button--fav {
+        @include svgStyles(block, $border-bottom-gray, 0.6rem 0.8rem, 50%);
+        background: none;
+        svg {
+            height: 20px;
+            width: 20px;
+        }
+    }
+}
+
+//button na checkout-page
+.basket__summary__add {
+    @include displayFlex(flex, center, 1rem);
+    padding: 2rem 0;
+
+    &--button {
+        @include svgStyles(block, $border-bottom-gray, 0.6rem 1rem, 100px);
+        width: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        svg {
+            width: 10px;
+            height: 10px;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.button--wishlist {
+    position: absolute;
+    right: 0;
+    top: 0;
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.button--cart {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    fill: #fff;
+    background: $color-blue;
+    border: transparent;
+    border-radius: 100px;
+    padding: 0.4rem 0.6rem;
+}
+
+.mini__get--button {
+    @include svgStyles(block, $border-bottom-gray, 0.8rem, 100px);
+    color: #000;
+    background: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup--button {
+    @include svgStyles(block, $border-bottom-gray, 0.5rem 0.6rem, 100px);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #fff;
+    cursor: pointer;
+
+    svg {
+        width: 11px;
+        height: 11px;
+    }
+}
+
+.dimensions--button--close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+
+    svg {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+.takeaway--button {
+    @include svgStyles(block, $border-bottom-gray, 0.6rem, 100px);
+    background: #fdfefe;
+    fill: black;
+    cursor: pointer;
+
+    svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+.takeaway__button--blue {
+    @include svgStyles(block, $border-bottom-gray, 0.8rem, 100px);
+    color: $white-color;
+    background: $color-blue;
+    width: 100%;
+}
+
+.more__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.show-more__button {
+    display: flex;
+    color: black;
+    background: transparent;
+    border: $border-bottom-gray;
+    border-radius: 100px;
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+.add-to-cart__button {
+    display: block;
+    cursor: pointer;
+}
+

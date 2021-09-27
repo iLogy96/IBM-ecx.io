@@ -1,0 +1,38 @@
+.recommended {
+    display: grid;
+    grid-column: span 10;
+    padding-top: 1rem;
+    padding-bottom: 10rem;
+
+    @include mq-down("tablet") {
+        width: 100%;
+        margin-left: 2rem;
+    }
+
+    &__article{
+        position: relative;
+    }
+
+    &__summary {
+        @include displayFlex(flex, flex-start, 1rem);
+        flex-direction: column;
+        line-height: 1.3;
+    }
+
+    &__title {
+        @include sectionTitleStyles();
+    }
+
+    &__name {
+        @include articleNameStyles();
+    }
+
+    &__price {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    &__scroll {
+        @include sectionScrollStyles();
+        gap: 2.5rem;
+    }
+}

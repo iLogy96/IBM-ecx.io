@@ -1,0 +1,123 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    &__logo {
+        margin: 0 2rem 0;
+    }
+
+    &__primary,
+    &__secondary {
+        display: flex;
+        gap: 5rem;
+
+        &__list {
+            @extend .header__primary;
+            align-items: center;
+            gap: 25px;
+            position: relative;
+
+            &__item {
+                @include listItemStyles();
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+    }
+    &__primary__list::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 1px;
+        height: 6rem;
+        background: lightgray;
+        right: -2.5rem;
+        bottom: 0;
+    }
+
+    &__tertiary {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+
+        &__icon__wrapper {
+            display: flex;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: relative;
+
+            &:first-child::before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                width: 1px;
+                height: 6rem;
+                background: lightgray;
+                left: -0.25rem;
+                bottom: 0;
+            }
+
+            &:not(:last-child)::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                width: 1px;
+                height: 6rem;
+                background: lightgray;
+                right: -0.25rem;
+                bottom: 0;
+            }
+        }
+    }
+
+    &__alt {
+        position: absolute;
+        bottom: -1.2rem;
+        background: $color-primary;
+        padding: 1rem;
+        width: 100%;
+
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            &__item {
+                @include listItemStyles();
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+        }
+
+        &--link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: $color-secondary;
+
+            svg {
+                width: 8px;
+                fill: $color-secondary;
+                height: 8px;
+                transform: rotate(90deg);
+            }
+
+            &:focus-within{
+                svg {
+                    transform: rotate(270deg);
+                }
+            }
+        }
+    }
+}
+
+.has-dropdown:hover .dropdown {
+    display: block;
+}

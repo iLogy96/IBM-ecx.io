@@ -1,0 +1,17 @@
+.copyright{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1rem 0;
+    
+    &__text{
+        font-size: .7em;
+        color:transparentize($secondary-text-color, 0.2);
+    }
+
+    &__list{
+        font-size: .7em;
+        display: flex;
+        gap: 15px;
+    }
+}

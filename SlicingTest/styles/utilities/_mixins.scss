@@ -1,0 +1,42 @@
+@mixin amperStyles() {
+    font-size: 4rem;
+    color: $color-red;
+}
+
+@mixin innerCircleStyles() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 50%;
+    padding: 2.5rem 3.5rem;
+}
+
+@mixin outerCircleStyles() {
+    border-radius: 50%;
+    padding: 2rem;
+}
+
+@mixin paraStyles() {
+    color: $gray-primary;
+    width: 80%;
+    line-height: 1.5;
+    font-size: .9rem;
+
+}
+
+@mixin mq-up($name) {
+    $min: map-get($grid, $name, "min");
+
+    @media (min-width: $min) {
+        @content;
+    }
+}
+
+@mixin mq-down($name) {
+    $max: map-get($grid, $name, "max");
+
+    @media (max-width: $max) {
+        @content;
+    }
+}

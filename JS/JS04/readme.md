@@ -1,0 +1,1 @@
+Jednostavne DOM manipulacije i kreiranje i brisanje listi i list-itema.

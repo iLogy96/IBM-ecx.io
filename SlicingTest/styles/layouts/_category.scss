@@ -1,0 +1,79 @@
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 6rem 0;
+
+    &__title--main {
+        font-size: 2.5rem;
+        font-weight: bold;
+        padding-bottom: 1rem;
+    }
+
+    &__title--alt {
+        color: $text-color-secondary;
+    }
+
+    &__custom {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+
+        &__image {
+            height: 70px;
+        }
+
+        &__content {
+            color: $color-secondary;
+        }
+
+        &__outer {
+            @include outerCircleStyles();
+
+            &--vases {
+                background: darken(#e4b366, 5);
+            }
+
+            &--mugs {
+                background: darken(#f15b10, 5);
+            }
+
+            &--plates {
+                background: darken(#a2100f, 3);
+            }
+        }
+
+        &__inner {
+            @include innerCircleStyles();
+
+            &--vases {
+                background: #e4b366;
+            }
+
+            &--mugs {
+                background: #f15b10;
+            }
+
+            &--plates {
+                background: #a2100f;
+            }
+        }
+    }
+
+    &__about {
+        display: flex;
+
+        &__title {
+            font-weight: bold;
+            font-size: 2rem;
+            width: 50%;
+            padding: 2rem 0;
+        }
+
+        &__para {
+            @include paraStyles();
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.recent {
+    padding: 3rem 0;
+    
+    @include mq-down("tablet") {
+        width: max-content;
+        margin-left: 2rem;
+    }
+
+
+    &__title {
+        padding: 1.5rem 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}

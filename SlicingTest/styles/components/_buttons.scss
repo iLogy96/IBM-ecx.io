@@ -1,0 +1,15 @@
+.header__cart--button {
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hero__shop--button{
+    background: $color-red;
+    padding: 1.5rem 2.5rem;
+    border: none;
+    color: $color-primary;
+}

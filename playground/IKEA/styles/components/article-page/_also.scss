@@ -1,0 +1,39 @@
+.also {
+    display: grid;
+    grid-column: span 8;
+    padding: 1rem 0;
+
+    @include mq-down("tablet") {
+        width: 100%;
+        margin-left: 2rem;
+    }
+
+    &__article{
+        position: relative;
+    }
+
+    &__summary {
+        @include displayFlex(flex, flex-start, 1rem);
+        flex-direction: column;
+        line-height: 1.3;
+    }
+
+    &__title {
+        @include sectionTitleStyles();
+    }
+
+    &__age {
+        color: $error-color;
+    }
+
+    &__name {
+        @include articleNameStyles();
+    }
+
+    &__price {
+        font-weight: bold;
+    }
+    &__scroll {
+        @include sectionScrollStyles();
+    }
+}

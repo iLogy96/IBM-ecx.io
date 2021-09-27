@@ -1,0 +1,18 @@
+.search {
+    width: 100%;
+    padding: 1rem;
+    padding-right: 8rem;
+    padding-left: 3rem;
+    border: 1px solid transparent;
+    background: $background-color;
+    border-radius: 70px;
+
+    &:focus-within {
+        outline: none;
+    }
+    transition: 200ms ease-in-out;
+
+    &:hover {
+        background: #e2e2e2;
+    }
+}

@@ -1,0 +1,44 @@
+header {
+    background: $color-primary;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+
+    &__list {
+        display: flex;
+        gap: 1.3rem;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+        }
+    }
+    &__link {
+        color: $gray-primary;
+
+        &:focus {
+            color: $color-focus;
+        }
+    }
+
+    &__cart {
+        width: 23px;
+        height: 23px;
+        fill: $gray-primary;
+
+        &--content {
+            color: $gray-primary;
+        }
+    }
+
+    &__logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}

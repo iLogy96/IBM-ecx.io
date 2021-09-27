@@ -100,7 +100,11 @@ a {
 }
 .header__list__item {
   font-size: 0.9rem;
-  transition: all ease-in-out 300ms;
+  display: flex;
+}
+.header__list__item--link {
+  color: #fff;
+  transition: color ease-in-out 300ms;
 }
 .header__list__item--link:hover, .header__list__item--link:focus {
   color: #30b7d4;

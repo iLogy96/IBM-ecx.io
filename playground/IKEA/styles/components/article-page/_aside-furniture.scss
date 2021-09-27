@@ -1,0 +1,58 @@
+.furniture__aside {
+    position: sticky;
+    top: 40px;
+    grid-column: span 3;
+    line-height: 1.8;
+
+    @include mq-down("tablet") {
+        width: max-content;
+        margin-left: 2rem;
+    }
+
+
+    &__age {
+        color: $error-color;
+    }
+
+    &__name {
+        @include articleNameStyles();
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__price {
+        font-weight: bold;
+        font-size: 1.5em;
+
+        span {
+            font-size: 1rem;
+        }
+    }
+    &__variants {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--color {
+            font-weight: bold;
+        }
+
+        &--variant {
+            font-weight: normal;
+        }
+
+        svg {
+            width: .8em;
+            height: .8em;
+            fill: transparentize(#000, .5);
+        }
+    }
+
+    &__stars{
+        @include displayFlex(flex,center,5px)
+    }
+}

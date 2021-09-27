@@ -1,0 +1,93 @@
+.footer {
+    background: #f5f5f5;
+
+    @include mq-down("tablet") {
+        width: max-content;
+    }
+
+
+    @include mq-down("phone") {
+        width: fit-content;
+    }
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 3rem;
+    padding: 3.5rem 0;
+
+    article {
+        &:first-of-type {
+            grid-column: 1/3;
+        }
+    }
+
+    @include mq-down("tablet") {
+        grid-template-columns: repeat(2, 1fr);
+        width: max-content;
+    }
+
+    @include mq-down("phone") {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+
+        article {
+            &:first-of-type {
+                grid-column: 1/1;
+            }
+        }
+    }
+}
+
+.planner,
+.services,
+.help,
+.ikea {
+    @include footerArticleStyles();
+}
+
+.family {
+    width: 80%;
+    line-height: 1.2;
+    font-size: 0.9em;
+
+    @include mq-down("tablet") {
+        padding: 1.3rem 0;
+    }
+
+    @include mq-down("phone") {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: fit-content;
+    }
+
+    &__title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding-bottom: 1rem;
+    }
+
+    &__text {
+        padding-bottom: 2rem;
+    }
+
+    &__link {
+        text-decoration: underline;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            color: lighten($primary-text-color, 50%);
+        }
+    }
+
+    &__button {
+        color: $white-color;
+        background: #000;
+        border: none;
+        border-radius: 100px;
+        padding: 0.8rem;
+    }
+}
