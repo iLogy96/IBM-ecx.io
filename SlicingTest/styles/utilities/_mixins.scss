@@ -1,3 +1,18 @@
+@mixin displayFlex($flex, $align-items, $gap) {
+    display: $flex;
+    align-items: $align-items;
+    gap: $gap;
+    @content;
+}
+
+@mixin buttonStyles() {
+    background: $color-red;
+    padding: 1.5rem 2.5rem;
+    border: none;
+    color: $color-primary;
+    cursor: pointer;
+}
+
 @mixin amperStyles() {
     font-size: 4rem;
     color: $color-red;
@@ -7,7 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
     border-radius: 50%;
     padding: 2.5rem 3.5rem;
 }
@@ -21,8 +36,7 @@
     color: $gray-primary;
     width: 80%;
     line-height: 1.5;
-    font-size: .9rem;
-
+    font-size: 0.9rem;
 }
 
 @mixin mq-up($name) {

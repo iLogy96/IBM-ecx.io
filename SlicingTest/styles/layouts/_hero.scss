@@ -1,22 +1,51 @@
 .hero {
-    display: flex;
-    align-items: center;
-    padding: 10rem 0;
-    background: $color-secondary;
+    
+    @include displayFlex(flex, center, 10px) {
+        padding: 10rem 0;
+        background: $color-secondary;
+
+        @include mq-down("tablet") {
+            @include displayFlex(flex, center, 10px) {
+                flex-direction: column;
+                padding: 2rem 3rem;
+            }
+        }
+
+    }
 
     &__image {
         height: 400px;
+
+        @include mq-down("phone") {
+            height: 220px;
+        }
     }
 
     &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+        @include displayFlex(flex, start, 15px) {
+            flex-direction: column;
+        }
+
+        @include mq-down("tablet") {
+            @include displayFlex(flex, center, 25px) {
+                width: 80%;
+                text-align: center;
+            }
+        }
+
+        @include mq-down("phone") {
+            width: 100%;
+        }
     }
 
     &__title--main {
         font-weight: bold;
         font-size: 3.2rem;
+
+        @include mq-down("phone") {
+            font-size: 2rem;
+            width: 90%;
+        }
     }
 
     &__title--alt {
@@ -25,11 +54,17 @@
 
     &__amper {
         @include amperStyles();
+
+        @include mq-down("phone") {
+            font-size: 3rem;
+        }
     }
-    &__para{
+    &__para {
         color: $gray-primary;
         padding-bottom: 2rem;
+
+        @include mq-down("tablet") {
+            width: 50%;
+        }
     }
-
 }
-

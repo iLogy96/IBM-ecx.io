@@ -9,22 +9,22 @@ html {
     font-family: inherit;
     box-sizing: inherit;
 }
+
 .container {
     max-width: 1200px;
     margin: auto;
 }
 
+header {
+    border-bottom: 2px solid $gray-secondary;
+    position: relative;
+}
+
+main{
+    position: relative;
+}
+
 a {
     cursor: pointer;
     text-decoration: none;
-}
-
-.overlay--gray {
-    background: $color-secondary;
-}
-
-.overlay--white {
-    background: $color-primary;
-    border-bottom: 1px solid $gray-secondary;
-
 }

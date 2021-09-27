@@ -1,0 +1,85 @@
+.news {
+    @include displayFlex(flex, center, 1.5rem) {
+        flex-direction: column;
+        padding: 6rem 0;
+    }
+
+    &__image__wrapper {
+        background: #ebb96a;
+        width: max-content;
+        border-radius: 50%;
+        padding: 1.5rem;
+
+        @include mq-down("phone") {
+            padding: 1rem;
+        }
+    }
+
+    &__image {
+        height: 40px;
+
+        @include mq-down("phone") {
+            height: 30px;
+        }
+    }
+
+    &__title--main {
+        font-weight: bold;
+        font-size: 2.5rem;
+
+        @include mq-down("phone") {
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+    &__title--alt {
+        color: $text-color-secondary;
+        padding-top: 1.5rem;
+
+        @include mq-down("phone") {
+            font-size: 0.8rem;
+        }
+    }
+
+    &__amper {
+        @include amperStyles();
+
+        @include mq-down("phone") {
+            font-size: 2.7rem;
+        }
+    }
+    &__input__wrapper,
+    &__checkbox__wrapper {
+        @include displayFlex(flex, center, 5px) {
+        }
+    }
+    &__email {
+        position: relative;
+        padding: 0.8rem 2.5rem;
+        width: 300px;
+        outline: none;
+        background: transparent;
+        border: 2px solid $gray-secondary;
+
+        @include mq-down("phone") {
+            width: 200px;
+            padding: 0.5rem 2.4rem;
+        }
+    }
+    &__input__image {
+        position: absolute;
+        margin-left: 5px;
+        width: 25px;
+        height: 25px;
+    }
+
+    &__checkbox {
+        color: $gray-primary;
+        font-size: 0.8em;
+
+        @include mq-down("phone") {
+            font-size: 0.6em;
+        }
+    }
+}

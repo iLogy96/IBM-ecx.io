@@ -1,0 +1,72 @@
+.footer {
+    @include displayFlex(flex, center, 1.5rem) {
+        flex-direction: column;
+        padding: 6rem 0;
+    }
+
+    &__about {
+        @include displayFlex(flex, center, 1.5rem) {
+            flex-direction: column;
+        }
+    }
+
+    &__logo {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    &__para {
+        width: 60%;
+        color: $gray-primary;
+        text-align: center;
+
+        @include mq-down("phone") {
+            width: 80%;
+            font-size: .8rem;
+        }
+
+    }
+
+    &__info {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+        @include mq-down("phone") {
+            @include displayFlex(flex,center,1rem){
+                flex-direction: column;
+                font-size: .8rem;
+            }
+        }
+
+    }
+
+    &__image {
+        height: 40px;
+        width: 40px;
+
+        @include mq-down("phone") {
+            height: 30px;
+            width: 30px;
+        }
+
+    }
+
+    &__email,
+    &__location,
+    &__phone {
+        @include displayFlex(flex, center, 1rem) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__description {
+            font-weight: bold;
+        }
+    }
+
+    &__link,
+    &__location__address {
+        color: $gray-primary;
+    }
+}

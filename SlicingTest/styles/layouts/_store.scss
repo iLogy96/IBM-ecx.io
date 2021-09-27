@@ -1,14 +1,62 @@
 .store {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &__grid{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
+    @include displayFlex(flex, center, 5px) {
+        flex-direction: column;
+        padding: 8rem 0;
     }
 
-    &__article{
-        
+    &__title--main {
+        font-weight: bold;
+        font-size: 2.6rem;
+        padding: 2rem 0;
+
+        @include mq-down("phone") {
+            font-size: 2rem;
+        }
+    }
+
+    &__title--alt {
+        color: $text-color-secondary;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding-bottom: 2.5rem;
+
+        @include mq-down("phone") {
+            @include displayFlex(flex, center, 1rem) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__article {
+        @include displayFlex(flex, start, 5px) {
+            flex-direction: column;
+            border-bottom: 2px solid $gray-secondary;
+        }
+    }
+
+    &__description {
+        padding-top: 1rem;
+        color: $gray-primary;
+    }
+
+    &__price {
+        color: #000;
+        font-weight: bold;
+        font-size: 0.9em;
+        padding-bottom: 1rem;
+    }
+
+    &__image {
+        height: 500px;
+
+        @include mq-down("tablet") {
+            height: 300px;
+        }
     }
 }

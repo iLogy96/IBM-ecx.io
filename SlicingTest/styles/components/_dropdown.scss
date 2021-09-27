@@ -1,0 +1,30 @@
+.dropdown {
+    display: none;
+    right: 710px;
+
+    &__list {
+        &__item {
+            padding: 1rem;
+            font-size: 0.9rem;
+
+            &:not(:last-child) {
+                border-bottom: 2px solid $gray-secondary;
+            }
+            @include mq-down("tablet") {
+                padding: 1.5rem 3rem;
+            }
+        }
+    }
+
+    &__link {
+        color: $gray-primary;
+
+        &:focus {
+            color: $color-red;
+        }
+    }
+
+    @include mq-down("phone") {
+        display: block;
+    }
+}

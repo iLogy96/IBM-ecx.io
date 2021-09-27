@@ -1,0 +1,42 @@
+.ready {
+    @include displayFlex(flex, start, 1.3rem) {
+        flex-direction: column;
+        padding: 5rem 0;
+    }
+
+    &__title--main {
+        font-weight: bold;
+        font-size: 2.3rem;
+
+        @include mq-down("phone") {
+            font-size: 2rem;
+        }
+    }
+
+    &__title--alt {
+        color: $text-color-secondary;
+
+        @include mq-down("phone") {
+            font-size: 0.8rem;
+        }
+    }
+
+    &__para {
+        @include paraStyles();
+        width: 30%;
+
+        @include mq-down("phone") {
+            width: 100%;
+            font-size: 0.8rem;
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+        color: $color-red;
+    }
+
+    @include mq-down("tablet") {
+        padding: 2rem 3rem;
+    }
+}

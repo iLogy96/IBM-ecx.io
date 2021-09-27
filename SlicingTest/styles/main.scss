@@ -4,11 +4,17 @@
 
 @import "./base/reset";
 @import "./base/global";
+@import "./base/overlay";
 
 @import "./layouts/header";
 @import "./layouts/hero";
 @import "./layouts/category";
 @import "./layouts/type";
 @import "./layouts/store";
+@import "./layouts/ready";
+@import "./layouts/news";
+@import "./layouts/footer";
 
 @import "./components/buttons";
+@import "./components/burger";
+@import "./components/dropdown";

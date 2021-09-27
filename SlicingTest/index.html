@@ -7,7 +7,7 @@
     <title>Loba</title>
     <link rel="stylesheet" href="main.css" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300;400;600&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
     </style>
   </head>
   <body>
@@ -28,7 +28,7 @@
             <li class="header__list__item">
               <a href="#" class="header__link">CONTACT</a>
             </li>
-            <li class="header__list__item">
+            <li class="header__list__item header__list__item--button">
               <button class="header__cart--button">
                 <svg class="header__cart">
                   <use xlink:href="#cart"></use>
@@ -36,12 +36,30 @@
                 <span class="header__cart--content">Cart</span>
               </button>
             </li>
+            <div class="burger"></div>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
+      <div class="dropdown">
+        <ul class="dropdown__list">
+          <li class="dropdown__list__item">
+            <a href="#" class="dropdown__link">HOME</a>
+          </li>
+          <li class="dropdown__list__item">
+            <a href="#" class="dropdown__link">ABOUT</a>
+          </li>
+          <li class="dropdown__list__item">
+            <a href="#" class="dropdown__link">SHOP</a>
+          </li>
+          <li class="dropdown__list__item">
+            <a href="#" class="dropdown__link">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+
       <div class="overlay--gray">
         <section class="hero container">
           <div class="hero__content">
@@ -171,7 +189,7 @@
                 alt="gold-pottery"
               />
             </div>
-            <div class="type__content">
+            <div class="type__content--alt">
               <h1 class="type__title">Gold & Black Pottery</h1>
               <p class="type__para">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
@@ -192,52 +210,170 @@
           <section class="store__grid">
             <a class="store__link" href="#">
               <article class="store__article">
-                <img class="store__image" src="./styles/assets/pottery-collection/decor-plate.png" alt="">
+                <img
+                  class="store__image"
+                  src="./styles/assets/pottery-collection/decor-plate.png"
+                  alt=""
+                />
                 <span class="store__description">Decor Plate</span>
                 <span class="store__price">$ 65.00 USD</span>
               </article>
             </a>
             <a class="store__link" href="#">
               <article class="store__article">
-                <img class="store__image" src="./styles/assets/pottery-collection/mint-pottery.png" alt="">
+                <img
+                  class="store__image"
+                  src="./styles/assets/pottery-collection/mint-pottery.png"
+                  alt=""
+                />
                 <span class="store__description">Mint Pottery</span>
                 <span class="store__price">$ 75.00 USD</span>
               </article>
             </a>
             <a class="store__link" href="#">
               <article class="store__article">
-                <img class="store__image" src="./styles/assets/pottery-collection/set-of-potterys.png" alt="">
+                <img
+                  class="store__image"
+                  src="./styles/assets/pottery-collection/set-of-potterys.png"
+                  alt=""
+                />
                 <span class="store__description">Set Of Potterys</span>
                 <span class="store__price">$ 125.00 USD</span>
               </article>
             </a>
             <a class="store__link" href="#">
               <article class="store__article">
-                <img class="store__image" src="./styles/assets/pottery-collection/orange-ceramic.png" alt="">
+                <img
+                  class="store__image"
+                  src="./styles/assets/pottery-collection/orange-ceramic.png"
+                  alt=""
+                />
                 <span class="store__description">Orange Ceramic</span>
                 <span class="store__price">$ 55.00 USD</span>
               </article>
             </a>
             <a class="store__link" href="#">
               <article class="store__article">
-                <img class="store__image" src="./styles/assets/pottery-collection/dark-bowl.png" alt="">
+                <img
+                  class="store__image"
+                  src="./styles/assets/pottery-collection/dark-bowl.png"
+                  alt=""
+                />
                 <span class="store__description">Dark Bowl</span>
                 <span class="store__price">$ 115.00 USD</span>
               </article>
             </a>
             <a class="store__link" href="#">
               <article class="store__article">
-                <img class="store__image" src="./styles/assets/pottery-collection/square-pottery.png" alt="">
+                <img
+                  class="store__image"
+                  src="./styles/assets/pottery-collection/square-pottery.png"
+                  alt=""
+                />
                 <span class="store__description">Square Pottery</span>
                 <span class="store__price">$ 75.00 USD</span>
               </article>
             </a>
           </section>
+          <button class="store__button">VIEW ALL PRODUCTS</button>
         </div>
+      </div>
+
+      <div class="overlay--custom">
+        <section class="ready container">
+          <span class="ready__title--alt">LOBA</span>
+          <h1 class="ready__title--main">Ready to start shopping</h1>
+          <p class="ready__para">
+            Lorem ipsum dolor sit amet
+            <a class="ready__link" href="#">consectetur adipisicing elit</a>.
+            Harum inventore illum minima voluptates.
+          </p>
+          <div>
+            <button class="ready__button">NEW COLLECTION</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="overlay--white">
+        <section class="news">
+          <div class="news__image__wrapper">
+            <img
+              class="news__image"
+              src="./styles/assets/icons/send.png"
+              alt="send"
+            />
+          </div>
+          <span class="news__title--alt">LATEST NEWS</span>
+          <h1 class="news__title--main">
+            Latest news <span class="news__amper">&</span> New updates
+          </h1>
+          <div class="news__input__wrapper">
+            <img
+              class="news__input__image"
+              src="./styles/assets/icons/mail.png"
+              alt="mail"
+            />
+            <input
+              class="news__email"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <button class="news__button">SUBSCRIBE</button>
+          </div>
+          <div class="news__checkbox__wrapper">
+            <input id="checkbox" name="checkbox" type="checkbox" />
+            <label class="news__checkbox" for="checkbox"
+              >Sign up for our newsletter</label
+            >
+          </div>
+        </section>
       </div>
     </main>
 
-    <footer></footer>
+    <footer class="footer overlay--gray">
+      <div class="footer__about container">
+        <h1 class="footer__logo">Loba</h1>
+        <p class="footer__para">
+          I have always striven to fix beauty in wood, stone, glass or pottery,
+          that has been my creed.
+        </p>
+      </div>
+
+      <div class="footer__info container">
+        <div class="footer__email">
+          <img
+            class="footer__image"
+            src="./styles/assets/icons/mail.png"
+            alt="email"
+          />
+          <span class="footer__email__description">EMAIL</span>
+          <a href="mailto:shop@loba.com" class="footer__link">shop@loba.com</a>
+        </div>
+        <div class="footer__location">
+          <img
+            class="footer__image"
+            src="./styles/assets/icons/location.png"
+            alt="location"
+          />
+          <span class="footer__location__description">FIND</span>
+          <span class="footer__location__address"
+            >Central Park, Manhattan
+            <div>New York, 1101</div>
+          </span>
+        </div>
+        <div class="footer__phone">
+          <img
+            class="footer__image"
+            src="./styles/assets/icons/phone.png"
+            alt="phone"
+          />
+          <span class="footer__phone__description">CALL</span>
+          <a href="tel:+1 292 345 678" class="footer__link">+1 292 345 678</a>
+        </div>
+      </div>
+    </footer>
   </body>
   <svg width="0" height="0" class="hidden">
     <symbol

@@ -1,0 +1,20 @@
+.overlay--gray {
+    background: $color-secondary;
+
+}
+
+.overlay--white {
+    background: $color-primary;
+    border-bottom: 1px solid $gray-secondary;
+}
+
+.overlay--custom {
+    background: linear-gradient(to right, lighten(#fff, 1), rgb(#fff, 0.1)), url(./styles/assets/ready-to-shop.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include mq-down("phone") {
+        width: fit-content;
+    }
+}

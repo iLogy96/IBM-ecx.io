@@ -1,33 +1,49 @@
-header {
-    background: $color-primary;
-}
-
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
+    @include displayFlex(flex, center, 10px) {
+        justify-content: space-between;
+        padding: 2rem 0;
+
+        @include mq-down("tablet") {
+            padding: 2rem 3rem;
+        }
+    }
 
     &__list {
         display: flex;
         gap: 1.3rem;
+        position: relative;
+        align-items: center;
 
         &__item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 0.9rem;
+            @include displayFlex(flex, center, 5px) {
+                font-size: 0.9rem;
+            }
+
+            &:last-child::before {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                width: 1px;
+                height: 30px;
+                background: $gray-secondary;
+            }
+
+            @include mq-down("tablet") {
+                display: none;
+                margin-right: 30px;
+            }
         }
     }
     &__link {
         color: $gray-primary;
 
         &:focus {
-            color: $color-focus;
+            color: $color-red;
         }
     }
 
     &__cart {
+        position: relative;
         width: 23px;
         height: 23px;
         fill: $gray-primary;
@@ -42,3 +58,4 @@ header {
         font-weight: bold;
     }
 }
+

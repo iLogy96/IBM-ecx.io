@@ -1,31 +1,45 @@
 .type {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 4rem 0;
+    @include mq-down("tablet") {
+        padding: 2rem 3rem;
+    }
+
+    @include displayFlex(flex, start, 2rem) {
+        flex-direction: column;
+        padding: 4rem 0;
+    }
 
     &__article {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+
+        @include mq-down("phone") {
+            @include displayFlex(flex, center, 1rem) {
+                flex-direction: column;
+            }
+        }
     }
 
     &__article--alt {
         @extend .type__article;
-        flex-direction: row-reverse;
+        grid-column-start: 1;
     }
 
     &__content {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        display: grid;
+
+        &--alt {
+            grid-row-start: 1;
+        }
     }
 
     &__para {
         @include paraStyles();
-        width: 60%;
         padding: 1rem 0;
+
+        @include mq-down("phone") {
+            width: 100%;
+        }
     }
 
     &__link {
@@ -40,5 +54,41 @@
 
     &__image {
         height: 450px;
+
+        @include mq-down("phone") {
+            height: 300px;
+        }
+    }
+
+    &__image__wrapper {
+        @include displayFlex(flex, center, 5px) {
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            z-index: -1;
+            height: 15em;
+            width: 30em;
+            position: absolute;
+            left: 100;
+            right: 100;
+            bottom: 140px;
+            background: $gray-secondary;
+
+            @include mq-down("tablet") {
+                height: 15em;
+                width: 20em;
+            }
+
+            @include mq-down("phone") {
+                height: 10em;
+                width: 20em;
+                bottom: 100px;
+            }
+        }
     }
 }

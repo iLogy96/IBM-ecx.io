@@ -7,9 +7,41 @@
     cursor: pointer;
 }
 
-.hero__shop--button{
-    background: $color-red;
-    padding: 1.5rem 2.5rem;
-    border: none;
-    color: $color-primary;
+.hero__shop--button,
+.store__button,
+.ready__button {
+    @include buttonStyles();
+
+    @include mq-down("phone") {
+        padding: .8rem;
+    }
+
+}
+
+.news__button {
+    @include buttonStyles();
+    background: #000;
+    padding: 0.9rem 2rem;
+
+    @include mq-down("phone") {
+        padding: .5rem 1rem;
+    }
+
+}
+
+@include mq-down("tablet") {
+    .header__list__item--button {
+        @include displayFlex(flex, center, 5px) {
+            font-size: 0.9rem;
+        }
+
+        &:last-child::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 1px;
+            height: 30px;
+            background: $gray-secondary;
+        }
+    }
 }
