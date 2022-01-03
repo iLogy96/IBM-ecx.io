@@ -28,4 +28,9 @@
   overflow: hidden;
 }
 
-
+.one{
+  background-attachment: sc;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rebeccapurple;
+}
