@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 15px;
+            padding-top: 50px;
+        }
+        .card {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            height: 80px;
+            padding: 5px 10px 20px 10px;
+            max-height: max-content;
+            background: linear-gradient(
+                    to bottom right,
+                    cyan 50%,
+                    palegoldenrod 50%
+            );
+        }
+        address {
+            font-size: 0.7rem;
+            position: absolute;
+            bottom: 2%;
+            padding-bottom: 5px;
+            right: 2%;
+            text-align: right;
+        }
+        .modal {
+            display: none;
+            max-width: 500px;
+            height: 150px;
+            background-color: aliceblue;
+            border-radius: 5px;
+            padding: 0 20px 0 20px;
+        }
+        .modal p,
+        .modal h2 {
+            padding: 10px 0 0 5px;
+        }
+        .modal {
+            position: relative;
+            position: absolute;
+            transform: translate(145%, 100%);
+            z-index: 2;
+        }
+        .close {
+            position: absolute;
+            right: 2%;
+            top: 2%;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: red;
+        }
+        .btn {
+            position: absolute;
+            font-weight: bold;
+            right: 5%;
+            bottom: 10%;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+<div class="search__input">
+<input class="search" type="text">
+<button>Search</button>
+</div>
+<div class="container"></div>
+<script id="cards" type="text/x-handlebars-template">
+    {{#each data}}
+    <div class="card" data-id = "{{id}}">
+        <div class="card-left">
+            <h3>{{company.name}}</h3>
+            <p>{{name}}</p>
+        </div>
+        <div>
+            <p>{{address.street}}, {{address.city}}</p>
+            <p>{{phone}}</p>
+            <p>{{email}}</p>
+            <p>{{webite}}</p>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="./cards.js"></script>
+</body>
+</html>
