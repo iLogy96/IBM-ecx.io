@@ -78,14 +78,23 @@ class Game {
 	declareGameWinner() {
 		if (playerOneScore >= 10) {
 			alert(
-				`Winner is player One, The Score is ${playerOneScore} - ${playerTwoScore}`
+				`Winner is player One, the Score is ${playerOneScore} - ${playerTwoScore}`
 			);
 			gameStartButton.disabled = true;
 			gameResetButton.disabled = false;
-		} else if (playerTwoScore >= 10) {
+		}
+		if (playerTwoScore >= 10) {
 			alert(
-				`Winner is player One, The Score is ${playerOneScore} - ${playerTwoScore}`
+				`Winner is player One, the Score is ${playerOneScore} - ${playerTwoScore}`
 			);
+			gameStartButton.disabled = true;
+			gameResetButton.disabled = false;
+		}
+		if (
+			(playerOneScore >= 10 && playerOneScore === playerTwoScore) ||
+			(playerTwoScore >= 10 && playerTwoScore === playerOneScore)
+		) {
+			alert(`Its a draw, the score is ${playerOneScore} - ${playerTwoScore}`);
 			gameStartButton.disabled = true;
 			gameResetButton.disabled = false;
 		}
